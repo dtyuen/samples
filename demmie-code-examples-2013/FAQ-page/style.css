@@ -1,0 +1,1832 @@
+/* CSS Resets */
+/* Gotham Font Face */
+/*@font-face {
+    font-family: 'gothambold';
+    src: url('./fonts/gothambold.eot');
+    src: url('./fonts/gothambold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gothambold.woff') format('woff'),
+    url('./fonts/gothambold.ttf') format('truetype'),
+    url('./fonts/gothambold.svg#gothambold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothambook';
+    src: url('./fonts/gothambook.eot');
+    src: url('./fonts/gothambook.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gothambook.woff') format('woff'),
+    url('./fonts/gothambook.ttf') format('truetype'),
+    url('./fonts/gothambook.svg#gothambook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gothammedium';
+    src: url('./fonts/gothammedium.eot');
+    src: url('./fonts/gothammedium.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/gothammedium.woff') format('woff'),
+    url('./fonts/gothammedium.ttf') format('truetype'),
+    url('./fonts/gothammedium.svg#gothammedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}*/
+/* Microgramma Font Face */
+/* @license
+ * MyFonts Webfont Build ID 2440669, 2013-01-02T21:34:22-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Microgramma D Bold Extended by URW++
+ * URL: http://www.myfonts.com/fonts/urw/microgramma/d-bold-extended/
+ * 
+ * Webfont: Microgramma D Medium Extended by URW++
+ * URL: http://www.myfonts.com/fonts/urw/microgramma/d-medium-extended/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2440669
+ * Webfonts copyright: Copyright 2010 URW++ Design &amp; Development Hamburg
+ * 
+ * © 2013 Bitstream Inc
+*/
+/*@font-face {
+    font-family: 'MicrogrammaExtD-Med';
+    src:url('./fonts/253DDD_1_0.eot');
+    src:url('./fonts/253DDD_1_0.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/253DDD_1_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MicrogrammaExtD-Bold';
+    src:url('./fonts/microgrammaextd-bol-webfont.eot');
+    src:url('./fonts/microgrammaextd-bol-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/microgrammaextd-bol-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,q,small,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;margin:0;padding:0}article,aside,figure,figure img,figcaption,hgroup,footer,header,nav,section,video,object{display:block}a img{border:0}figure{position:relative}figure img{width:100%}
+h1,h2 {font-family:'gothambold','Arial','sans-serif';font-weight:normal;}
+h3,h4 {font-family:'gothammedium','Arial','sans-serif';font-weight:normal;}
+h5, h6 {font-family:'gothammedium','Arial','sans-serif';font-weight:normal;}
+p {font-family:'Verdana','Arial','sans-serif';font-weight:normal;}
+
+/* ==================================================================================================================== */
+/* ! The 1140px Grid V2 by Andy Taylor \ http://cssgrid.net \ http://www.twitter.com/andytlr \ http://www.andytlr.com   */
+/* ==================================================================================================================== */
+
+.container {
+padding-left: 20px;
+padding-right: 20px;
+position:relative;
+}
+
+.share {position:absolute;right:0;top:-50px;padding:0;margin:0;}
+.share li {display:inline;}
+.share .twitter-share {position:relative;}
+.share .facebook-like {right:-13px;top:0;position:relative;}
+.row {
+width: 100%;
+max-width: 1140px;
+min-width: 755px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.onecol, .twocol, .threecol, .fourcol, .fivecol, .sixcol, .sevencol, .eightcol, .ninecol, .tencol, .elevencol {
+margin-right: 3.8%;
+float: left;
+min-height: 1px;
+}
+
+.row .onecol {
+width: 4.85%;
+}
+
+.row .twocol {
+width: 13.45%;
+}
+
+.row .threecol {
+width: 22.05%;
+}
+
+.row .fourcol {
+width: 30.75%;
+}
+
+.row .fivecol {
+width: 39.45%;
+}
+
+.row .sixcol {
+width: 48%;
+}
+
+.row .sevencol {
+width: 56.75%;
+}
+
+.row .eightcol {
+width: 65.4%;
+}
+
+.row .ninecol {
+width: 74.05%;
+}
+
+.row .tencol {
+width: 82.7%;
+}
+
+.row .elevencol {
+width: 91.35%;
+}
+
+.row .twelvecol {
+width: 100%;
+float: left;
+}
+
+.last {
+margin-right: 0px;
+}
+
+img, object, embed {
+max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+
+/* Smaller screens */
+
+/*
+@media only screen and (max-width: 1023px) {
+
+  body {
+  font-size: 0.8em;
+  line-height: 1.5em;
+  }
+  
+  }
+*/
+
+/* Mobile */
+/*
+@media handheld, only screen and (max-width: 767px) {
+
+  body {
+  font-size: 16px;
+  -webkit-text-size-adjust: none;
+  }
+  
+  .row, body, .container {
+  width: 100%;
+  min-width: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  }
+  
+  .row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+  width: auto;
+  float: none;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+
+}
+*/
+
+/*
+Theme Name: Defiance EGO Site
+Author: Trion
+Author URI: http://trionworlds.com/
+Description: The Defiance theme is a custom HTML5 theme to showcase Defiance the Game
+Version: 2.0
+*/
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: 'Verdana',Arial,sans-serif; color: #222; }
+
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #a00; color: #fff; text-shadow: none; }
+::selection { background: #a00; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+/*
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+*/
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+/*label { cursor: pointer; }*/
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+/* ============================== */
+/* ! Layout for fancybox          */
+/* ============================== */
+
+/*! fancyBox v2.1.3 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp
+{padding: 0;margin: 0;border: 0;outline: none;vertical-align: top;}
+
+.fancybox-wrap {position: absolute;top: 0;left: 0;z-index: 8020;}
+.fancybox-skin {position: relative;background: #f9f9f9;color: #444;text-shadow: none;}
+.fancybox-opened {z-index: 8030;}
+.fancybox-opened .fancybox-skin {-webkit-box-shadow: 0 0 25px rgba(43, 194, 209, 0.75);-moz-box-shadow: 0 0 25px rgba(43, 194, 209, 0.75);box-shadow: 0 0 25px rgba(43, 194, 209, 0.75);}
+.fancybox-outer, .fancybox-inner {position: relative;}
+.fancybox-inner {overflow: hidden;padding-top: 15px;}
+.fancybox-type-iframe .fancybox-inner {-webkit-overflow-scrolling: touch;}
+.fancybox-error {color: #444;font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin: 0;padding: 15px;white-space: nowrap;}
+.fancybox-image, .fancybox-iframe {display: block;width:100%;height:100%;}
+.fancybox-image {max-width: 100%;max-height: 100%;}
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {background-image: url('http://webcdn.triongames.com/defiance/images/fancybox/fancybox_sprite.png');}
+
+#fancybox-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+
+#fancybox-loading div {
+  width: 44px;
+  height: 44px;
+  background: url('http://webcdn.triongames.com/defiance/images/fancybox/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 47px;
+  height: 23px;
+  cursor: pointer;
+  z-index: 8040;
+  background: url('http://webcdn.triongames.com/defiance/images/fancybox2/fancy-sprite.png') top left scroll transparent;
+}
+
+.fancybox-nav {
+  /*position: absolute;
+  top: 0;*/
+  width: 80px;
+  /*height: 100%;*/
+  height: 55px;
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent url('http://webcdn.triongames.com/defiance/images/fancybox/blank.gif'); /* helps IE */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  z-index: 8040;
+}
+
+.fancybox-prev {
+  left: -80px;
+}
+
+.fancybox-next {
+  right: -80px;
+}
+
+.fancybox-nav span {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 55px;
+  margin-top: -18px;
+  cursor: pointer;
+  z-index: 8040;
+  background: url('http://webcdn.triongames.com/defiance/images/fancybox2/fancy-sprite.png') top left scroll transparent;
+}
+
+.fancybox-prev span {left: -65px;background-position: -15px -42px;}
+.fancybox-prev span:hover {background-position: -15px -112px;}
+.fancybox-next span {right: -65px;background-position: -68px -41px;}
+.fancybox-next span:hover {background-position: -68px -112px;}
+
+.fancybox-tmp {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important;
+}
+
+/* Overlay helper */
+
+.fancybox-lock {
+  overflow: hidden;
+  margin-right:0 !important;
+}
+
+.fancybox-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 8010;
+  background: url('http://webcdn.triongames.com/defiance/images/fancybox/fancybox_overlay-80.png');
+}
+
+.fancybox-overlay-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+/* Title helper */
+
+.fancybox-title {visibility:hidden;font:normal 16px/23px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow: none;z-index: 8050;font-weight: bold;padding-top: 20px}
+.browser-ie .fancybox-title {width: 800px}
+.fancybox-opened .fancybox-title {visibility: visible;}
+
+/* 
+.fancybox-title-float-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  margin-bottom: -35px;
+  z-index: 8050;
+  text-align: center;
+}
+ */
+
+/* 
+.fancybox-title-float-wrap .child {
+  display: inline-block;
+  margin-right: -100%;
+  padding: 2px 20px;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-border-radius: 15px;
+     -moz-border-radius: 15px;
+          border-radius: 15px;
+  text-shadow: 0 1px 2px #222;
+  color: #FFF;
+  font-weight: bold;
+  line-height: 24px;
+  white-space: nowrap;
+}
+*/
+.fancybox-title-outside-wrap {position: relative;margin-top: 10px;color: #fff;}
+.fancybox-title-inside-wrap {padding-top: 10px;}
+.fancybox-title-over-wrap {position: absolute;bottom: 0;left: 0;color: #fff;padding: 10px;background: #000;background: rgba(0, 0, 0, .8);}
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+body {background:#FFF url('http://webcdn.triongames.com/defiance/images/bg.jpg') no-repeat center 180px;font-size:14px;}
+.cookie-compliance-container {background:#333;border-bottom:1px solid #FFF;top:0;position:absolute;width:100%;height:102px;}
+.cookie-compliance-message{width:978px;margin:0 auto;position:relative;}
+.cookie-compliance-message p{color:#999;width:770px;padding:14px 10px 18px;font-size:12px;line-height:1.2em;margin:0;}
+.cookie-compliance-message p a{color:#fff;text-decoration:underline;}
+.hide-cookie-compliance{left:805px;padding:6px;position:absolute;top:20px;}
+.dob-form {background:url('http://webcdn.triongames.com/defiance/images/media/age-gate-bg.jpg') no-repeat 0 0 #087C7B;height:100%;max-height:455px;width:817px;text-align:center;}
+.dob-form .styled-select {
+background: url("http://webcdn.triongames.com/defiance/images/media/styled-select-bg2.png") no-repeat scroll right center transparent;
+border: 1px solid #087C7B;
+box-shadow: 0 2px 5px #333333;
+float: left;
+height: 36px;
+margin: 10px;
+overflow: hidden;
+width: 25%;
+}
+.dob-form .styled-select select {
+-webkit-appearance:none;
+background:none repeat scroll 0 0 transparent;
+border:medium none;
+color:#FFFFFF;
+font:bold 15px 'gothambook','Arial',sans-serif;
+padding:7px;
+outline:medium none;
+overflow:hidden;
+width:125%;
+cursor:pointer;
+}
+.dob-form .dob-error{display:none;}
+.dob-form .dob-header,
+.dob-form .dob-error{text-align:center;padding-top:172px;}
+.dob-form .dob-header h2,
+.dob-error h2{text-transform:uppercase;color:#FFF;text-shadow: 0px 2px 5px #000000;}
+.dob-form .age-selector {text-align:center;margin:0 auto;width:50%;}
+.dob-form .styled-select select option {color:#087C7B;background:#FFF;text-transform:uppercase;font-family:'gothambook','Arial',sans-serif;}
+.dob-form .styled-select select.error {border:1px solid red;}
+/*
+.dob-form .dob-submit {background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn-right.png') no-repeat right 0;text-transform:uppercase;padding:10px 0 16px 0;display:inline;}
+.submitButton {background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn-left.png') no-repeat left 0;border:none;padding:10px 34px 17px;text-transform:uppercase;color:#FFF;font:bold 16px MicrogrammaExtD-Med;word-spacing:0.2em;letter-spacing:0.2em;text-shadow:#000 0.1em 0.1em 0.1em;margin-left:-20px;}
+*/
+.submitButton:hover {
+cursor: pointer;
+}
+.dob-form .dob-submit {background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn2-left.png') no-repeat left 0;padding:12px 0 13px;margin:0 0 0 -58px;display:inline;}
+.page-template-homepage-php .dob-form .dob-submit {padding-top:11px;}
+.submitButton {background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn2-right.png') no-repeat right 0;border:none;padding:12px 42px 13px 40px;margin:0 -25px 0 0;white-space:nowrap;text-transform:uppercase;color:#FFF;font:bold 14px MicrogrammaExtD-Med;word-spacing:0.2em;letter-spacing:0.2em;text-shadow:#000 0.1em 0.1em 0.1em;width:auto;}
+/*
+.page-template-homepage-php.browser-ie9 .dob-form .dob-submit {padding-top:10px;}
+.browser-ie7 .dob-form .dob-submit {padding-top:0px;}
+.browser-ie9 .dob-form .styled-select select option:first-child {background:transparent;color:#FFF;}
+.browser-ie7 .styled-select, .browser-ie8 .styled-select {background:none repeat scroll 0 0 #FFF;height:auto;width:auto;}
+.browser-ie7 .styled-select select, .browser-ie8 .styled-select select {width:auto;}
+*/
+.browser-ie .dob-form .styled-select select option {color:#087C7B;background:#fff;}
+.browser-ie .styled-select {width:auto;height:auto;background:#fff;margin-right:0px;}
+.browser-ie .styled-select select{width:auto;color:#087C7B;}
+.browser-ie .styled-select select option{color:#087C7B;background:#fff;}
+.single-videos .dob-form {margin-left: 31px;height: 455px;}
+p {color:#555555;font-size:1em;line-height:1.7em}
+p.sm {font-size:.8em;line-height:1.5em}
+p a {color:#6FE9F4;}
+.container {padding:0;max-width:938px;min-width:938px;width:100%;margin: 0 auto;z-index:0;/*overflow:hidden;*/}
+.row {max-width:960px;min-width:960px}
+.row.content {max-width:880px;min-width:880px;overflow:visible;position:relative}
+.row.content .sixcol .bgglow {position:absolute;top:-64px;z-index:-1;background:transparent url('http://webcdn.triongames.com/defiance/images/background-glow.png') no-repeat scroll 0 0;height:400px;width:400px}
+.content, .content p, .content h3 {color:#FFF}
+.content p {font-weight:normal;font-size:1em;line-height:1.5em;padding:20px 0 0 0}
+.content h3 {font-size:2em;line-height:1em;text-transform:uppercase}
+.content h4 {font-size:1.2em;line-height:1.2em;color:#d1f2f9;text-transform:uppercase}
+.left, .alignleft {float:left}
+.right, .alignright {float:right}
+.clear {clear:both}
+.hide{display: none}
+.uppercase{text-transform:uppercase}
+.defi-red{color:#913254}
+.defi-blue{color:#6FE9F4}
+.a-name {height:0;position:relative;}
+.trion-nav {height:34px;background:#000 url('http://webcdn.triongames.com/defiance/images/global-nav-bg.png') repeat-x 0 0;margin-bottom:1px;
+-moz-box-shadow: 0px 1px 0px rgba(140, 140, 140, 1);
+-webkit-box-shadow: 0px 1px 0px rgba(140, 140, 140, 1);
+box-shadow: 0px 1px 0px rgba(140, 140, 140, 1);
+}
+.training-bg {background:transparent url('http://webcdn.triongames.com/defiance/images/training-bg1.png') no-repeat center bottom;width:938px;height:202px;margin-bottom:-20px;}
+.progress .progress-bg {background:transparent url('http://webcdn.triongames.com/defiance/images/progress-bar-bg.png') no-repeat 0 0;width:420px;height:27px;}
+.progress .progress-bg #progress-bar {position:relative;width:0px;height:27px;background:transparent url('http://webcdn.triongames.com/defiance/images/progress-bar.png') repeat-x 0 0;}
+.progress .progress-bg #progress-bar:before {position:absolute;content:" ";width:5px;height:27px;left:-5px;background:transparent url('http://webcdn.triongames.com/defiance/images/progress-bar-left.png') no-repeat 0 0;}
+.progress .progress-bg #progress-bar:after {position:absolute;content:" ";width:5px;height:27px;right:-5px;background:transparent url('http://webcdn.triongames.com/defiance/images/progress-bar-right.png') no-repeat 0 0;}
+.progress .progress-count p {padding:0;font:bold 19px 'MicrogrammaExtD-Med','Arial','sans-serif';text-decoration:none;color:#FFF;word-spacing:0.2em;letter-spacing:0.2em;}
+.progress .progress-count #codes-redeemed-text {text-align:center;vertical-align:bottom;font-size:0.5em;font-weight:normal;line-height:2em;text-shadow:-1px 1px 1px #33eeff,1px -1px 1px #33eeff,1px 1px 1px #33eeff,-1px -1px 1px #33eeff;filter:dropshadow(color=#33eeff, offx=-1, offy=1);text-transform:uppercase;}
+.progress h1 {color:#d1f2f9;padding-bottom:10px;}
+.progress .levels {background:transparent url('http://webcdn.triongames.com/defiance/images/grid-bg3.png') no-repeat 0 0;height:180px;}
+.progress .levels #level {background:transparent url('http://webcdn.triongames.com/defiance/images/levels-sprite2.png') no-repeat -600px -600px;width:200px;height:200px;margin-top:-16px;}
+.progress .levels #level.level1 {background-position:0 0;}
+.progress .levels #level.level2 {background-position:-200px 0;}
+.progress .levels #level.level3 {background-position:-400px 0;}
+.progress .levels #level.level4 {background-position:-600px 0;}
+.progress .levels #level.level5 {background-position:0 -200px;}
+.progress .levels #level.level6 {background-position:-200px -200px;}
+.progress .levels #level.level7 {background-position:-400px -200px;}
+.progress .levels #level.level8 {background-position:-600px -200px;}
+.progress .levels #level.level9 {background-position:0 -400px;}
+.progress .levels #level.level10 {background-position:-200px -400px;}
+.progress .levels #level.level11 {background-position:-400px -400px;}
+.progress .levels #level.level12 {background-position:-600px -400px;}
+.progress .levels #level.level13 {background-position:0 -600px;}
+.progress .levels #level.level14 {background-position:-200px -600px;}
+.progress .levels #level.level15 {background-position:-400px -600px;}
+.progress .levels #level .level-copy {position:relative;left:200px;}
+.progress .levels #level .level-copy h1 {font:bold 1.6em/1.8em 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;word-spacing:0.2em;letter-spacing:0.2em;color:#FFF;padding-top:22px;padding-bottom: 0px;}
+.progress .levels #level .level-copy h2 {text-transform:uppercase;padding:4px 0;font-size:1.1em;font-weight:normal;color:#d1f2f9;}
+.language-de .progress .levels #level .level-copy h1 {font-size:1.3em;}
+.progress .levels #level .level-copy p {padding-top:4px;}
+ul#unlockables {list-style:none;margin:0;padding:0;}
+ul#unlockables li {background:url('http://webcdn.triongames.com/defiance/images/icons.png') no-repeat 0 0;width:26%;height:54px;float:left;padding-left:7%;list-style:none;}
+ul#unlockables li.reward1.unlocked {background-position:0 -54px;}
+ul#unlockables li.reward2.unlocked {background-position:0 -108px;}
+ul#unlockables li.reward3.unlocked {background-position:0 -162px;}
+ul#unlockables li.reward4.unlocked {background-position:0 -216px;}
+ul#unlockables li.reward5.unlocked {background-position:0 -270px;}
+ul#unlockables li.reward6.unlocked {background-position:0 -324px;}
+ul#unlockables li.reward7.unlocked {background-position:0 -378px;}
+ul#unlockables li.reward8.unlocked {background-position:0 -432px;}
+ul#unlockables li.reward9.unlocked {background-position:0 -486px;}
+ul#unlockables li.reward10.unlocked {background-position:0 -540px;}
+ul#unlockables li.reward11.unlocked {background-position:0 -594px;}
+ul#unlockables li.reward12.unlocked {background-position:0 -648px;}
+ul#unlockables li.reward13.unlocked {background-position:0 -702px;}
+ul#unlockables li.reward14.unlocked {background-position:0 -756px;}
+ul#unlockables li.reward15.unlocked {background-position:0 -810px;}
+ul#unlockables li p {padding:0;font-size:0.9em;text-transform:uppercase;line-height:0.9em;}
+ul#unlockables li p.entitlement-name {margin-top:10px;}
+ul#unlockables li p.unlock-count {color:#d1f2f9;}
+ul#unlockables li p.unlocked-text {display:none;}
+ul#unlockables li.unlocked p.unlock-count {display:none;}
+ul#unlockables li.unlocked p.unlocked-text {color:#d1f2f9;display:block;}
+.arkfall-cta-wrap {clear:both;background: transparent url('http://webcdn.triongames.com/defiance/images/arkfall-form-bg2.png') no-repeat center 46px;position: relative;height: 150px;margin-bottom:-34px;}
+.arkfall-cta-wrap.error {clear:both;background:transparent url('http://webcdn.triongames.com/defiance/images/arkfallformbg-error.png') no-repeat center 0px;position: relative;height: 150px;margin-bottom:-34px;}
+.arkfall-cta-wrap .row {position:relative;height:106px;}
+.arkfall-cta-wrap .arkfall-cta {width:300px;text-align:center;left:18px;top:31px;position:absolute;text-transform:uppercase;}
+.arkfall-cta-wrap h1, .progress h1 {font-size:1.2em;font-weight:normal;text-decoration:none;word-spacing:0.1em;letter-spacing:0.1em;text-transform:uppercase;}
+.arkfall-cta-wrap h2 {font:bold 1.1em 'MicrogrammaExtD-Med','Arial','sans-serif';text-decoration:none;color:#FFF;word-spacing:0.2em;letter-spacing:0.2em;padding-top:38px;text-transform:uppercase;}
+.language-de .arkfall-cta-wrap h2 {font-size:0.7em;}
+.arkfall-cta-wrap .arkfall-form {position:absolute;left:288px;top:52px;}
+.arkfall-cta-wrap .arkfall-form #arkfallcode {font-size:27px;width:270px;background:#112531;color:#FFF;border:1px solid #37bdce;padding:3px 4px;margin-left:10px;}
+/*
+.arkfall-cta-wrap .arkfall-form .submit-wrap {color:#FFF;padding:14px 0 0 20px;display:block;background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn-left.png') no-repeat left 0px;height:40px;margin-left:24px;position:absolute;left:310px;top:-5px;}
+.arkfall-cta-wrap .arkfall-form .submit-wrap .submit-inner-wrap {background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn-right.png') no-repeat right 0px;display:block;color:#FFF;padding:10px 36px 14px 10px;position:relative;top:-14px;}
+.arkfall-cta-wrap .arkfall-form #arkfallcode-submit{font:bold 14px 'MicrogrammaExtD-Med';text-transform:uppercase;display:block;color:#FFF;background:transparent;border:none;text-shadow:1px 1px 1px black;filter: dropshadow(color=#000000, offx=1, offy=1);word-spacing:0.2em;letter-spacing:0.2em;}
+*/
+.arkfall-cta-wrap .arkfall-form .submit {font-size:1.1em;background:url('http://webcdn.triongames.com/defiance/images/submit-btn.png') no-repeat center center transparent;width:220px;height:43px;border:none;font-family: 'MicrogrammaExtD-Med', sans-serif;color:#FFF;text-transform:uppercase;position:absolute;top:-2px;left:334px;word-spacing:0.2em;letter-spacing:0.2em}
+.arkfall-cta-wrap .arkfall-form .submit span {font:bold 14px 'MicrogrammaExtD-Med';text-transform:uppercase;display:block;color:#FFF;background:transparent;border:none;text-shadow:1px 1px 1px black;word-spacing:0.2em;letter-spacing:0.2em;}
+.arkfall-cta-wrap #voucher_error {position:absolute;top:-28px;left:-288px;width:100%;text-align:left;padding:0;background-color:transparent;color:#FF0000;}
+.arkfall-cta-wrap #voucher_success {position:absolute;top:-28px;left:-288px;width:100%;text-align:left;padding:0;background-color:transparent;color:#FFF;}
+.arkfall-cta-wrap .question-mark {position:absolute;right:0;top:52px;}
+.page-template-page-game-php .arkfall-cta-wrap {background:transparent url('http://webcdn.triongames.com/defiance/images/game/home/ArkfallCode_BG2.png') no-repeat top center;height:100px;margin:0 auto;position:relative;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-cta {margin-left:200px;float:left;width:300px;text-align:center;left:18px;top:31px;text-transform:uppercase;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-cta h1 {font:bold 16px 'MicrogrammaExtD-Med','Arial','sans-serif';text-decoration:none;color:#FFF;word-spacing:0.2em;letter-spacing:0.12em;}
+.language-fr.page-template-page-game-php .arkfall-cta-wrap .arkfall-cta h1,.language-de.page-template-page-game-php .arkfall-cta-wrap .arkfall-cta h1 {font-size:11px;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-cta h1 span {display:block;text-align:center;font-size:11px;font-weight:normal;line-height:1em;text-shadow:-1px 1px 2px #33eeff,1px -1px 2px #33eeff,1px 1px 2px #33eeff,-1px -1px 2px #33eeff;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-form {position:absolute;left:334px;height:40px;width:300px;top:35px;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-form #arkfallcode {font-size:27px;width:290px;background:transparent;color:#FFF;border:none;padding:3px 4px;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-form .submit-wrap {color:#FFF;padding:14px 0 0 20px;display:block;background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn-left.png') no-repeat left 0px;height:40px;margin-left:24px;position:absolute;left:328px;top:-5px;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-form .submit-wrap .submit-inner-wrap {background:transparent url('http://webcdn.triongames.com/defiance/images/submit-btn-right.png') no-repeat right 0px;display:block;color:#FFF;padding:10px 36px 14px 10px;position:relative;top:-14px;}
+.page-template-page-game-php .arkfall-cta-wrap .arkfall-form #arkfallcode-submit{font:bold 14px 'MicrogrammaExtD-Med';text-transform:uppercase;display:block;color:#FFF;background:transparent;border:none;text-shadow:1px 1px 1px black;filter: dropshadow(color=#000000, offx=1, offy=1);word-spacing:0.2em;letter-spacing:0.2em;}
+.page-template-page-game-php .arkfall-cta-wrap .question-mark {position:absolute;left:644px;top:37px;}
+.page-template-page-game-php .arkfall-cta-wrap .cta-button {
+background: url('http://webcdn.triongames.com/defiance/images/submit-btn.png') no-repeat center center transparent;
+width: 220px;
+height: 43px;
+border: none;
+font-family: 'MicrogrammaExtD-Med', sans-serif;
+color: #FFF;
+text-transform: uppercase;
+word-spacing: 0.2em;
+letter-spacing: 0.2em;
+float:right;
+margin-right:215px;
+margin-top:28px;
+text-decoration:none;
+opacity: .85;
+}
+.browser-ie.page-template-page-game-php .arkfall-cta-wrap .cta-button {opacity:1;}
+.page-template-page-game-php .arkfall-cta-wrap .cta-button span {
+font: bold 14px 'MicrogrammaExtD-Med';
+text-transform: uppercase;
+display: block;
+color: #FFF;
+background: transparent;
+border: none;
+text-shadow: 1px 1px 1px black;
+filter: dropshadow(color=#000000, offx=1, offy=1);
+word-spacing: 0.2em;
+letter-spacing: 0.1em;
+margin-top:11px;
+text-align:center;
+}
+.page-template-page-game-php .arkfall-cta-wrap .cta-button:hover {opacity: 1;}
+.language-de.page-template-page-game-php .arkfall-cta-wrap .cta-button span {font-size:10px;}
+#top-ctas {clear:both;background:transparent url('http://webcdn.triongames.com/defiance/images/two-col-bg.png') no-repeat top center;height:283px;}
+#bot-ctas {background:transparent url('http://webcdn.triongames.com/defiance/images/three-col-bg.png') no-repeat top center;height:227px;margin-top:-8px;padding-bottom:20px;}
+#top-ctas .ego, #bot-ctas .ego {position:absolute;bottom:10px;right:10px;background-image:url('http://webcdn.triongames.com/defiance/images/ego-sprite.png');height:31px;width:31px;}
+.ego.ego-1 {background-position:0 0;}
+.ego.ego-2 {background-position:0 -31px;}
+.ego.ego-3 {background-position:0 -62px;}
+.ego.ego-4 {background-position:0 -93px;}
+.ego.ego-5 {background-position:0 -124px;}
+.ego.ego-6 {background-position:0 -155px;}
+.ego.ego-7 {background-position:0 -186px;}
+.ego.ego-8 {background-position:0 -217px;}
+#top-ctas .sixcol a, #bot-ctas .fourcol a {display:block;position:relative;color:#FFF;}
+#top-ctas .sixcol a {height:206px;width:436px;}
+#bot-ctas .fourcol a {height:160px;width:270px;}
+#bot-ctas .fourcol .bg2 {position:absolute;min-height:32px;bottom:0;left:0;background:transparent url('http://webcdn.triongames.com/defiance/images/game/home/home-promo-overlay-maroon.png') repeat 0 0;padding:10px 52px 10px 10px;text-transform:uppercase;}
+#top-ctas .sixcol .bg, #bot-ctas .fourcol .bg {position:absolute;min-height:32px;bottom:0;left:0;background:transparent url('http://webcdn.triongames.com/defiance/images/game/home/home-promo-overlay.png') repeat 0 0;padding:10px 52px 10px 10px;text-transform:uppercase;}
+#top-ctas .sixcol .bg h1, #bot-ctas .fourcol .bg h1, #bot-ctas .fourcol .bg2 h1{font:normal 12px 'MicrogrammaExtD-Med','sans-serif';color:#FFF;word-spacing:0.2em;letter-spacing:0.2em;}
+#top-ctas .sixcol .bg h2, #bot-ctas .fourcol .bg h2, #bot-ctas .fourcol .bg2 h2 {font:normal 9px 'MicrogrammaExtD-Med','sans-serif';color:#d1f2f9;word-spacing:0.15em;letter-spacing:0.15em;}
+#bot-ctas .fourcol .bg, #bot-ctas .fourcol .bg2 {width:208px;}
+#top-ctas .sixcol .bg {width:374px;}
+#top-ctas .sixcol a, #bot-ctas .fourcol a {overflow:hidden;}
+#top-ctas .sixcol a.promo1 {margin:36px 0 0 22px;}
+#top-ctas .sixcol a.promo2 {margin:36px 0 0 5px;}
+#bot-ctas .fourcol a.promo1 {margin:32px 0 0 24px;}
+#bot-ctas .fourcol a.promo2 {margin:32px 0 0 13px;}
+#bot-ctas .fourcol a.promo3 {margin:32px 0 0 3px;}
+#arkfall-code-info h1 {color:#2a4452;font:bold 16px 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;padding:10px 0;word-spacing:0.2em;letter-spacing:0.2em;}
+#arkfall-code-info p {color:#2a4452;font:normal 14px 'MicrogrammaExtD-Med','sans-serif';padding:10px 0;word-spacing:0.2em;letter-spacing:0.2em;}
+.page-details h1 a {color:#6fe9f4;text-decoration:none;}
+.page-details h1 a:hover {text-decoration:underline;}
+.page-details h1, .page-details h2 {color:#FFF;font-family:'MicrogrammaExtD-Med','sans-serif';word-spacing:0.2em;letter-spacing:0.2em;}
+.page-details h1 {font:bold 1.1em/1.6em 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;color:#6fe9f4;word-spacing:0.2em;letter-spacing:0.2em;}
+.page-details h2 {font:bold 2.1em/1.6em 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;word-spacing:0.1em;letter-spacing:0.1em;}
+div.ark-hr {clear:both;height:20px;width:943px;border:0;background:transparent url('http://webcdn.triongames.com/defiance/images/arkfall-cta-break.png') no-repeat scroll center center;padding:20px 0;}
+div.hr hr,div.ark-hr hr {display:none;}
+div.hr {clear:both;height:7px;border:0;background:transparent url('http://webcdn.triongames.com/defiance/images/divider-thin.png') no-repeat scroll center center;padding:20px 0;}
+.center {text-align:center;}
+.frame-mid {
+background: url('http://webcdn.triongames.com/defiance/images/frame-mid.png') no-repeat scroll center 469px transparent;
+margin-top: 200px;
+z-index: 10;
+/*overflow:hidden;*/
+min-height:619px;
+/*height:1469px;*/
+}
+.frame-top {
+background: url('http://webcdn.triongames.com/defiance/images/frame-top.png') no-repeat scroll center 46px transparent;
+padding-top: 1px;
+margin-top: -122px;
+min-height: 818px;
+/*height: 818px;*/
+}
+.frame-bot {
+background: url('http://webcdn.triongames.com/defiance/images/frame-bot.png') no-repeat scroll center bottom transparent;
+min-height: 273px;
+margin-top: -149px;
+}
+.header {background: url('http://webcdn.triongames.com/defiance/images/tab-bg.png') repeat-x scroll center bottom #FFF;
+/*overflow:hidden;*/
+/*-moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+-webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+*/
+}
+/*.header .row {overflow:visible;}*/
+.trion-nav .language:hover ul.sub {display:block}
+.trion-nav .language ul.sub {display:none;margin:0;padding:0;list-style:none;background:#262626;position:absolute;z-index:1000}
+.trion-nav .language ul.sub li a {position:relative;display:block;padding:10px 80px 10px 20px;border-bottom:1px solid #1b1b1b;-moz-box-shadow:0px 1px 0px #515151;-webkit-box-shadow:0px 1px 0px #515151;box-shadow:0px 1px 0px #515151}
+.trion-nav .language ul.sub li .check {position:absolute;right:0;top:12px;margin:0 20px 0 0}
+.trion-nav .language ul.sub li .check img {display:none}
+.trion-nav .language ul.sub li.active .check img {display:block}
+.defiance-logo {overflow:hidden}
+.defiance-logo h1 img {padding-top:22px}
+.account {padding-top:0}
+.account a {display:block;color:#000;font:bold 11px/14px 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;text-decoration:none;word-spacing:0.2em;letter-spacing:0.2em}
+.account a.sign-in:hover { color: #87D1EC; }
+.register-btn, .header .login-btn {height:25px}
+.register-btn {background: transparent url('http://webcdn.triongames.com/defiance/images/register-login-sep.png') no-repeat right center;margin-left:5px}
+.register-btn a {background:transparent url('http://webcdn.triongames.com/defiance/images/ego-dark-icon-small.png') no-repeat left 5px;margin-right:5px}
+.register-btn a:hover { color: #87D1EC; background-image: url('http://webcdn.triongames.com/defiance/images/ego-blue-icon-small.png') }
+.register-btn a span {padding:8px 22px 8px 0px;display:block}
+.login-btn a span {padding:8px 2px 8px 9px;display:block}
+.register-btn a span {margin-left:24px}
+.login-btn {margin-right:5px}
+.login-btn a {margin-left:5px}
+.btn-center a {margin:0 auto}
+
+/* This is old code from the Pre-Order days. Btn used to be dark red then. 3/29/13
+.standard-btn a {font:bold 11px/13px 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;text-decoration:none;text-align:center;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order-btn-left.png') no-repeat left 1px;display:block;color:#FFF;float:left;white-space:nowrap;word-spacing:0.2em;letter-spacing:0.2em;opacity:.85}
+.standard-btn a:hover {opacity:1}
+.standard-btn a#reg-btn{height:40px}
+.standard-btn a span {padding:14px 56px 0px 24px;height:30px;display:block;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order-btn-right.png') no-repeat right 1px;margin-left:24px;float:left;white-space:nowrap;}*/
+
+.standard-btn {margin-top: 7px}
+.standard-btn a {background-image: url(//webcdn.triongames.com/defiance/images/cta/BuyNow_btn.png);background-attachment:scroll;background-repeat:no-repeat}
+.language-en .standard-btn a {background-position: center -8px}
+.language-en .standard-btn a:hover{background-position: center -58px}
+.language-en .standard-btn a:active{background-position: center -108px}
+.language-de .standard-btn a {background-position: center -308px}
+.language-de .standard-btn a:hover{background-position: center -358px}
+.language-de .standard-btn a:active{background-position: center -408px}
+.language-fr .standard-btn a {background-position: center -159px}
+.language-fr .standard-btn a:hover{background-position: center -208px;}
+.language-fr .standard-btn a:active{background-position: center -258px}
+.standard-btn a span {background: none;font-size:0px;height:42px;width:231px;display:block}
+.standard-btn a span:hover {background: url(http://webcdn.triongames.com/defiance/images/cta/hi_light.png) scroll center center}
+.standard-2-btn a {font:bold 12px/14px 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;text-decoration:none;text-align:center;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order-btn-left.png') no-repeat left 1px;display:block;color:#FFF;float:left;white-space:nowrap;word-spacing:0.2em;letter-spacing:0.2em}
+.standard-2-btn a span {padding:14px 56px 0px 24px;height:40px;display:block;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order-btn-right-2.png') no-repeat right 1px;height:40px;margin-left:24px;float:left;white-space:nowrap;}
+
+#slides a {text-decoration:none}
+.main-cta-message {padding-top: 62px;text-align: center;text-shadow: -2px -1px 8px #000000;text-transform: uppercase;}
+.main-cta-message p a {text-decoration:none; color:#fff;}
+.main-cta-message p {font-weight:bold;font-family: 'gothammedium','Arial','sans-serif';}
+.main-cta-message p.firstline {font-size:2em;line-height:0.75em;}
+.main-cta-message p.secondline {font-size:3.5em;line-height:1em;}
+/*
+.language-en .main-cta-message {background: url('http://webcdn.triongames.com/defiance/images/game/022713/joinfight-title-en.png') no-repeat  center center scroll; height: 85px;}
+.language-fr .main-cta-message {background: url('http://webcdn.triongames.com/defiance/images/game/022713/joinfight-title-fr.png') no-repeat  center center scroll; height: 85px;}
+.language-de .main-cta-message {background: url('http://webcdn.triongames.com/defiance/images/game/022713/joinfight-title-de.png') no-repeat  center center scroll; height: 85px;}
+*/
+
+/* Game page slider */
+.main-cta-cont {display:block;height:377px;margin:0 auto;position:relative;width:556px;z-index:300;background: url(//webcdn.triongames.com/defiance/images/game/slides/game-video-bg-v2.png) no-repeat scroll top center;padding-top:10px;padding-left:15px}
+.game-video-cont {height:304px}
+.game-video-cont .slide {margin:0 auto}
+.game-video-cont img {width:540px;height:304px;display:block;margin:0 auto}
+.game-video-cont h4 {color: #FFF; font-size:.9em;text-transform:uppercase;padding-left: 4px;padding-top:4px}
+.game-video-cont p {color: #a8acaf; font-size:.9em;padding-left:4px}
+.game-video-cont .play-btn{position: absolute; z-index:4000;width:70px;height:70px;background: url(//webcdn.triongames.com/defiance/images/media/video-play.png) no-repeat center center scroll;top:162px;left:435px;opacity:.85}
+#game-slide-nav {bottom:41px;font-size:0;height:25px;position:absolute;right:24px;min-width:50px;z-index:100}
+#game-slide-nav a {display:inline-block;width:25px;height:25px;background: url(//webcdn.triongames.com/defiance/images/game/slides/game-vid-sprite.png) no-repeat 4px 1px scroll}
+#game-slide-nav a.selected {background-position:-21px 1px}
+.game-video-cont .play-btn:hover{opacity:1}
+.main-cta-btn {text-align:center;margin:50px auto 0}
+.main-cta-btn a {background: transparent url('http://webcdn.triongames.com/defiance/images/main-cta-left.png') no-repeat -23px 1px;color:#FFF;text-decoration:none;padding:30px 0 26px 27px}
+.main-cta-btn a span {padding: 29px 42px 26px 12px;background:transparent url('http://webcdn.triongames.com/defiance/images/main-cta-right.png') no-repeat right 0px;height:40px;font-weight:bold;font-size:15px;font-family:'MicrogrammaExtD-Med',Verdana,sans-serif;line-height:18px;text-transform:uppercase;text-shadow:1px 1px 1px #000000;filter:dropshadow(color=#000000, offx=1, offy=1)}
+.game-video-cont .slide {width:540px;background-color:transparent !important;}
+.language-fr .main-cta-btn a {padding:29px 0 26px 27px}
+.language-fr .main-cta-btn a span {font-size:12px}
+.top-nav {padding-top:0;margin-bottom:6px;position:relative}
+.top-nav .row {overflow:visible}
+.top-nav li a {background: url('http://webcdn.triongames.com/defiance/images/tab-sep.png') no-repeat scroll left bottom transparent;height:30px;}
+.top-nav li.dropdown {padding-right:10px}
+.top-nav li.dropdown a:before {content:" ";position:absolute;right:0;background: url('http://webcdn.triongames.com/defiance/images/nav-arrows.png') no-repeat scroll 0px -25px transparent;height:10px;width:17px}
+.top-nav li.dropdown.active a:before {background-position:0px 4px}
+.top-nav li a {padding:16px 12px 0px 12px}
+.browser-safari .top-nav li a {font-size:10px;}
+.top-nav li a, .sub-nav li a {color:#333;font:bold 11px/11px 'MicrogrammaExtD-Med','sans-serif';text-decoration:none;text-transform:uppercase;display:block;word-spacing:0.2em;letter-spacing:0.2em;}
+.top-nav li a:hover {color:#333;text-decoration:none}
+.top-nav li:last-child a:after {content:" ";position:absolute;width:2px;height:46px;right:0;bottom:0;background: url('http://webcdn.triongames.com/defiance/images/tab-sep.png') no-repeat scroll right bottom transparent;}
+.top-nav li:hover, .top-nav li.active, .top-nav li.current_page_item, .top-nav li.current_page_ancestor {background: url('http://webcdn.triongames.com/defiance/images/current-tab-bg.png') repeat-x scroll center bottom transparent;}
+.top-nav li {position:relative;width:auto;/*overflow:hidden;*/float:left;height:46px}
+.top-nav li > a {width:auto;}
+.sub-nav li a {padding:14px 12px 0px 12px;height:27px;}
+.sub-nav ul.row li a {color:#8C3250;pointer-events:none;cursor:default;}
+.sub-nav ul.children li a {color:#333;pointer-events:auto;cursor:pointer;}
+.sub-nav li.current_page_item a,
+.top-nav li.current_page_item a,
+.top-nav li.current_page_ancestor a {color:#8c3250;}
+.sub-nav ul.children li.current_page_item a,.sub-nav ul.children li:hover a {color:#FFF;background:transparent url('http://webcdn.triongames.com/defiance/images/nav-hover-bg.png') repeat-x scroll 0 0;}
+.sub-nav {position:absolute;background:#FAFAFA url('http://webcdn.triongames.com/defiance/images/dropdown-nav-bg.png') repeat-y scroll center 1px;z-index:1000;opacity:.9;left:0;width:100%;}
+.sub-nav > ul {padding-bottom:10px;}
+.sub-nav ul li {float:left;padding-left:4px;}
+.sub-nav ul.children li {float:none;padding-left:0;height:40px;margin-bottom:1px;}
+/*styles for series dropdown*/
+.series-dropdown {position:relative;overflow:visible;}
+.language-en .series-dropdown div {right:98px;}
+.language-fr .series-dropdown div {right:58px;}
+.language-de .series-dropdown div {right:32px;}
+.series-dropdown div {position:absolute;top:0;right:0;z-index:1000;background:url('http://webcdn.triongames.com/defiance/images/series-region-select-bg4.png') no-repeat 0 4px;width:229px;height:463px;}
+.series-dropdown li a {padding:14px 12px 0px 12px;height:27px;color: #333;font: bold 11px/11px 'MicrogrammaExtD-Med','sans-serif';text-decoration: none;text-transform: uppercase;display: block;word-spacing: 0.2em;letter-spacing: 0.2em;}
+.series-dropdown ul li {float: left;padding-left: 4px;}
+.series-dropdown ul.children li {float:none;padding-left:0;height:40px;margin-bottom:1px;}
+.series-dropdown ul li a {color:#8C3250;pointer-events:none;cursor:default;}
+.series-dropdown ul.children li a {color:#333;pointer-events:auto;cursor:pointer;width:163px;padding-left:46px;}
+.series-dropdown ul.children li a img {position:absolute;left:13px;width:25px;height:160px;}
+.series-dropdown ul.children li a img.us {clip:rect(0px,25px,16px,0px);top:53px;}
+.series-dropdown ul.children li a img.ca {clip:rect(16px,25px,32px,0px);top:77px;}
+.series-dropdown ul.children li a img.fr {clip:rect(32px,25px,48px,0px);top:102px;}
+.series-dropdown ul.children li a img.de {clip:rect(48px,25px,64px,0px);top:127px;}
+.series-dropdown ul.children li a img.uk {clip:rect(64px,25px,80px,0px);top:152px;}
+.series-dropdown ul.children li a img.asia {clip:rect(80px,25px,96px,0px);top:176px;}
+.series-dropdown ul.children li a img.au {clip:rect(96px,25px,112px,0px);top:202px;}
+.series-dropdown ul.children li a img.es {clip:rect(112px,25px,128px,0px);top:226px;}
+.series-dropdown ul.children li a img.la {clip:rect(128px,25px,144px,0px);top:252px;}
+.series-dropdown ul.children li a img.br {clip:rect(144px,25px,160px,0px);top:277px;}
+.series-dropdown ul.children li:hover a {color:#FFF;background:transparent url('http://webcdn.triongames.com/defiance/images/nav-hover-bg.png') repeat-x scroll 0 0;}
+.sixcol.bg {padding-top:21px;position:relative;}
+img.fourcolbg {position:absolute;top:0px;left:-14px;max-width:301px;width:301px;}
+.sidebar {position:relative;padding:7px 0px;list-style:none;margin:30px 0 0 0;}
+.sidebar li:hover, .sidebar li.active {background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-hover.png') repeat-y scroll center center;}
+.sidebar li {width:306px;position:relative;}
+.sidebar li a {padding:16px 20px;display:block;color:#fff;font:bold 12px/14px 'MicrogrammaExtD-Med','sans-serif';text-decoration:none;text-transform:uppercase;word-spacing:0.2em;letter-spacing:0.2em;}
+.sidebar li.active a {color:#6fe9f4;}
+.sidebar li:before {content:" ";position:absolute;top:0;left:0;background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-sep.png') no-repeat scroll center center;height:2px;width:302px;}
+.sidebar li:first-child:before {background:none;}
+.sidebar:before {content:" ";position:absolute;top:0;left:0;background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-top.png') no-repeat scroll center 0;height:7px;width:306px;}
+.sidebar:after {content:" ";position:absolute;bottom:0;left:0;background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-bot.png') no-repeat scroll center 0;height:7px;width:306px}
+.language,.support {margin-left:1px;border-left:1px solid #5b6468;border-right:1px solid #5b6468;-webkit-box-shadow:-2px 0 0 0 rgba(150, 161, 166, 1),2px 0 0 0 rgba(150, 161, 166, 1);box-shadow:-2px 0 0 0 rgba(150, 161, 166, 1),2px 0 0 0 rgba(150, 161, 166, 1);height:34px}
+.language a, .trion-nav .trion-logo a, .support a {color:#FFF;font-size:12px;font-family:'MicrogrammaExtD-Med','sans-serif';text-decoration:none;text-transform:uppercase;word-spacing:0.2em;letter-spacing:0.2em}
+.language a:hover, .trion-nav .trion-logo a:hover, .support a:hover {color:#FFF;text-decoration:underline}
+.register span {background:transparent url('http://webcdn.triongames.com/defiance/images/register-btn-left.png') no-repeat scroll left 0;display:block;padding:8px 14px 10px 45px}
+.language span,.support span {display:block;padding:8px 14px 10px 14px}
+.language span {/*background:transparent url('http://webcdn.triongames.com/defiance/images/lang-arrow.png') no-repeat scroll right 17px;*/margin-right:14px}
+/* begin splash homepage styles */
+/*body.page-template-homepage-php {background:url('http://webcdn.triongames.com/defiance/images/header/SplashHeader.jpg') no-repeat center top white;}*/
+.page-template-homepage-php .home-wrap {background:url("http://webcdn.triongames.com/defiance/images/bgs/footer-repeat.png") repeat-x scroll 0 0 transparent;position:relative;height:327px;margin-top:-245px}
+.page-template-homepage-php .main-header {background: transparent;min-height: 100%;height: auto}
+.page-template-homepage-php .main-navigation ul .current-menu-item ul{display:block}
+.page-template-homepage-php .main-navigation li a {display: block;float: none;width:auto;padding:10px 0 15px 0;color:#fff;font-weight:bold;text-decoration:none;text-align:center;text-transform:uppercase;font-family:'PrototypeRegular','Verdana','Helvetica','Arial',sans-serif;font-weight:normal;text-shadow: 2px 2px 3px #333333}
+.page-template-homepage-php .main-navigation li.current-menu-item a,
+.page-template-homepage-php .main-navigation li a:hover {background:url('http://webcdn.triongames.com/defiance/images/hover-glow.png') no-repeat center 16px}
+.page-template-homepage-php .main-header .logo {margin:0 auto;padding-top:26px}
+.page-template-homepage-php .main-header .logo h1 {text-align:center}
+.page-template-homepage-php .main-header .logo h2 {font-family:'MicrogrammaExtD-Med','Verdana','Helvetica','Arial',sans-serif;font-size:1.35em;color:#999;margin:0 auto;text-align:center;word-spacing:0.2em;letter-spacing:0.2em}
+.page-template-homepage-php .share {position:relative;top:auto;right:auto}
+.main-header .youtube a {background: url("http://webcdn.triongames.com/defiance/images/sprite/youtube.png") no-repeat scroll 0 0 transparent;display:block;height:23px;text-indent:-9999px;width:60px}
+.page-template-homepage-php .main-header .youtube a {background: url("http://webcdn.triongames.com/defiance/images/sprite/youtube-black.png") no-repeat scroll 0 0 transparent}
+.page-template-homepage-php .main-header .youtube {padding-left:20px;margin-left:0px;position:relative}
+.language-de .page-template-homepage-php .main-header .youtube {margin-left:310px}
+.language-fr .page-template-homepage-php .main-header .youtube {margin-left:262px}
+.language-fr .footer .copyrights p {font-size:9px;}
+.page-template-homepage-php .share .twitter-share {right:auto;position:relative}
+.page-template-homepage-php .share .facebook-like {right:auto;top:auto;position:relative}
+.page-template-homepage-php .join-btn {margin-top:10px;padding-right:86px;background: transparent url('http://webcdn.triongames.com/defiance/images/subscribe-btn-right.png') no-repeat scroll right 5px;display: block;float: left;text-decoration: none;font-size: 16px;font-family: 'MicrogrammaExtD-Med','Verdana','Helvetica','Arial',sans-serif;word-spacing:0.2em;letter-spacing:0.2em;font-weight: normal;color: white}
+.page-template-homepage-php .join-btn {margin-left:325px;width:250px}
+.language-de .page-template-homepage-php .join-btn {margin-left:300px;width:300px}
+.language-fr .page-template-homepage-php .join-btn {margin-left:324px;width:250px}
+.page-template-homepage-php .join-btn span {background:url('http://webcdn.triongames.com/defiance/images/subscribe-btn-left.png') no-repeat scroll 0 0 transparent;display:block;line-height:22px;margin-top:5px;padding:14px 0 14px 90px;text-align:center;text-transform:uppercase;text-shadow:2px 2px 3px #333}
+.page-template-homepage-php .main-header .logo .share{padding:16px 0px 10px 320px;list-style-type:none;height:30px}
+.page-template-homepage-php .main-header .logo .share .twitter-follow {padding:0 10px 0 31px}
+.language-de .page-template-homepage-php .main-header .logo .share .twitter-follow {padding:0 10px 0 38px;position:relative}
+.language-de .page-template-homepage-php .main-header .logo .share {padding:13px 0 2px 295px}
+.language-fr .page-template-homepage-php .main-header .logo .share {padding:13px 0px 2px 320px}
+.page-template-homepage-php .main-header .logo .share li{float:left;z-index:2}
+.fb_iframe_widget iframe {z-index:2}
+.page-template-homepage-php .home-nav a {display: block;padding-top:77px;padding-bottom:20px;text-align: center;color: #FFF;text-decoration: none;font-family: 'PrototypeRegular', 'Verdana', sans-serif;font-size: 28px;text-transform: uppercase;text-shadow: 2px 2px 3px #333333}
+.page-template-homepage-php .home-nav .game a,
+.page-template-homepage-php .home-nav .series a {padding-bottom:8px;font-size:22px}
+.page-template-homepage-php .home-nav a:hover {background:url('http://webcdn.triongames.com/defiance/images/hover-glow.png') no-repeat center 88px}
+.page-template-homepage-php .home-nav .series {background:url('http://webcdn.triongames.com/defiance/images/nav/home/nav-1.png') no-repeat 0 0;height:121px;width:287px}
+.page-template-homepage-php .home-nav .world {background:url('http://webcdn.triongames.com/defiance/images/nav/home/nav-2.png') no-repeat 0 0;height:121px;width:226px}
+.page-template-homepage-php .home-nav .game {background:url('http://webcdn.triongames.com/defiance/images/nav/home/nav-3.png') no-repeat 0 0;height:121px;width:288px}
+.page-template-homepage-php .home-nav .seriesB {background:url('http://webcdn.triongames.com/defiance/images/nav/home/nav-1-disabled.png') no-repeat 0 0;height:121px;width:287px}
+.page-template-homepage-php .home-nav .gameB {background:url('http://webcdn.triongames.com/defiance/images/nav/home/nav-2b.png') no-repeat 0 0;height:121px;width:226px}
+.page-template-homepage-php .home-nav .worldB {background:url('http://webcdn.triongames.com/defiance/images/nav/home/nav-3-disabled.png') no-repeat 0 0;height:121px;width:288px}
+.page-template-homepage-php .footer {background:#000}
+.page-template-homepage-php .home-nav{height:400px}
+.page-template-homepage-php .home-nav ul {list-style:none;height:240px;padding:30px 0 0 82px}
+.page-template-homepage-php .home-nav ul li {float:left;display:block}
+.page-template-homepage-php .featured-video {width:693px;height:403px;background:transparent url('http://webcdn.triongames.com/defiance/images/bgs/video-bg.png') no-repeat center top;padding:21px 0;text-align:center;margin:0 auto}
+.page-template-homepage-php .home-featured-video #video-container {width:640px;height:358px;margin:0 auto;position:relative}
+.page-template-homepage-php .main-header .logo .home-featured-video #video-container a span{top:144px;left:269px}
+.page-template-homepage-php .main-header .logo .featured-video a:hover span,
+.page-template-homepage-php .main-header .logo .home-featured-video #video-container a:hover span{background: transparent url("http://webcdn.triongames.com/defiance/images/media/video/playButton.png") no-repeat 0 -72px;}
+.page-template-homepage-php .main-header .logo .home-featured-video{padding-bottom:10px;}
+.page-template-homepage-php .main-header .logo .featured-video{margin:0 auto 56px;width:332px;z-index:0;}
+.page-template-homepage-php .main-header .logo .featured-video #header_featured_video, .page-template-homepage-php .main-header .logo .home-featured-video #video-container #home_featured_video{border:2px solid #fff;-webkit-box-shadow:2px 2px 4px #999;-o-box-shadow:2px 2px 4px #999;-moz-box-shadow:2px 2px 4px #999;box-shadow:2px 2px 4px #999;}
+.page-template-homepage-php .main-header .logo .featured-video a span,.page-template-homepage-php .main-header .logo .home-featured-video #video-container a span{background: transparent url("http://webcdn.triongames.com/defiance/images/media/video/playButton.png") no-repeat 0 0;width:102px;height:72px;position:absolute;}
+.page-template-homepage-php .main-header .logo .featured-video a span{top:57px;left:114px;}
+.page-template-homepage-php .main-header .logo .home-featured-video #video-container a span{top:144px;left:269px;}
+.page-template-homepage-php .main-header .logo .featured-video a:hover span,.page-template-homepage-php .main-header .logo .home-featured-video #video-container a:hover span{background: transparent url("http://webcdn.triongames.com/defiance/images/media/video/playButton.png") no-repeat 0 -72px}
+.page-template-homepage-php .main-header .logo .home-featured-video{padding-bottom:10px}
+.page-template-homepage-php .wrap {width:990px;margin:0 auto;position:relative}
+/* begin game homepage styles */
+body.page-template-page-game-php {background-image:none;background-color:#FFF}
+.homepage-features {position:relative;z-index:6000}
+.home-bg {position:relative;background:#FFF url('http://webcdn.triongames.com/defiance/images/game/home/defiance_homepage_bg_v4.jpg') no-repeat center -11px;overflow:visible}
+.home-bg .home-share-wrap {position:relative;width:940px;margin:0 auto}
+.home-bg .home-share-wrap .share {position:absolute;top:13px;right:1px;padding:0;margin:0;text-align:right;z-index:400}
+
+/* game homepage styles May 8rd, 2013 */
+
+.main-cta-cont {width:940px;height:445px;padding:0}
+.game-video-cont {height:349px;margin-top:63px;overflow:hidden}
+.game-video-cont img {width:940px;height:356px}
+#game-slide-nav {position:relative;bottom:0px;width:940px;height:82px;margin-left:3.1%}
+.game-video-cont .slide {width: 940px;margin-top:0px}
+
+#game-slide-nav a{position: relative;border:1px solid #669999;height:82px; opacity:0.6; background-position: center bottom; background-attachment: scroll;background-repeat: no-repeat; width: 19.5%; margin-right:.15%}
+#game-slide-nav a.selected{border:1px solid #7AE9F0}
+#game-slide-nav a:hover {border:1px solid #7ae9f0;background-position: center bottom}
+#game-slide-nav a.selected {opacity:1;background-position: center bottom}
+#game-slide-nav a:hover {opacity:1;background-position: center top}
+#game-slide-nav a.selected:hover {background-position: center bottom}
+#game-slide-nav a.last-thumb {margin: 0}
+
+#game-slide-nav .thumb01 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/01_thumb_EN.jpg)}
+.language-fr #game-slide-nav .thumb01 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/01_thumb_FR.jpg)}
+.language-de #game-slide-nav .thumb01 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/01_thumb_DE.jpg)}
+#game-slide-nav .thumb02 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/salvage-thumb-en-v2.jpg)}
+.language-fr #game-slide-nav .thumb02 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/salvage-thumb-fr-v2.jpg)}
+.language-de #game-slide-nav .thumb02 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/salvage-thumb-de-v2.jpg)}
+#game-slide-nav .thumb03 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/rynn-thumb-EN.jpg)}
+.language-fr #game-slide-nav .thumb03 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/rynn-thumb-FR.jpg)}
+.language-de #game-slide-nav .thumb03 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/rynn-thumb-DE.jpg)}
+#game-slide-nav .thumb04 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/badlands-thumb-EN.jpg)}
+.language-fr #game-slide-nav .thumb04 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/badlands-thumb-FR.jpg)}
+.language-de #game-slide-nav .thumb04 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/badlands-thumb-DE.jpg)}
+#game-slide-nav .thumb05 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/en-th-ep6.jpg)}
+.language-fr #game-slide-nav .thumb05 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/fr-th-ep6.jpg)}
+.language-de #game-slide-nav .thumb05 {background-image: url(//webcdn.triongames.com/defiance/images/game/slides/thumbs/de-th-ep6.jpg)}
+
+#game-slide-nav a.selected:after {content:" ";position:absolute;z-index:6000;background:transparent url('http://webcdn.triongames.com/defiance/images/game/home/slider-nav-selected-v6.png') scroll no-repeat center center;width:187px;height:90px;top: -8px;left:0px}
+
+.slider-bg {height:535px;background:url('http://webcdn.triongames.com/defiance/images/game/home/videoframe-v5.png') no-repeat center 40px}
+.news-bg {clear:both}
+.news-bg .row {overflow:visible !important}
+.main-cta-cont {background:transparent none no-repeat 0 0 scroll}
+.language-en .buynow-bg {background: url('http://webcdn.triongames.com/defiance/images/game/home/buy_now_ad_sprite_en-v2.png') no-repeat center top}
+.language-fr .buynow-bg {background: url('http://webcdn.triongames.com/defiance/images/game/home/buy_now_ad_sprite_fr-v2.png') no-repeat center top}
+.language-de .buynow-bg {background: url('http://webcdn.triongames.com/defiance/images/game/home/buy_now_ad_sprite_de-v2.png') no-repeat center top}
+.buynow-bg {height: 112px;clear: both;margin-top: -20px;margin-bottom: -3px;min-width: 960px;}
+.buynow-bg a {height: 112px;width: 960px;display: block;background: transparent none no-repeat center top;text-indent: -9999px;}
+.language-en .buynow-bg  a:hover{background: url('http://webcdn.triongames.com/defiance/images/game/home/buy_now_ad_sprite_en-v2.png') no-repeat center -117px}
+.language-fr .buynow-bg  a:hover{background: url('http://webcdn.triongames.com/defiance/images/game/home/buy_now_ad_sprite_fr-v2.png') no-repeat center -117px}
+.language-de .buynow-bg  a:hover{background: url('http://webcdn.triongames.com/defiance/images/game/home/buy_now_ad_sprite_de-v2.png') no-repeat center -117px}
+
+.summary {margin-left:90px}
+.summary h1, .summary h1 a {font-size:18px;color:#FFF;line-height:18px;padding:0px;text-transform:none;margin-bottom: 2px}
+.summary a {text-decoration:none}
+.summary a:hover {text-decoration:underline}
+.summary .date {color:#6bd4e2;font-size:12px;padding:0px}
+.summary p {color:#FFF;font-size:.9em;line-height:1.25em;padding:12px 0px}
+.summary a {font-size:12px;display:block;text-transform:uppercase;color:#6bd4e2;padding-top:12px}
+.summaryfig {float:left;width:72px;height:72px;border:1px solid #7ae9f0}
+.box-content {overflow:hidden;background:url('http://webcdn.triongames.com/defiance/images/game/home/news-bg-repeat.png') repeat-y center top;padding:18px 18px 18px 16px}
+.box-content:after {position:absolute;content:" ";background:url('http://webcdn.triongames.com/defiance/images/game/home/news-divider.png') no-repeat center 14px;width:611px;height:16px}
+.box-content.last:after {position:absolute;content:" ";background:transparent url('http://webcdn.triongames.com/defiance/images/game/home/news-divider-bot.png') no-repeat center 19px;height:31px}
+.homepage-features .news-header {height:74px}
+.homepage-features .news-header h1 {position: absolute;background: url('http://webcdn.triongames.com/defiance/images/game/home/news-ego-logo.png') no-repeat 9px 12px;
+height: 49px;left: 0px;top: 0px;padding-left: 65px;padding-top: 21px;color: #fff;font: 24px 'MicrogrammaExtD-Bold' normal;text-transform: uppercase;text-shadow: 1px 1px 4px #000}
+.homepage-features .news-header h1 a {color:#FFF;text-decoration:none}
+.homepage-features .news-header .news-header-bg {position:absolute;background:url('http://webcdn.triongames.com/defiance/images/game/home/news-top-bg.png') no-repeat 0 0;width:636px;height:84px;left:0;top:5px}
+.homepage-features .twitter-bg {width:960px;height:287px}
+.see-all {float:right;margin-right:26px}
+.see-all a {font-size: 12px;display: block;text-transform: uppercase;color: #6bd4e2;padding-top: 12px;text-transform:uppercase;text-decoration:none}
+.see-all a:hover {text-decoration:underline}
+.twitter-feed {left:-23px;position:relative;width:319px; background:url('http://webcdn.triongames.com/defiance/images/game/home/gen-side-tab.png') no-repeat center top;margin-top: -15px}
+.twitter-feed .twitter-header {background: url('http://webcdn.triongames.com/defiance/images/game/home/twitter-icon.png') no-repeat 17px 25px;height:62px}
+.twitter-feed .twitter-header h1 {padding-left:62px;padding-top:34px;color: #fff;font: 1.25em/.9em 'MicrogrammaExtD-Bold','sans-serif';text-transform: uppercase; letter-spacing: .05em}
+.twitter-feed .twitter-header h1 a {color:#FFF;text-decoration:none}
+.twitter-feed iframe {margin-left: 20px}
+.show-promo {position: absolute;right:3px}
+#prev2 {position: absolute;left: -13px;top: 236px;z-index: 1000;background: url('http://webcdn.triongames.com/defiance/images/game/home/arrow_sprite.png') 0px -200px no-repeat;width: 36px;height: 100px;text-indent: -9999px}
+#prev2:hover {background-position:0px -300px}
+#next2 {position: absolute;right: -8px;top: 236px;z-index: 1000;background: url('http://webcdn.triongames.com/defiance/images/game/home/arrow_sprite.png') 0px 0px no-repeat;width: 36px;height: 100px;text-indent: -9999px}
+#next2:hover {background-position:0px -100px}
+#next2:focus, #prev2:focus, .main-cta-cont .nav:focus {border: none}
+.game-page .news-bg .news-headnbody {background: transparent url('http://webcdn.triongames.com/defiance/images/game/home/news-bg-top-v7.png') scroll top center no-repeat;min-height: 975px
+;min-width:960px;margin-bottom: -50px}
+.game-page .news-bg .news-footer {background: transparent url('http://webcdn.triongames.com/defiance/images/game/home/news-bg-bottom-v2.jpg') scroll bottom center no-repeat;height:231px; display: block;min-width:960px;margin: 0 auto 65px}
+#server-stat {background: transparent url('http://webcdn.triongames.com/defiance/images/game/home/server-status.png') scroll center center no-repeat;width:319px;height:157px;display:block;margin-left: -23px; margin-top: 3px;padding-top: 25px}
+#server-stat h5 {text-align:center; text-transform: uppercase; color:#FFF; text-decoration: none;text-shadow: 1px 1px 4px #000000; font: 1.5em/.9em 'MicrogrammaExtD-Bold','sans-serif'; letter-spacing: .05em}
+.language-fr #server-stat h5 {font-size: 1.3em}
+.language-fr #server-stat p {font-size: .9em}
+#server-stat p, #watch-show p{text-align:center; color:#80f4fa;text-shadow: 1px 1px 4px #000000;text-decoration:none}
+.no-underline {text-decoration: none}
+#watch-show {background: transparent url('http://webcdn.triongames.com/defiance/images/game/home/watch-the-show-v3.png') scroll center top no-repeat;width:319px;height:250px;display:block;margin-left: -23px; margin-top: 5px;padding-top: 35px}
+#watch-show h5{text-align:center; text-transform: uppercase; color:#FFF; text-decoration: none;text-shadow: 1px 1px 4px #000000; font: 1.6em/.9em 'gothambold','Arial','sans-serif'}
+
+/* video page styles */
+.video-wrap,.thumb {text-align:center}
+.image-thumbs, .video-thumbs, .weapon-thumbs {list-style:none;margin:0;padding:0px 0px 0px 4px}
+.thumb .thumb-bg {position:absolute;display:block;top:0;left:-2px;width:301px;height:249px;z-index:-1;min-height:249px;min-width:301px;max-width:301px}
+.thumb {position:relative;width:31%;margin-right:2%;height:250px;float:left}
+.thumb a img, .thumb span img {margin-top:30px}
+.thumb-overlay {opacity: .85}
+.thumb-overlay:hover {opacity: 1}
+#top-ctas .thumb-overlay {position:absolute;top:24px;left:87px}
+#bot-ctas .thumb-overlay {position:absolute;top:0px;left:0px}
+.video-thumbs .thumb-overlay {position:absolute;top:0px;left:18px}
+.video-thumbs .thumb-overlay img {cursor:pointer}
+.video560w-bg {background:transparent url('http://webcdn.triongames.com/defiance/images/video560w-bg.png') no-repeat scroll 0 0;position:absolute;top:-7px;z-index:-1;height:377px;width:600px;left:-20px;}
+.thumb .video-details p {text-align:left;margin-left:18px;margin-right:18px;}
+.thumb .video-details .title {padding-top:10px;color:#FFF;text-transform:uppercase;font-weight:bold;font-size:13px;line-height:13px;}
+.thumb .video-details .desc {color:#d1f2f9;text-transform:uppercase;font-weight:normal;font-size:13px;line-height:13px;}
+.videoHeader {width:918px; height:50px; padding-bottom:10px; color:#fff; font-family:Arial,sans-serif; position:relative;}
+.videoHeader #numFound {padding:4px 0px 0px 15px; font-size:1.2em; line-height:1.2em; text-transform:uppercase;}
+.videoHeader #numFound em {font-size:.8em; font-style:italic; text-transform:none;}
+.videoHeader .filterHeader {font-size:12px; padding-left:5px;}
+#trailers {display:none; width:940px; }
+div.filterSelect, div.filterSelect span.filterSelect-ed {background-image:url("http://webcdn.triongames.com/defiance/images/sprite/filtermenu-sprite.png"); background-repeat:no-repeat;}
+div.filterSelect {width:228px; height:33px; background-position:0 -33px; overflow:hidden; padding:0 0 0 10px; position:relative;}
+div.filterSelect span.filterSelect-ed {cursor:pointer; display:block; height:27px; background-position:right 0; text-transform:uppercase; padding-top:6px; font-weight:bold;}
+select#filterMenu {width:224px; height:24px; cursor:pointer; font-family:Verdana, Arial,sans-serif; position:absolute; opacity:0; top:6px; left:5px; border:0;}
+select#filterMenu option { background-color:#112531; color:#fff;}
+
+/* weapons page styles */
+.weapons-preview-copy-wrap {width:62%;margin-right:2%;float:left;}
+.weapons-preview-copy {padding-left:28px;}
+.weapons-preview-copy p {color:#FFF;}
+.weapons-preview-vid-wrap {width:34%;float:right;}
+.weapons-preview-vid-wrap .video-details {width:280px;}
+.weapons-preview-vid {width:100%;}
+.weapons-preview-vid a {margin-left:-27px;}
+.page-template-page-gamecards-php .row.products .boxart,
+.page-template-page-gamecards-php .product-details {padding:0;}
+.page-template-page-gamecards-php .product-details .button3 a {background:url('http://webcdn.triongames.com/defiance/images/cta/redeem_btn.png') no-repeat 0px -8px;position:relative;display:block;margin-left:25px;margin-top:36px;text-transform:uppercase;text-decoration:none;font-weight:700;font-size:17px;width:231px;height:42px;color:#FFF;text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;}
+/* pagination styles */
+.pagination {
+clear:both;
+padding:20px 0;
+position:relative;
+font-weight:bold;
+font-size:15px;
+line-height:13px;
+text-align:center;
+}
+.pagination span, .pagination a {
+margin: 2px 2px 2px 0;
+padding: 15px 18px 0px 15px;
+text-decoration:none;
+width:auto;
+color:#6fe9f4;
+}
+.pagination a {cursor:pointer;}
+.pagination a:hover{color:#fff;background: transparent url('http://webcdn.triongames.com/defiance/images/media/pagination-active.png') no-repeat 0 0px;}
+.pagination .current{background: transparent url('http://webcdn.triongames.com/defiance/images/media/pagination-active.png') no-repeat 0 0px;color:#fff;}
+/* FAQ styles */
+#faqContent {padding-bottom:65px; background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg-bot.png') no-repeat scroll center bottom;}
+#faqContent p.faqNote {font-size:.85em; padding:10px 0 5px 0; background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg-top.png') no-repeat scroll center bottom;}
+#faqContent section h3 {font-size:1.5em; font-weight:bold; border-bottom: 1px solid #487184; padding:16px 0;}
+#faqContent section h3 span {padding-left:18px; display:block; background: transparent url('http://webcdn.triongames.com/defiance/images/faq-arrows2.png') no-repeat left 6px; }
+#faqContent section h3 span:hover {color:#6FE9F4; background-position: left -31px;}
+#faqContent section h3.active span {color:#6FE9F4; background-position: left -67px;}
+#faqContent section h3.active span:hover {color:#fff; background-position: left -102px;}
+#faqContent section .question h4 {text-transform:none; color:#fff;}
+#faqContent section h3 {cursor:pointer; background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg-mid.png') repeat-y scroll center center;}
+#faqContent section .faqSection {padding-left:18px; display:none;}
+#faqContent section .question {border-bottom: 1px solid #487184; padding:17px 0 20px 0;}
+#faqContent section .question.alt {background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg2.png') repeat-y scroll center center;}
+#faqContent section .question p {padding:0; margin:0; color:#D1F2F9;}
+#faqContent section .answer {padding-top:15px;}
+#faqContent section .answer p ~ p {padding-top:15px;}
+
+#faqSidebar {margin:31px 0 0 0; width:306px; background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-top.png') no-repeat scroll center 0; padding-top:7px;}
+#faqSidebar .faq-sidebar {padding:0 0 7px 0; margin:0; list-style:none; background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-bot.png') no-repeat scroll center bottom;}
+#faqSidebar .faq-sidebar li:hover, #faqSidebar .faq-sidebar li.active {background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-hover.png') repeat-y scroll center center;}
+#faqSidebar .faq-sidebar li a {cursor:pointer; padding: 16px 0 16px 20px; display:block;color:#fff;font:normal 1.1em 'gothammedium','Arial','sans-serif';text-decoration:none;text-transform:uppercase; background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-sep.png') no-repeat scroll center bottom;}
+#faqSidebar .faq-sidebar li a span {padding-left:22px; display:block;}
+#faqSidebar .faq-sidebar li.active a, #faqSidebar .faq-sidebar li.active a:hover {color:#6fe9f4; cursor:default;}
+#faqSidebar .faq-sidebar li.active a span, #faqSidebar .faq-sidebar li.active a:hover span {background: transparent url('http://webcdn.triongames.com/defiance/images/sidebar-icon2.png') no-repeat left 2px;}
+/* Pre order */
+.gametagline {position:absolute;right:-40px;top:2px;}
+#header-wrap .nobutton {height:69px;}
+.page-template-page-pre-order-digital-php .container {background:none}
+.grid-highlight-bg {position:relative;}
+.row.content .sixcol .grid-highlight-bg .bgglow {background:transparent url('http://webcdn.triongames.com/defiance/images/bgs/bgglow.png') no-repeat 0 0;top:0px;left:-90px;}
+.products .game-edition,.product1 .game-edition,.product2 .game-edition,.product3 .game-edition {border-left:5px solid #65cbc7;padding-left:8px;margin-left:10px;margin-top:10px;}
+.game-edition h1 {font-size:22px;color:#65cbc7;line-height:0.7em;}
+.game-edition h2 {font-size:30px;color:#e5e5e5;line-height:0.8em;padding-top:6px;}
+
+.page-template-page-gamecards-php .game-editions h1 {font: bold 2.1em/1.6em 'MicrogrammaExtD-Med','sans-serif';text-align:center}
+.page-template-page-gamecards-php .game-editions h1 span {font-family: 'Arial','sans-serif';vertical-align:top;font-size:22px}
+.page-template-page-gamecards-php .game-editions h2 {text-align:center; font-family: 'gothambook','Arial','sans-serif';font-size:.9em}
+
+.page-template-page-gamecards-php .game-editions .vert-sep {background: url(//webcdn.triongames.com/defiance/images/pre-order/vert-line.png) no-repeat scroll 92.5% top;}
+.page-template-page-gamecards-php .game-editions .left-sep {width: 7%; height: 451px; display: block; background-position: 57% top}
+.page-template-page-gamecards-php .game-editions .retailers-bg h1 {text-align: left;font-family: 'gothambook','Arial','sans-serif'; }
+
+.product-details {color:#65cbc7;font-size:18px;padding-top:26px;}
+.product-details p {font-size:13px;line-height:1.4em;padding:6px 0 30px 0;}
+.product-details h1 {font-size:18px;}
+.product-details ul {color:#d9eaec;font-size:12px;margin:4px 0;padding:0;list-style:none;}
+.product-details ul li {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/ego-bullet.png') no-repeat left 5px;padding-left:16px;font-size:13px;line-height:1.4em;}
+.language-fr .product-details ul li {font-size:12px;}
+.product-details ul li a {color:#66ccc8;text-transform:uppercase;text-decoration:none;}
+.product-details .price {font-size:36px;font-family:'gothambold','Arial','sans-serif';color:#FFF;font-weight:700;padding-top:10px;}
+.product-details .price span {position:relative;font-size:22px;top:5px;vertical-align:top;}
+.pricing .product-details .price {padding-top:0px;}
+.pricing .product-details {padding-top:0px;}
+.pricing {margin-top:-20px;}
+.page-template-page-dlc-xbox-360-php .product-details .price span {display:block;font-size:16px;padding-bottom:7px;position:relative;top:-6px;vertical-align:top;text-transform:uppercase;}
+.page-template-page-dlc-ps3-php .product-details .button,
+.page-template-page-dlc-digital-php .product-details .button {margin-top:-24px;}
+.product-details .nosub {font-size:11px;color:#FFF;padding-bottom:14px;}
+.page-template-page-dlc-ps3-php .product-details .button-grn,
+.page-template-page-dlc-digital-php .product-details .button-grn {margin-top:-24px;}
+/*buynow button*/
+.product-details .button3 {width:313px;text-align:center;height:80px;margin-left:-28px;margin-top:-40px}
+.product-details .button3 a {background:url('http://webcdn.triongames.com/defiance/images/cta/BuyNow_btn.png') no-repeat 0px -8px;position:relative;display:block;margin-left:25px;margin-top:36px;text-transform:uppercase;text-decoration:none;font-weight:700;font-size:17px;width:231px;height:42px;color:#FFF;text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;}
+
+.language-en .product-details .button3 a:hover {color:#FFF;background-position:0px -58px;}
+.language-en .product-details .button3 a:active {color:#FFF;background-position:0px -108px;}
+
+.language-fr .product-details .button3 a{background-position: 0px -159px;}
+.language-fr .product-details .button3 a:hover {color:#FFF;background-position: 0px -208px;}
+.language-fr .product-details .button3 a:active {color:#FFF;background-position: 0px -258px;}
+
+.language-de .product-details .button3 a{background-position: 0px -308px;}
+.language-de .product-details .button3 a:hover {color:#FFF;background-position: 0px -358px;}
+.language-de .product-details .button3 a:active {color:#FFF;background-position: 0px -408px;}
+
+.product-details .button3 a:active span {top:9px;}
+.product-details .button3 a span {position:relative;height:44px;top:7px;left:-2px;width:226px;z-index:-100}
+.product-details .button3 a:hover:before {position:absolute;content:" ";z-index:1;height:62px;top:-11px;left:0px;width:231px;background:transparent url('http://webcdn.triongames.com/defiance/images/cta/hi_light.png') no-repeat 0px 0px}
+.product-details .button3 a:active:before {background-image:none}
+/*yellow button test*/
+.product-details .button2 {width:313px;text-align:center;height:80px;margin-left:-28px;margin-top:-40px}
+.product-details .button2 a {background:url('http://webcdn.triongames.com/defiance/images/pre-order/yellow-btn.png') no-repeat 0px 0px;position:relative;display:block;margin-left:28px;margin-top:32px;text-transform:uppercase;text-decoration:none;font-weight:700;font-size:17px;width:230px;height:44px;color:#FFF;text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000}
+.product-details .button2 a:hover {color:#FFF;background-position:0px -44px}
+.product-details .button2 a:active {color:#FFF;background-position:0px -88px}
+.product-details .button2 a:active span {top:9px;}
+.product-details .button2 a span {position:relative;height:44px;top:7px;left:-2px;width:226px}
+.language-de .product-details .button2 a span {font-size:0.8em;}
+.product-details .button2 a:hover span:before {position:absolute;content:" ";z-index:1;height:60px;top:-18px;left:-32px;width:156px;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/btn-fg-glow.png') no-repeat 0px 0px;animation:quickslide 0.4s ease-in-out;-moz-animation:quickslide 0.4s ease-in-out; /* Firefox */-webkit-animation:quickslide 0.4s ease-in-out; /* Safari and Chrome */-o-animation:quickslide 0.4s ease-in-out; /* Opera */}
+.product-details .button2 a:active span:before,
+.product-details .button2 a:active span:after {background-image:none;}
+.product-details .button2 a:hover span:after {position:absolute;content:" ";z-index:-1;height:88px;top:-30px;left:-42px;width:253px;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/btn-bg-glow.png') no-repeat 0px 0px;}
+/*green button test*/
+.product-details .button2.grn a {background-image:url('http://webcdn.triongames.com/defiance/images/pre-order/green-btn.png');}
+/*red button test*/
+.product-details .button2.red a {background-image:url('http://webcdn.triongames.com/defiance/images/pre-order/red-btn.png');}
+/*orange button test*/
+.product-details .button2.orange a {background-image:url('http://webcdn.triongames.com/defiance/images/pre-order/orange-btn.png');}
+/*pink button test*/
+.product-details .button2.pink a {background-image:url('http://webcdn.triongames.com/defiance/images/pre-order/pink-btn.png');}
+@keyframes quickslide{0%   {left:32px;}100% {left:-32px;}}
+@-moz-keyframes quickslide /* Firefox */{0%   {left:32px;}100% {left:-32px;}}
+@-webkit-keyframes quickslide /* Safari and Chrome */{0%   {left:32px;}100% {left:-32px;}}
+@-o-keyframes quickslide /* Opera */{0%   {left:32px;}100% {left:-32px;}}
+/*
+.product-details .button {margin-top:-31px;width:313px;text-align:center;}
+.product-details .button a {background:url('http://webcdn.triongames.com/defiance/images/pre-order/pre-order-btn-sprite.png') no-repeat 0 0;height:69px;color:#124462;margin-left:-28px;padding:41px 62px 8px 0;text-transform:uppercase;font-weight:700;font-size:17px;text-decoration:none;position:relative;display:block;}
+.product-details .button a:hover {color:#295A79;background-position:0 -110px;}
+.product-details .button a:active {color:#295A79;background-position:0 -220px;}
+*/
+.language-de .product-details .button a {font-size:15px;}
+.language-fr .product-details .button a {font-size:15px;}
+.bonuses {position:relative;background-position:16px 100px;}
+.bonuses h1 {font-size:20px;color:#65cbc7;text-align:center;line-height:1em;padding-bottom:20px;}
+
+.bonuses div {position:absolute;}
+.bonuses .outlander {z-index:2;left:74px;}
+.bonuses .dlc-bonus {z-index:2;right:0px;}
+.bonuses .dlc-bonus .text {bottom:-21px;right:0px;width:100%;text-align:right;}
+.bonuses .dlc-bonus .text.hat {top:31px;width:236px;right:0px;text-align:left;}
+.bonuses .text {position:absolute;display:block;text-align:center;line-height:1.1em;text-transform:uppercase;}
+.bonuses .outlander .text {top:32px;left:120px;width:100%;}
+.bonuses .outlander .text.weapon {top:184px;width:100px;left:-52px;}
+.language-de .bonuses .outlander .text.weapon {width:120px;left:-83px;}
+.bonuses .challenger-right {z-index:1;top:154px;left:134px;}
+.bonuses .challenger-right .text {top:-14px;left:46px;width:100%;}
+.bonuses .challenger-left {z-index:1;top:148px;right:73px;}
+.bonuses .challenger-left .text {left:60px;bottom:-22px;}
+.bonuses.deluxe {padding-top:36px;background-position:64px 112px;}
+.bonuses .infiltrator {z-index:2;right:18px;top:64px;}
+.bonuses .infiltrator .text {top:-26px;width:200px;left:-21px;}
+.bonuses .infiltrator .text.weapon {margin-left:-105px;width:162px;top:50px;}
+.game-editions .viewall-btn {position:relative;left:170px;}
+.game-editions .viewall-btn a:hover {background-position:left 0px;}
+.game-editions .viewall-btn a:hover span {background-position:right 0px;}
+.game-editions .viewall-btn a {color:#66ccc8;font:normal 11px/12px 'gothambook','sans-serif';text-transform:uppercase;text-decoration:none;text-align:center;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/view-all-left.png') no-repeat left -25px;display:block;float:left;white-space:nowrap;word-spacing:0.1em;letter-spacing:0.1em;width:29px;height:25px;}
+.game-editions .viewall-btn a span {padding:6px 8px 0px 0px;display:block;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/view-all-right.png') no-repeat right -25px;margin-left:29px;float:left;white-space:nowrap;height:19px;}
+.game-upgrade-cta {text-align:center;text-transform:uppercase;font-size:19px;font-family:'gothambold',verdana;}
+.game-upgrade-cta h1, .game-upgrade-cta h2 {font-size:1em;color:#FFF;text-shadow:1px 1px 4px #000;}
+.game-upgrade-cta a {color:#f3e151;text-decoration:underline;}
+.game-upgrade-cta a:hover {color:#fff6ad;text-decoration:underline;}
+.row.game-details,
+.row.retailers {clear:both;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/game-details-bg-top.png') no-repeat;padding-top:21px;}
+.row.products.retailers {background:transparent url('http://webcdn.triongames.com/defiance/images/bgs/top-glow-full-bg.png') no-repeat;padding-bottom:124px;}
+.row.console.retailers {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/game-details-bg-bot.png') no-repeat;padding-bottom:124px;}
+.row.retailers ul {margin: 0 0 0 2.6%;padding: 0;list-style:none;}
+.row.retailers ul li {width:31.6%;height:120px;display:block;float:left;text-align:center;border:1px solid #2f4e5a;box-shadow:0px 0px 7px #467a87;background-color:#2f4e5a;}
+.row.retailers ul li:hover {background-color:#335360;}
+.page-template-page-gamecards-php .row.retailers ul li:hover {background-color:#2f4e5a;}
+.row.products .boxart,.row.product1 .boxart,.row.product2 .boxart,.row.product3 .boxart {padding-left:19px;padding-top:32px;}
+.row.products{height:348px;}
+.row.products .nolan-pic,.row.product1 .nolan-pic{position:absolute;top:0;right:-36px;width:451px;height:496px;}
+.row.products,.row.product1,.row.product2,.row.product3{position:relative;overflow:visible;}
+.row.products {background:transparent url('http://webcdn.triongames.com/defiance/images/bgs/top-glow-full-bg.png') no-repeat;padding-top:32px;margin-top:16px;}
+.row.product1 {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/left-split.png') no-repeat;padding-top:32px;margin-top:16px;}
+.row.product2 {padding-top:40px;background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/game-details-bg-bot.png') no-repeat}
+.row.product3 {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/game-details-bg-top.png') no-repeat;padding-top:21px;}
+.row.products, .row.product1, .row.product2 {padding-bottom:124px;}
+.page-template-page-pre-order-digital-php .row.product1,.page-template-page-pre-order-ps3-php .row.product1 {margin-bottom:-48px;}
+.page-template-page-pre-order-ps3-php .row.product3 .game-details-bg {padding:16px 0 48px;}
+.row.products .disclaimer,.row.product1 .disclaimer,.row.product2 .disclaimer,.row.product3 .disclaimer{font-size:11px;margin:0;position:relative;color:#999;padding-bottom:16px;}
+.row.bottom-retailers {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/game-details-bg-bot.png') no-repeat;height:124px;}
+.row.console.bottom-retailers {background:none;}
+.row.console.retailers .retailers-bg {background:none;}
+.row.product3 {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/game-details-bg-top.png') no-repeat;}
+.row.game-details .game-details-bg {padding:16px 0 16px;}
+.row.product3 .game-details-bg {padding:16px 0 54px;}
+.row.product3 .game-details-bg.disclaimer {padding:16px 0 16px;}
+.row.game-details .game-details-bg,
+.row.product3 .game-details-bg,
+.row.retailers .retailers-bg {background:transparent url('http://webcdn.triongames.com/defiance/images/pre-order/lightbluetransparentbg.png') repeat-y 0 0;}
+.row.retailers div {padding:16px 0 16px;}
+.row.retailers h1 {font-size:22px;margin-left:2.4%;padding:0px 0px 12px;color:#FFF;}
+.game-details .video-container {height:254px;position:relative;}
+.game-details .video-container .video-bg {background: url('http://webcdn.triongames.com/defiance/images/pre-order/video-bg.png') no-repeat;
+position: relative;
+height: 203px;
+padding-top: 20px;
+width: 291px;}
+.game-details .video-container .video-bg img {position: relative;
+left: 20px;
+top: 11px;
+border: 1px solid #91f5fb;
+box-shadow: 0px 0px 7px #91f5fb;
+opacity:0.8;z-index:1}
+.game-details .video-container .video-bg a:hover img {opacity:1;}
+.game-details .video-container .video-bg .thumb-overlay {opacity:1;position:relative;top:-140px;left:-5px;z-index:2;}
+.game-details .video-container .video-bg .thumb-overlay img {border:none;box-shadow:none;z-index:2}
+.game-details .copy-container h1 {text-transform:uppercase;font-size:24px;}
+.game-details .copy-container h2 {font-size:14px;font-family:'gothambook','Verdana','Arial','sans-serif';line-height:1.2em;margin:6px 0 14px 0;}
+.game-details .copy-container span img {border: 1px solid #91f5fb;box-shadow: 0px 0px 7px #91f5fb;opacity:0.8;}
+.game-details .copy-container span a:hover img {opacity:1;}
+
+/*
+.page-template-page-pre-order-physical-php .container, 
+.page-template-page-pre-order-digital-php .container {background: url('http://webcdn.triongames.com/defiance/images/physical/header-bg-v4.png') no-repeat scroll center 129px transparent}
+*/
+.game-editions p, .game-editions li {font-family:'gothambook','Arial','sans-serif'}
+.game-editions.row.content .row {width:880px;max-width:880px;min-width:880px}
+.game-editions.row.content {width:938px;max-width:938px;min-width:938px}
+.game-editions.row.content .edition-nav.row {height:75px;width:938px;max-width:938px;min-width:938px;position:relative;background:url("http://webcdn.triongames.com/defiance/images/divider-thin.png") no-repeat scroll center 65px transparent;}
+.edition-nav .page_item {border-left:1px solid #152e3c;border-right:1px solid #2b4454;width:33%;}
+.edition-nav ul{padding:17px 0 0 0;height:54px;background:url("http://webcdn.triongames.com/defiance/images/divider-thin.png") no-repeat scroll center 12px transparent;}
+.edition-nav li{display:block;list-display-type:none;float:left}
+.edition-nav a{letter-spacing: .05em; font-size:1.125em;line-height:.8em;text-transform:uppercase;color:#fff;font-weight:600;text-decoration:none;padding:19px 15px;display:block;text-align:center;font-family:'gothambold','Arial','sans-serif';background-image: url('http://webcdn.triongames.com/defiance/images/pre-order/nav-bg.png');}
+.edition-nav li.current_page_item a, .edition-nav a:hover {color:#fff;background: url('http://webcdn.triongames.com/defiance/images/pre-order/nav-bg-active.png') repeat scroll transparent;}
+.edition-nav li.current_page_item a {cursor:default;pointer-events:none;}
+.rt-grey {border-right:1px solid #2b4454}
+.lft-blue {border-left:1px solid #152e3c}
+.standard-2-btn a span {font-size:1.4em;letter-spacing:.1em; padding:14px 20px 0 0}
+.language-fr .standard-2-btn a span {font-size:1.3em}
+.language-de .standard-2-btn a span {font-size:1.1em}
+.retail-option-box {border: 1px solid #34727e; width: 205px; height: 22px; background: url('http://webcdn.triongames.com/defiance/images/pre-order/preorder-retailer-option-bg.png') no-repeat scroll center right; margin-top: 25px;}
+.retail-option-box ul {margin: 0;}
+.retail-option-box ul li{list-style-type:none;background-image:none;cursor:pointer;line-height:1.1em;padding:0;}
+.retail-option-box ul li span {text-transform:uppercase; display: block;padding:4px}
+.language-de .retail-option-box ul li span {font-size:9px;padding-top:4px;}
+.retail-option-box .dropdown{display:none;text-transform:none;background-color:#1c4855;border: 1px solid #34727e;margin: 0;width: 205px; position: relative; z-index:300;left:-1px;top:0px; opacity:.95}
+.retail-option-box .dropdown li {margin:0;padding:0;opacity: 1;}
+.product-details .retail-option-box .dropdown li a{text-transform:none; padding: 3px; display: block;color:#FFF;padding-left:10px;line-height:18px;}
+.product-details .button .disabled,.product-details .button2 .disabled,.product-details .button3 .disabled {cursor:not-allowed;}
+.retail-option-box .dropdown li a:hover{background-color:#193749;color:#FFF}
+/*.retail-option-box ul li:hover .dropdown{display:block;}*/
+.disclaimer{font-size:.85em;margin:16px 0 0 0;color:#fff;}
+.relative {position:relative;}
+.content.page-header {height:54px;}
+
+/* Specific to Retail table - Mothballed!
+#retail-table {width:900px;height:670px;background: url('http://webcdn.triongames.com/defiance/images/retail/retail-table-bg-v2.png') no-repeat scroll center center transparent;margin: 0 auto}
+#retail-table td {width:200px;vertical-align: middle;}
+#retail-table .first-col {width:290px}
+#retail-table tr{height:60px}
+#retail-table tr.first{height:123px}
+#retail-table tr.last{height:123px}
+#retail-table img {margin:0 auto;display:block}*/
+
+/* Specific to Digital Edition */
+
+
+/* styles for bottom of game page platform details */
+.platform-wrap {background:#FFF;}
+.platform-details {padding:7px 10px;}
+.platform-details h1 {color:#283b4d;padding:0 0 3px 0;margin:0;font-weight:bold;font-size:1.4em;line-height:2em;text-transform:uppercase;}
+.platform-details div {text-transform:uppercase;display:block;padding:0 0 0 10px;color:#FFF;font-weight:bold;text-decoration:none;background:#283b4d url('http://webcdn.triongames.com/defiance/images/platform-bar-bg2.png') repeat-x 0 0;line-height:38px;font-size:1em;}
+
+/* slider styles */
+.slide-thumbnail_1 a img, .slide-thumbnail_2 a img, .slide-thumbnail_3 a img {
+width: 100%;
+height: 0px;
+padding: 0;
+}
+.cycle-content-slider {
+position:relative;
+clear: both;
+height: 740px;
+}
+#cycle-controller {
+text-align:center;
+margin-bottom: 20px;
+min-height: 54px;
+position: relative;
+}
+#cycle-controller ul li {
+display: inline;
+cursor: pointer;
+}
+.controller.top-shadow{margin-top:0;}
+.footer {background:#000 url('http://webcdn.triongames.com/defiance/images/footer-bg.png') repeat-x 0 0;}
+.footer .corporate, .footer .legal, .footer .platforms, .footer .ratings-brand, .footer .copyrights {
+margin: 0 auto;
+text-align: center;
+padding:20px 0 10px 0;
+}
+.footer .wrap ul li {
+display: inline;
+}
+.footer .corporate a, .footer .platforms a, .footer .ratings-brand a, .footer .copyrights a {
+margin: 0px 28px;
+}
+.footer .corporate ul li img {
+/*padding-right: 28px;*/
+}
+.footer .legal li {
+  border-right: 1px solid #666;
+  padding:0 10px;
+}
+.footer .copyrights p {
+  font-size:12px;
+}
+.footer .copyrights {
+  padding-bottom:30px;
+}
+.footer .legal a {
+color: #666;font-size:13px;
+}
+.footer .legal a {
+margin: 0px 5px;
+}
+.footer a {
+text-decoration: none;
+}
+.footer a:hover {
+text-decoration: underline;
+}
+.footer .corporate ul li.last, .footer .legal ul li.last {
+border: none;
+}
+.footer .row ul li {
+display: inline;
+}
+.footer .legal #change-region {margin:0px 5px;color:#666;font-size:13px;background: none repeat scroll 0 0 #222222;border: 1px solid #333333;border-radius: 3px 3px 3px 3px;padding: 6px 9px;}
+.footer .legal #change-region:hover {cursor:pointer;text-decoration:underline;}
+.footer .legal #change-region span {background: url("http://webcdn.triongames.com/eon/website/images/region-arrows.png") no-repeat scroll 100% 4px #222222;padding-right: 14px;color: #666;}
+.footer .legal #change-region span.selected {color:#d1f2f9;background-position: 100% -31px;}
+.region-selector {margin:0 auto;height:138px;padding-top:15px;}
+.region-selector ul.region-selector-container {width:480px;height:106px;margin:0 auto;}
+.region-selector ul.region-selector-container li.column {float:left;border-right:1px solid #404040;margin-right:36px;padding-right:36px;height:132px;}
+.region-selector ul.region-selector-container li.column.last {margin-right:0;border:none;padding-right:0;}
+.region-selector ul.region-selector-container li.column h3 {font-size:24px;color:#d1f2f9;margin-top:0;margin-bottom:12px;}
+.region-selector ul.region-selector-container li.column ul li {display:block;float:none;margin:3px 0;}
+.region-selector ul.region-selector-container li.column ul li a, .footer .region-selector ul.region-selector-container li.column ul li a:visited {color:#fff;text-decoration:none;}
+/* Social widget */
+#social {position:absolute;padding-top:13px;top:76px;right:-46px;overflow:visible;background:url('http://webcdn.triongames.com/defiance/images/game/home/social-bg-v3.png') no-repeat center top;height:365px;width:44px;z-index:0;}
+#social a {width:28px;display:block;outline:none;margin-left:9px;margin-bottom:0.5em;}
+.page-template-page-game-php #social {top:50px;z-index:1;}
+
+/*#social {position:fixed;top:190px;right:0px;z-index:100;}*/
+/*#social a {width:42px;display:block;outline:none;margin-bottom:0.5em;}*/
+/* arkhunters page styles */
+#gameplay-arkhunters {height:280px;}
+#gameplay-arkhunters img {position:absolute;margin-top:-60px;margin-left:-58px;}
+/* characters page styles */
+#karlvonbach {height:320px;}
+#karlvonbach img {position:absolute;margin-left:-87px;bottom:-23px;}
+#varussoleptor {height:300px;}
+#varussoleptor img {position:absolute;margin-left:-42px;bottom:-23px;}
+#torcmok {height:320px;}
+#torcmok img {position:absolute;margin-left:-42px;bottom:-23px;}
+#rosarodriguez {height:300px;}
+#rosarodriguez img {position:absolute;margin-left:-42px;bottom:-23px;}
+#cassducar {height:320px;}
+#cassducar img {position:absolute;margin-left:-12px;bottom:-23px;}
+#erenniden {height:320px;}
+#erenniden img {position:absolute;bottom:-23px;}
+#joncooper {height:405px;}
+#joncooper img {position:absolute;margin-left:20px;bottom:-23px;}
+#joshuanolan {height:320px;}
+#joshuanolan img {position:absolute;margin-left:-42px;bottom:-23px;}
+#irisa {height:320px;}
+#irisa img {position:absolute;bottom:-23px;}
+/* enemies page styles */
+#enemies-mutants {height:256px;}
+#enemies-mutants img {position:absolute;margin-top:-68px;}
+#enemies-hellbugs {height:235px;}
+#enemies-hellbugs img {position:absolute;margin-top:-72px;margin-left:-78px;}
+#enemies-raiders {height:282px;}
+#enemies-raiders img {position:absolute;margin-top:-90px;margin-left:-20px;}
+#enemies-ninetyniners {height:265px;}
+#enemies-ninetyniners img {position:absolute;margin-top:-90px;}
+#enemies-scrappers {height:345px;}
+#enemies-scrappers img {position:absolute;margin-top:-68px;margin-left:15px;}
+#enemies-darkmatter {height:275px;}
+#enemies-darkmatter img {position:absolute;margin-top:-87px;margin-left:-37px;}
+#enemies-thevolge {height:300px;}
+#enemies-thevolge img {position:absolute;margin-top:-91px;margin-left:-63px;}
+
+/* beta page styles */
+.betabox .beta-bg {position:absolute;display:block;top:14px;left:-14px;width:287px;height:234px;z-index:-1;min-height:234px;min-width:287px;max-width:287px;}
+.betabox {position:relative;padding-top:38px;height:192px;margin-bottom:58px;}
+.betabox .beta-event-header {padding-bottom:12px;}
+.betabox h3 {font-size: 1.4em;}
+.language-de .betabox h3 {font-size:0.8em;width:240px;}
+.betabox .beta-event-header h4 {position:relative;display:inline;font-family:'gothambook','Arial','sans-serif';font-size:1.1em;}
+.betabox .beta-event-header h4 span {position:absolute;left:0;font-size:.75em;top:18px;width:100px;}
+.language-fr .betabox .beta-event-header h4 span, .language-de .betabox .beta-event-header h4 span {font-size: .6em;width:105px;}
+.betabox p {margin-right:8px;font-size:13px;padding:8px 0 0 0}
+.language-fr .betabox p {padding-top:3px;font-size: .75em}
+.language-de .betabox p {padding-top:8px; line-height:1.3em}
+.betabox .platform {position:absolute;bottom:0}
+.language-fr .betabox .platform {font-size: .75em; font-weight: 200}
+
+/* Sign Up Styles */
+#sign-up-con {display: block; position:relative;width:938px;height:800px; margin:0 auto; background: url('http://webcdn.triongames.com/defiance/images/beta-bg.png') no-repeat scroll center center transparent}
+#sign-up-con .head-01 {display:block; padding:20px 110px 0 110px}
+#sign-up-con .head-01, #sign-up-con hgroup {height:110px}
+#sign-up-con input {height:36px;background-color:#112531;border:1px solid #2f4d5b;width:295px}
+#sign-up-con label, #sign-up-con input {font-family:'gothambook', sans-serif; font-size:.9em; font-weight:600}
+#sign-up-con .head-01 h2{font-family:'MicrogrammaExtD-Med','sans-serif';font-weight:bold;color:#FFF;font-size:1.6em;line-height:.9em;margin:0;text-transform:uppercase;word-spacing:0.2em;letter-spacing:0.2em;margin-top: 20px;text-align: center}
+.language-fr #sign-up-con .head-01 h2, .language-de #sign-up-con .head-01 h2 {font-size:1.1em;line-height:1.2em}
+#sign-up-con .head-01 p{font-family:'MicrogrammaExtD-Med','sans-serif';font-size:1.2em;line-height:1em;margin:5px 0 0 0;color:#FFF;text-transform:uppercase;word-spacing:0.2em;letter-spacing:0.2em}
+#sign-up-con .head-01 .instructions {font-family:'gothambook', sans-serif;font-size:1em;line-height:1em;margin: 25px 0 0 0;text-transform:none;word-spacing:0.005em;letter-spacing:0.1em;}
+#sign-up-con .head-01 .instructions {text-align:center;font-family:'gothambook', sans-serif;font-size:1em;line-height:1em;margin: 25px 0 0 0;text-transform:none;word-spacing:0.005em}
+#sign-up-con .head-01 .instructions {font-family:'gothambook', sans-serif;font-size:1em;line-height:1em;margin-top:15px;text-transform:none;word-spacing:0.005em;text-align:center}
+#sign-up-con .head-01 .instructions button {color:#6fe9f4;text-decoration:underline; float:none; padding: 0;display: block;font-family: 'gothambook', sans-serif;font-size: 1em;line-height: 1em;margin-top: 10px;text-transform: none;word-spacing: 0.005em;text-align: center;width: 100%;}
+.language-fr #sign-up-con .head-01 .instructions button, .language-de #sign-up-con .head-01 .instructions button {padding-top: 5px}
+#sign-up-con .norm-hr hr {border:none;height:0}
+#sign-up-con .norm-hr {border-top:1px solid #223f4e;border-bottom:1px solid #557281;height:0;margin-top:20px}
+#sign-up-con input {color:#FFF;padding-left:15px}
+#sign-up-con .trion-existing {font-size:.85em;float:right;color:#b3231d;text-decoration:none; background:none;border:none}
+#sign-up-con .trion-existing:hover {text-decoration:underline}
+#sign-up-con .reg-row {width:295px;position:absolute}
+#sign-up-con input:-webkit-input-placeholder{color:#bbbcbe}
+#sign-up-con input:-moz-placeholder{color:#bbbcbe}
+#sign-up-con input:-ms-input-placeholder{color:#bbbcbe}
+#sign-up-con label {color:#FFF}
+#sign-up-con option {background-color:#112531;color:#FFF}
+.browser-ie #sign-up-con option {background-color:rgb(17, 37, 49)}
+.alpha-30{opacity: .3}
+
+.rr1{top:150px;left:156px}
+.rr2{top:220px;left:156px}
+.rr3{top:150px;right:156px}
+.rr4{top:365px;left:156px}
+.rr5{top:290px;left:156px}
+.rr6{top:340px;left:156px}
+.rr7{top:220px;right:156px}
+.rr8{top:290px;right:156px}
+
+#reg-platform.rr9{top:440px;left:156px;width:630px;position:absolute;color: #FFF}
+#reg-platform input{width:13px;height:13px;margin-right:3px}
+#sign-up-con select {height:38px;padding:9px 0 0 11px;position:relative;-webkit-appearance:none;outline:none}
+.browser-chrome #sign-up-con select{padding: 3px 0 0 10px}
+.browser-ie #sign-up-con select {background-image:none; background-color:none;}
+.browser-ie8 #sign-up-con option {background-image:none; background-color:none; color: #000}
+.browser-ie9 #sign-up-con select {padding: 3px 0 0 11px}
+.browser-ie8 #sign-up-con select {padding: 8px 0 0 11px}
+
+.select-style{display:block;overflow:hidden;height:38px;float:left;border:1px solid #aeaeae}
+.rr3 .select-style{width:86px}
+.rr4 .select-style{width:309px}
+.select-style select {background-image:url('http://webcdn.triongames.com/defiance/images/select-bg.png');background-attachment:scroll;background-repeat:no-repeat;background-color:transparent;border:none;padding:5px 0 0 11px;color: #FFF}
+.rr3 .select-style select {width:104px;background-position:-311px center}
+.rr4 .select-style select {width:327px;background-position:-91px center}
+#submit{}
+#submit:hover, .submit:hover{background-color:#6d1312}
+#reg-legal,  #reg-newsletters {position:absolute;width:630px;left:156px;font-size:.75em;font-family:'gothambook', sans-serif;color:#FFF}
+#reg-newsletters {bottom:334px;width:674px;}
+.language-de #reg-newsletters {bottom:340px}
+.language-fr #reg-newsletters {bottom:338px}
+#reg-newsletters div {margin:4px 0}
+#reg-legal {bottom:280px}
+.language-de #reg-legal {bottom:276px}
+.language-fr #reg-legal {bottom:262px}
+#reg-legal a {color:#6fe9f4}
+#reg-legal ul{margin:0;padding:0}
+#reg-legal li{margin:0 0 0 32px; padding:0}
+#sign-up-con input:focus {color:#FFF}
+#reg-legal input, #reg-newsletters input, #sign-up-con .platforms input {width:13px;height:13px;padding:0;margin:0 7px 0 0}
+#sign-up-con #reg-legal label, #sign-up-con #reg-newsletters {font-size:11px;font-weight: normal}
+.page-template-page-defiance-beta-php #registration .platforms {height:28px;width:195px;display:block;line-height:.9em;float: left;padding-top:10px;text-transform:uppercase;font-size:.85em;line-height:1.2em} 
+.reg-legal-headline {display: none;}
+.reg-legal-action{width:605px;}
+#sign-up-con .show {display:block;}
+#sign-up-con .hidden {display:none;}
+#sign-up-con .checkbox {display:inline;width:25px;height:16px;float:left;}
+#sign-up-con .submit {font-size:1.1em;background:url('http://webcdn.triongames.com/defiance/images/beta-cta-btn-bg.png') no-repeat center center transparent;width:220px;height:38px;border:none;font-family: 'MicrogrammaExtD-Med', sans-serif;color:#FFF;text-transform:uppercase;position:absolute;bottom:231px;left:364px;word-spacing:0.2em;letter-spacing:0.2em}
+#validatorator, #global-error{position:absolute;background-color:#fff; border:3px solid #bf0202; padding:10px; z-index: 200; box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.5)}
+#validatorator {width:440px;top:225px;left:-1px;background: url('http://webcdn.triongames.com/defiance/images/beta/red-close.png') scroll no-repeat 442px 4px #FFF}
+#global-error {top:106px;left:156px;width:622px;min-height:15px;opacity:1;text-align:center;background-color:#b3231d;border: 0 none;font-size: 12px;font-weight: bold}
+#validatorator ul {padding:0;margin: 0 0 0 25px}
+.field-errors, .capson {position:absolute;top:0px;width:104%;text-align:left;left:0;background-color:#bf0202;color:#FFF;padding: 0 3px}
+#_regBirthdate{width:136%;}
+#_regBirthdateYoung, #_regEmail_format {font-size:10px;height:16px;text-align:left;padding-top:3px}
+.congratulations {text-align:center;font-size:1.2em;color:#fff; padding:10px 40px;}
+#usessoaccount {width:600px}
+#applyarkhunter, #registernewaccount {display:block;padding-top:20px;text-align:center}
+#usessoaccount span {}
+#usessoaccount .submit,
+#notAuthenticatedModal .submit{width:450px;height:38px;background-color:#155976;border:1px solid #000;font-family: 'MicrogrammaExtD-Med', sans-serif;color:#FFF;text-transform:uppercase;display:block;font-size:.9em;margin:0 auto;word-spacing:0.2em;letter-spacing:0.2em;}
+#platform-preference {height:170px;width:500px;display:block;}
+#platform-preference .platforms {width:155px;height:40px; float:left;}
+#platform-preference #null{font-weight:bold; display:block;}
+#platform-preference #_regPlatform_preference.field-errors {color:#b3231d;font-weight:bold;height:25px;position:relative;text-align:center;clear:both;padding-top:15px}
+#platform-preference .submit {height:38px;background-color:#155976;border: 1px solid #000;font-family: 'MicrogrammaExtD-Med', sans-serif;color:#FFF; text-transform:uppercase; font-size:.9em;position: absolute; bottom:15px; right: 15px;word-spacing:0.2em;letter-spacing:0.2em}
+#congratulations{color:#000;text-align:center;padding-top:38px;height:69px}
+footer p{ font-size:.85em;color:#a6a6a6}
+.mar-right-15 {margin-right:15px}
+*:-moz-placeholder:focus{color:transparent !important;}
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+  body {
+    /*background:#DADADA none repeat 0 0; */
+  }
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*  .logo {
+    background: url(logo2x.jpg) no-repeat;
+    background-size: 212px 303px;
+  }*/
+
+}
+
+/* Facebook Pre-order styles */
+
+body.fb-order {background-image:none;background-color:#2E4856}
+.fb-order .row, .fb-order .row.content{max-width:810px;min-width:810px}
+.fb-order .row .twocol {width: 7.45%}
+.fb-order .row .fourcol {width: 34.75%}
+.fb-order .trion-nav{display:none}
+.fb-order header#header-wrap{display:none}
+.fb-order .frame-top {background-image:none; margin-top: 0}
+.fb-order .frame-mid {background-image:none;margin-top:0}
+.fb-order .container {background-color:#2E4856;max-width:810px;min-width:810px}
+.fb-order .share{display:none}
+.fb-order .row.content{max-width:810px;min-width:810px}
+.fb-order .page-details {padding: 15px 0 0 15px}
+.fb-order .bonuses .outlander .text{left:80px;top:20px}
+.fb-order .bonuses .outlander .text.weapon {left: -74px;top:126px}
+.fb-order .game-editions.row.content {max-width:810px;min-width:810px}
+.fb-order .row.game-details, .fb-order .row.retailers, .fb-order .row.console.retailers {background-image:none}
+.fb-order .row.product2, .fb-order .row.product3 {background-image:none}
+.fb-order .row.game-details .game-details-bg, .fb-order .row.product3 .game-details-bg, .fb-order .row.retailers .retailers-bg {background-image:none;width:810px;}
+.fb-order .game-editions.row.content .edition-nav.row {max-width:810px;min-width:810px; width: 810px}
+.fb-order .last img {max-width: 70%}
+.fb-order .game-editions .viewall-btn {left: 125px}
+.fb-order .edition-nav .top-hr{width:818px}
+.fb-order .bonuses h1{width:314px}
+.fb-order .bonuses .text {font-size:0.8em}
+.fb-order .bonuses .infiltrator {right:144px}
+.fb-order .row.bottom-retailers {background-image:none; height: 0}
+.fb-order .row.console.retailers{padding-bottom: 25px}
+.fb-order .row.retailers ul {margin: 0 0 0 32px}
+.fb-order .row.retailers ul li {width:30%}
+.fb-order .disclaimer {padding-left:18px}
+.fb-order .row.product3 .game-details-bg.disclaimer {padding: 15px 0 15px 15px}
+.fb-order .frame-bot {background-image:none;min-height: 50px}
+.fb-order footer.footer {display: none}
+.fb-order {overflow-x:hidden}
+
+/* Law Keeper Promo*/
+.page-template.page-lawkeeper-promo {background:url(//webcdn.triongames.com/defiance/images/bg.jpg) no-repeat scroll center -41px #FFF}
+.page-template.page-lawkeeper-promo .page-details {padding-bottom: 13px; background: url(//webcdn.triongames.com/defiance/images/divider-thick.png) no-repeat scroll -23px 44px;}
+#lk-promo {width:936px; position: relative;clear:both}
+#lk-promo #mast-head {background: url(//webcdn.triongames.com/defiance/images/promo-most-wanted/lawkeeper-header-bg-v2.jpg) no-repeat center -13px scroll;height:511px;width:908px;padding-top:25px;margin:0 auto}
+#lk-promo #mast-head-bottom {width:908px;height:162px;display:block;background: url(//webcdn.triongames.com/defiance/images/promo-most-wanted/masterhead-bottom.png) no-repeat center bottom scroll;margin: 0 auto;}
+#lk-promo a, #lk-promo a:visited {color: #fff;}
+#lk-promo #mast-head p {font: 1.2em/0.9em 'gothambold','Arial','sans-serif';text-align:center;color:#204352;letter-spacing:.06em;margin-bottom:7px;display:block;}
+#lk-promo #mast-head h3 {font: 2em 'MicrogrammaExtD-Bold','sans-serif';text-transform:uppercase;text-align:center;color:#fff;background-color:#204352;width:314px;margin: 0 auto; letter-spacing: .06em}
+.language-de #lk-promo #mast-head h3 {width:331px;letter-spacing:0.15em;}
+.language-de #lk-promo #mast-head h4 {letter-spacing:-0.05em;font-size:3.2em;}
+.language-fr #lk-promo #mast-head h3 {letter-spacing:0.22em;}
+.language-fr #lk-promo #mast-head h4 {font-size:3.7em; line-height:1em;}
+#lk-promo #mast-head h4 {font: 4.5em/0.9em'gothambold','Arial','sans-serif';text-transform:uppercase;text-align:center;color:#204352}
+#lk-promo #mast-head h5 {color:#fff; text-align: center; font: 3.5em/0.95em 'gothambold','Arial','sans-serif';text-transform:uppercase;margin-top: 277px; text-shadow: 2px 2px 2px #000;}
+.language-fr #lk-promo #mast-head h5 {font-size:3.2em;line-height:1em;}
+#lk-promo h6 { font: 2.3em/0.9em'gothambold','Arial','sans-serif';color:#fff;text-transform: uppercase;padding-left: 15px; padding: 30px 0 20px 15px;}
+.browser-unknown #lk-promo h6 {font-size: 2.3em; line-height: 0.9em;}
+#lk-promo #body-stretch h6 {padding: 30px 0 0 40px}
+#lk-promo #mast-head-bottom p {text-align:right;font-size:.85em;padding-top:40px;}
+#lk-promo #mast-head-bottom .standard-btn {margin-top:49px;}
+#lk-promo #mast-head-bottom .reg-code {color:#fff;text-align:center;padding-top:12px;font:1.25em/0.9em 'gothambold','Arial','sans-serif';}
+#lk-promo #mast-head-bottom .fourcol.last {height:119px}
+#lk-promo .standard-btn {position:relative}
+#lk-promo .standard-btn a {background: url(//webcdn.triongames.com/defiance/images/cta/register_btn.png) no-repeat scroll 0 -8px;display:block;width:231px;margin: 0 auto;height: 44px;}
+#lk-promo .standard-btn a:hover {background-position:0 -58px}
+.language-de #lk-promo .standard-btn a {background-position:0 -308px}
+.language-de #lk-promo .standard-btn a:hover {background-position: 0 -358px}
+.language-fr #lk-promo .standard-btn a {background-position:0 -159px}
+.language-fr #lk-promo .standard-btn a:hover {background-position: 0 -208px}
+#lk-promo .standard-btn a span:hover{background:none}
+#lk-promo .standard-btn a .stars {display:none}
+#lk-promo .standard-btn a:hover:before{display: block;background: url(//webcdn.triongames.com/defiance/images/cta/hi_light.png) no-repeat scroll 0 0 transparent;height: 62px;left: 24px;position:absolute;top: -11px;width: 231px;z-index: 1; content: " "}
+#lk-promo #tabs {width: 908px; display: block; margin: 0 auto}
+#lk-promo #tabs nav {width: 100%; height: 45px; display: block; background: url(//webcdn.triongames.com/defiance/images/promo-most-wanted/promo-header.png) no-repeat scroll center top}
+#lk-promo #tabs nav ul li {list-style-type:none;display:inline;float:left}
+#lk-promo #tabs nav span{cursor:pointer;text-decoration:none;color:#FFF;font: 100 1em 'gothambook','Arial','sans-serif';width:119px;height:24px;display:block;text-align:center;padding-top:8px; background: url(//webcdn.triongames.com/defiance/images/promo-most-wanted/promo-btn-bg.png) no-repeat scroll center bottom}
+#lk-promo #tabs nav span.active {background-position: center top;cursor:default;}
+#lk-promo #tabs #body-stretch {background: url(//webcdn.triongames.com/defiance/images/promo-most-wanted/tabs-bg.png) repeat-y scroll center center; width: 100%; display: block; clear: both;padding-bottom: 25px;}
+#lk-promo #tabs .promo-tab-elements{}
+#lk-promo #tabs #body-stretch ul {margin:0;padding: 0 0 0 30px}
+#lk-promo #tabs #body-stretch li {list-style-type:none;color:#fff; margin: 15px 0; padding-top: 15px}
+#lk-promo #tabs #body-stretch li p {color:#fff;display:block;padding-bottom:15px;border-bottom: 1px solid #3d6c75;margin-left:15px;margin-left:57px;width:775px}
+#lk-promo #tabs #body-stretch li .sub-item {padding-left:15px; color:#abb9be; display: block; font-size:.9em; border: none;}
+#lk-promo .disclaimer {margin: 0; padding: 0 25px 0 15px;}
+#lk-promo .disclaimer a {color:#FFF;font-size:1em; }
+#lk-promo #tabs .number {font: 1.25em/.85em 'MicrogrammaExtD-Bold','sans-serif';width: 38px; height: 17px; margin-top: 5px; border-right: 2px solid #fff; text-align: center; display: block; float: left;}
+#lk-promo #footer {background: url(//webcdn.triongames.com/defiance/images/promo-most-wanted/promo-footer-v2.png) no-repeat scroll center bottom; padding-bottom: 25px; height: 1px}
+#lk-promo #details {padding: 25px 0;}
+#lk-promo #details dt, #lk-promo #details dd {font: 1em 'gothambook','Arial','sans-serif'; color: #FFF;}
+#lk-promo #details dt {font-family:  'gothambold','Arial','sans-serif';  margin: 15px 0 0 15px;}
+#lk-promo #details dd {line-height:1.5em;color:#FFF; margin: 3px 0 15px 15px;}
+
+/* Contest Rules */
+#contest-rules h1, #contest-rules h2 {text-align: center; font-size: 2em; }
+#contest-rules .alpha {list-style-type: upper-alpha;}
+#contest-rules .numeric {list-style-type: decimal;}
+#contest-rules a, #contest-rules a:visited {color: #6FE9F4;}
+
+.language-de #contest-rules p, .language-de #contest-rules li {font-size: .915em}
+.language-fr #contest-rules p, .language-fr #contest-rules li {font-size: .915em}
+
+.visuallyHidden{border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px}
