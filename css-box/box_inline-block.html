@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Ruge+Boogie' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'Ruge Boogie', arial, sans-serif;
+        }
+        .wrapper {
+            width:800px;
+            border:1px solid #000;
+            font-size:50px;
+
+            /* hack because 'inline-block' has white-space */
+            letter-spacing:-.25em;  
+            word-spacing:-1em;            
+        }
+        .wrapper div {
+            /* hack because 'inline-block' has white-space, this resets the 'letter-spacing' and 'word-spacing' from above */
+            letter-spacing:normal;  
+            word-spacing:normal;           
+        }
+        .leftCol, .rightCol {
+            display:inline-block;
+            width:400px;
+            height:100px; 
+            vertical-align:top;        
+            
+            /* IE hack */
+            zoom: 1;
+            *display: inline; 
+        }
+        .firstCol {
+            background-color:#b2d5ff;
+            height:100px;
+            text-align:center;
+        } 
+        .leftCol {
+            background-color:#9f9f9f;
+        } 
+        .rightCol {
+            background-color:#d0258a;
+        } 
+        </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="firstCol">800px</div>
+    <div class="leftCol">400px</div>
+    <div class="rightCol">400px</div>
+</div>
+
+</body>
+</html>
