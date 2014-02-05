@@ -1,0 +1,106 @@
+/* line 5, /source/css/style-guide.css.scss */
+.container {
+  font-family: arial, sans-serif; }
+
+/* line 9, /source/css/style-guide.css.scss */
+.helvLight {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  /* Firefox */ }
+
+/* line 14, /source/css/style-guide.css.scss */
+table {
+  width: 100%;
+  margin: 0 0 1rem 0; }
+  /* line 18, /source/css/style-guide.css.scss */
+  table th {
+    background-color: #F2F4F3; }
+  /* line 22, /source/css/style-guide.css.scss */
+  table th, table td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top; }
+    /* line 27, /source/css/style-guide.css.scss */
+    table th.swatch-col, table td.swatch-col {
+      width: 40px; }
+    /* line 31, /source/css/style-guide.css.scss */
+    table th.fontIcons, table td.fontIcons {
+      font-size: 1.5rem; }
+  /* line 36, /source/css/style-guide.css.scss */
+  table.table-bordered {
+    border: 1px solid #d5d9d8;
+    border-collapse: separate;
+    *border-collapse: collapsed; }
+    /* line 43, /source/css/style-guide.css.scss */
+    table.table-bordered th, table.table-bordered td {
+      border-left: 1px solid #d5d9d8;
+      border-top: 1px solid #d5d9d8; }
+      /* line 47, /source/css/style-guide.css.scss */
+      table.table-bordered th:first-child, table.table-bordered td:first-child {
+        border-left: 0; }
+    /* line 53, /source/css/style-guide.css.scss */
+    table.table-bordered tr:first-child th, table.table-bordered tr:first-child td {
+      border-top: 0; }
+  /* line 60, /source/css/style-guide.css.scss */
+  table.table-striped tr:nth-child(odd) td {
+    background-color: #F2F4F3; }
+
+/* line 67, /source/css/style-guide.css.scss */
+pre, code {
+  background-color: #F5F5F5;
+  border: 1px solid #d5d9d8;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin: 0 0 1rem 0;
+  padding: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left; }
+  /* line 79, /source/css/style-guide.css.scss */
+  pre:first-child, pre:last-child, code:first-child, code:last-child {
+    margin-bottom: 0; }
+
+/* line 85, /source/css/style-guide.css.scss */
+.live-style-guide #panel {
+  display: none; }
+/* line 89, /source/css/style-guide.css.scss */
+.live-style-guide .col .item {
+  min-height: 0; }
+
+/* line 96, /source/css/style-guide.css.scss */
+.mobile .live-style-guide .breakpoint > span:before {
+  background-color: rgba(0, 0, 255, 0.4);
+  content: "mobile"; }
+/* line 100, /source/css/style-guide.css.scss */
+.mobile .live-style-guide .breakpoint2 > span:before {
+  background-color: rgba(0, 0, 255, 0.4);
+  content: "mobile"; }
+
+/* line 107, /source/css/style-guide.css.scss */
+.tablet-ptr .live-style-guide .breakpoint > span:before {
+  background-color: rgba(255, 0, 0, 0.4);
+  content: "tablet (portrait)"; }
+/* line 111, /source/css/style-guide.css.scss */
+.tablet-ptr .live-style-guide .breakpoint2 > span:before {
+  background-color: rgba(255, 0, 0, 0.4);
+  content: "tablet-ptr"; }
+
+/* line 118, /source/css/style-guide.css.scss */
+.tablet-lnd .live-style-guide .breakpoint > span:before {
+  background-color: rgba(0, 255, 0, 0.4);
+  content: "tablet (landscape)"; }
+/* line 122, /source/css/style-guide.css.scss */
+.tablet-lnd .live-style-guide .breakpoint2 > span:before {
+  background-color: rgba(0, 255, 0, 0.4);
+  content: "tablet-lnd"; }
+
+/* line 129, /source/css/style-guide.css.scss */
+.desktop .live-style-guide .breakpoint > span:before {
+  background-color: rgba(255, 140, 0, 0.3);
+  content: "desktop"; }
+/* line 133, /source/css/style-guide.css.scss */
+.desktop .live-style-guide .breakpoint2 > span:before {
+  background-color: rgba(255, 140, 0, 0.3);
+  content: "desktop"; }

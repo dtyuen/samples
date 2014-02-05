@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1">
+    <link href="css/boilerplate.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="css/main.css" media="screen" rel="stylesheet" type="text/css" />
+      
+        <link href="css/isotope-style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    
+    <script src="js/vendor/modernizr-2.6.2.min.js" type="text/javascript"></script>
+</head>
+<body class="index">
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-left noDropdown">
+          <h1><strong>Logo</strong><br/> goes here</h1>
+          <h2>Dashboard</h2>
+        </div>
+
+        <div class="navbar-right">
+          <a href="details.html" class="btn-primary">Details</a>
+        </div>
+      </div><!-- .container -->            
+  </nav>
+
+    <div class="container">
+      
+
+<section id="options" class="clearfix"> 
+  <div class="option-combo">
+    <h3>Filter by:</h3>
+    <ul id="filters" class="option-set clearfix" data-option-key="filter">
+      <li><a href="#filter" data-option-value="*" class="selected">All</a></li>
+      <li><a href="#filter" data-option-value=".category1">Category 1</a></li>
+      <li><a href="#filter" data-option-value=".category2">Category 2</a></li>
+      <li><a href="#filter" data-option-value=".category3">Category 3</a></li>
+    </ul>
+  </div>
+
+  <div class="option-combo option-right">
+    <h3>Sort order:</h3>
+    <ul id="sort-direction" class="option-set clearfix" data-option-key="sortAscending">
+      <li><a href="#sortAscending=true" data-option-value="true" class="selected">Ascending</a></li>
+      <li><a href="#sortAscending=false" data-option-value="false">Descending</a></li>
+    </ul>
+  </div>
+
+  <div class="option-combo option-right">
+    <h3>Sort by:</h3>
+    <ul id="sort-by" class="option-set clearfix" data-option-key="sortBy">
+      <li><a href="#sortBy=original-order" data-option-value="original-order" class="selected">Default</a></li>
+      <li><a href="#sortBy=number" data-option-value="number">Percentage</a></li>
+      <li><a href="#sortBy=priority" data-option-value="priority">Priority</a></li>
+      <li><a href="#sortBy=date" data-option-value="date">Date</a></li>
+      <li><a href="#sortBy=name" data-option-value="name">Name</a></li>
+    </ul>
+  </div>
+</section><!-- #options -->
+
+<div id="isotope-container" class="row clearfix clickable">
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category2 element" data-priority="5" data-date="12/21/2013 3:30">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="desc">
+        <h3 class="name">Debrah</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">80%</p>
+      <p class="date">Date:<br/> 12/21/13 3:30am</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category1 height2 element" data-priority="5" data-date="4/18/2014 13:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">52%</p>
+      <p class="date">Date:<br/> 4/18/14 1:14pm</p>
+    </div>
+  </div>
+  
+      
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category2 height2 element" data-priority="1" data-date="2/1/2014 18:22">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">83%</p>
+      <p class="date">Date:<br/> 2/1/14 6:22pm</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category2 element" data-priority="5" data-date="6/9/2013 14:45">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">48%</p>
+      <p class="date">Date:<br/> 6/9/13 2:45pm</p>
+    </div>
+  </div>
+  
+      
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 height2 element" data-priority="5" data-date="7/28/2014 20:38">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">20%</p>
+      <p class="date">Date:<br/> 7/28/14 8:38pm</p>
+    </div>
+  </div>
+
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category2 element" data-priority="1" data-date="1/15/2013 14:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Debrah</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">93%</p>
+      <p class="date">Date:<br/> 1/15/13 2:14pm</p>
+    </div>
+  </div>
+
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 element" data-priority="5" data-date="8/18/2012 14:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Peter</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">37%</p>
+      <p class="date">Date:<br/> 8/18/12 2:14pm</p>
+    </div>
+  </div>
+  
+      
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category1 element" data-priority="5" data-date="7/12/2012 13:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Debrah</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">81%</p>
+      <p class="date">Date:<br/> 7/12/13 1:14pm</p>
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category2 element" data-priority="5" data-date="10/29/2014 17:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">18%</p>
+      <p class="date">Date:<br/> 10/29/14 5:14pm</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category3 element" data-priority="5" data-date="9/18/2013 6:22">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">51%</p>
+      <p class="date">Date:<br/> 9/18/13 6:22am</p>
+    </div>
+  </div>
+
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 element" data-priority="1" data-date="8/18/2012 14:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Peter</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">37%</p>
+      <p class="date">Date:<br/> 8/18/12 2:14pm</p>
+    </div>
+  </div>
+
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 element" data-priority="5" data-date="8/18/2012 14:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Peter</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">37%</p>
+      <p class="date">Date:<br/> 8/18/12 2:14pm</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category1 height2 element" data-priority="5" data-date="5/25/2014 13:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">27%</p>
+      <p class="date">Date:<br/> 5/25/14 1:14pm</p>
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 element" data-priority="1" data-date="9/21/2012 21:10">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">77%</p>
+      <p class="date">Date:<br/> 9/21/12 9:10pm</p>
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category3 element" data-priority="1" data-date="1/8/2014 22:51">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">75%</p>
+      <p class="date">Date:<br/> 1/8/14 10:51pm</p>
+    </div>
+  </div> 
+
+
+  <div class="col desktop-12col-span6 tablet-12col-span6 mobile-12col-span12 category1 element height2" data-priority="1" data-date="7/7/2014 18:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">99%</p>
+      <p class="date">Date:<br/> 7/7/14 6:14pm</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category2 element" data-priority="5" data-date="10/29/2014 17:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">18%</p>
+      <p class="date">Date:<br/> 10/29/14 5:14pm</p>
+    </div>
+  </div>
+
+
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category1 element" data-priority="5" data-date="3/7/2012 18:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">89%</p>
+      <p class="date">Date:<br/> 3/7/12 6:14pm</p>
+    </div>
+  </div>
+
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category2 height2 element" data-priority="5" data-date="1/15/2013 14:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Debrah</h3>
+        <p>Category 2</p>
+      </div>
+      <p class="number">93%</p>
+      <p class="date">Date:<br/> 1/15/13 2:14pm</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 element" data-priority="5" data-date="8/18/2012 14:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Peter</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">37%</p>
+      <p class="date">Date:<br/> 8/18/12 2:14pm</p>
+    </div>
+  </div>
+
+      
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category3 element" data-priority="5" data-date="9/21/2012 21:10">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Abby</h3>
+        <p>Category 3</p>
+      </div>
+      <p class="number">7%</p>
+      <p class="date">Date:<br/> 9/21/12 9:10pm</p>
+    </div>
+  </div>
+ 
+
+  <div class="col desktop-12col-span2 tablet-12col-span2 mobile-12col-span4 category1 element" data-priority="1" data-date="11/11/2011 9:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+      <div class="ribbon hotspot">
+        <i class="icon-hotspot"></i>
+      </div>
+      <div class="desc">
+        <h3 class="name">Debrah</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">71%</p>
+      <p class="date">Date:<br/> 11/11/11 9:14am</p>
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span8 category1 element" data-priority="5" data-date="3/7/2012 18:14">
+    <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+
+      <div class="desc">
+        <h3 class="name">Carter</h3>
+        <p>Category 1</p>
+      </div>
+      <p class="number">89%</p>
+      <p class="date">Date:<br/> 3/7/12 6:14pm</p>
+    </div>
+  </div>
+
+</div><!-- #isotope-container -->
+
+
+<!-- Large modal -->
+<!--button class="btn btn-primary" data-toggle="modal" data-target=".bs-modal-lg">Large modal</button-->
+<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ... Modal content ...
+      </div>
+      <div class="modal-footer clearfix">
+        <div style="float:right">
+          <a href="#" class="btn-secondary"><i class="icon-download"></i> Download</a>
+          <a href="#" class="btn-secondary"><i class="icon-print"></i> Print</a>
+          <a href="#" class="btn-primary">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div><!-- .container -->
+
+    <div style="padding:8px; margin:0 auto; text-align:center; display:none;">
+        <span style="font-size:16px;">Font size: 16px | </span> 
+        <span style="font-size:10px;">Font size: 10px | </span>
+        <span style="font-size:1rem;">Font size: 1rem | </span>
+        <span style="font-size:1em;">Font size: 1em | </span>
+    </div>
+
+    <div id="panel"><!-- info-panel -->
+        <a class="close-x" id="close-x">x</a>
+        <dl>
+            <dt>window-width:</dt>
+            <dd class="win"></dd>
+            <dt>body-width:</dt>
+            <dd class="width"></dd>
+            <dt>font-size:</dt>
+            <dd class="fontsize"></dd>
+            <dt>breakpoint:</dt>
+            <dd class="breakpoint"></dd>
+        </dl>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+      
+        <script src="js/vendor/jquery.isotope.min.js" type="text/javascript"></script>
+
+    
+    <script src="js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/plugins.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

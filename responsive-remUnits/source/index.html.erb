@@ -1,0 +1,97 @@
+---
+title: Dashboard
+---
+
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'isotope-style' %>
+<% end %>
+
+<% content_for :scripts do %>
+  <%= javascript_include_tag 'vendor/jquery.isotope.min' %>
+<% end %>
+
+<section id="options" class="clearfix"> 
+  <div class="option-combo">
+    <h3>Filter by:</h3>
+    <ul id="filters" class="option-set clearfix" data-option-key="filter">
+      <li><a href="#filter" data-option-value="*" class="selected">All</a></li>
+      <li><a href="#filter" data-option-value=".category1">Category 1</a></li>
+      <li><a href="#filter" data-option-value=".category2">Category 2</a></li>
+      <li><a href="#filter" data-option-value=".category3">Category 3</a></li>
+    </ul>
+  </div>
+
+  <div class="option-combo option-right">
+    <h3>Sort order:</h3>
+    <ul id="sort-direction" class="option-set clearfix" data-option-key="sortAscending">
+      <li><a href="#sortAscending=true" data-option-value="true" class="selected">Ascending</a></li>
+      <li><a href="#sortAscending=false" data-option-value="false">Descending</a></li>
+    </ul>
+  </div>
+
+  <div class="option-combo option-right">
+    <h3>Sort by:</h3>
+    <ul id="sort-by" class="option-set clearfix" data-option-key="sortBy">
+      <li><a href="#sortBy=original-order" data-option-value="original-order" class="selected">Default</a></li>
+      <li><a href="#sortBy=number" data-option-value="number">Percentage</a></li>
+      <li><a href="#sortBy=hotspot" data-option-value="priority">Priority</a></li>
+      <li><a href="#sortBy=date" data-option-value="date">Date</a></li>
+      <li><a href="#sortBy=name" data-option-value="name">Name</a></li>
+    </ul>
+  </div>
+</section><!-- #options -->
+
+<div id="isotope-container" class="row clearfix clickable">
+
+  <% data.isotope.each do |k| %>
+    <%
+      if k.size == "large"
+        cssClass = "desktop-12col-span6 tablet-12col-span6 mobile-12col-span12"
+      elsif k.size == "medium"
+        cssClass = "desktop-12col-span4 tablet-12col-span4 mobile-12col-span8"
+      else
+        cssClass = "desktop-12col-span2 tablet-12col-span2 mobile-12col-span4"
+      end
+    %>
+    <div class="col <%= cssClass %> <%= k.category %> <% if k.height == "tall" %>height2<% end %> element" data-priority="<%= k.priority %>" data-date="<%= k.dataDate %>">
+      <div class="item" data-toggle="modal" data-target=".bs-modal-lg">
+        <% if k.priority == 1 %>
+          <div class="ribbon hotspot">
+            <i class="icon-hotspot"></i>
+          </div>
+        <% end %>
+        <div class="desc">
+          <h3 class="name"><%= k.name %></h3>
+          <p><%= k.subtitle %></p>
+        </div>
+        <p class="number"><%= k.percent %></p>
+        <p class="date">Date:<br/> <%= k.friendlyDate %></p>
+      </div>
+    </div>
+  <% end %>
+
+</div><!-- #isotope-container -->
+
+
+<!-- Large modal -->
+<!--button class="btn btn-primary" data-toggle="modal" data-target=".bs-modal-lg">Large modal</button-->
+<div class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ... Modal content ...
+      </div>
+      <div class="modal-footer clearfix">
+        <div style="float:right">
+          <a href="#" class="btn-secondary"><i class="icon-download"></i> Download</a>
+          <a href="#" class="btn-secondary"><i class="icon-print"></i> Print</a>
+          <a href="#" class="btn-primary">View More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

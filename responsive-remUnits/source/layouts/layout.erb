@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1">
+    <%= stylesheet_link_tag 'boilerplate', 'bootstrap', 'main' %>
+    <% if content_for?(:stylesheets) %>  
+      <%= yield_content :stylesheets %>
+    <% end %>
+    <%= javascript_include_tag 'vendor/modernizr-2.6.2.min' %>
+</head>
+<body class="<%= page_classes %>">
+
+    <%= partial current_page.data.nav || "partials/nav-1" %>
+
+    <div class="container">
+      <%= yield %>
+    </div><!-- .container -->
+
+    <div style="padding:8px; margin:0 auto; text-align:center; display:none;">
+        <span style="font-size:16px;">Font size: 16px | </span> 
+        <span style="font-size:10px;">Font size: 10px | </span>
+        <span style="font-size:1rem;">Font size: 1rem | </span>
+        <span style="font-size:1em;">Font size: 1em | </span>
+    </div>
+
+    <div id="panel"><!-- info-panel -->
+        <a class="close-x" id="close-x">x</a>
+        <dl>
+            <dt>window-width:</dt>
+            <dd class="win"></dd>
+            <dt>body-width:</dt>
+            <dd class="width"></dd>
+            <dt>font-size:</dt>
+            <dd class="fontsize"></dd>
+            <dt>breakpoint:</dt>
+            <dd class="breakpoint"></dd>
+        </dl>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<%= current_page.data.relativePath %>js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <% if content_for?(:scripts) %>  
+      <%= yield_content :scripts %>
+    <% end %>
+    <%= javascript_include_tag 'vendor/bootstrap.min', 'plugins', 'main' %>
+</body>
+</html>

@@ -1,0 +1,357 @@
+---
+title: Style Guide
+nav: partials/nav-style-guide
+relativePath: ../
+
+primaryColors:
+  -
+    scssVar: $whiteMedium
+    hexColor: f5f5f5
+  -
+    scssVar: $whiteDark
+    hexColor: e5e5e5
+  -
+    scssVar: $grayLight
+    hexColor: d4d4d4
+  -
+    scssVar: $grayMedium
+    hexColor: bbb
+  -
+    scssVar: $grayDark
+    hexColor: 9b9b9b
+  -
+    scssVar: $blackLight
+    hexColor: 828282
+  -
+    scssVar: $blackMedium
+    hexColor: 4A4A4A
+  -
+    scssVar: $blueLight
+    hexColor: D3EBF5
+  -
+    scssVar: $blueMedium
+    hexColor: 4ABAE2
+  -
+    scssVar: $hoverBlue
+    hexColor: 81C9E3
+
+fontIcons:
+  -
+    cssClass: icon-cog
+    encodeNum: e600
+  -
+    cssClass: icon-checkmark
+    encodeNum: e607
+  -
+    cssClass: icon-close
+    encodeNum: e609
+  -
+    cssClass: icon-users
+    encodeNum: e60c
+  -
+    cssClass: icon-bubble
+    encodeNum: e60d
+  -
+    cssClass: icon-menu
+    encodeNum: e60e
+  -
+    cssClass: icon-grid
+    encodeNum: e60f
+  -
+    cssClass: icon-checkmark-circle
+    encodeNum: e610
+  -
+    cssClass: icon-bars
+    encodeNum: e611
+  -
+    cssClass: icon-save
+    encodeNum: e601
+  -
+    cssClass: icon-download
+    encodeNum: e602
+  -
+    cssClass: icon-print
+    encodeNum: e603
+  -
+    cssClass: icon-down-arrow
+    encodeNum: e604
+  -
+    cssClass: icon-hotspot
+    encodeNum: e605
+  -
+    cssClass: icon-up-arrow
+    encodeNum: e606
+  -
+    cssClass: icon-dots
+    encodeNum: e60a    
+  -
+    cssClass: icon-search
+    encodeNum: e60b 
+  -
+    cssClass: icon-calendar
+    encodeNum: e613
+  -
+    cssClass: icon-quality
+    encodeNum: e614
+  -
+    cssClass: icon-user
+    encodeNum: e615
+  -
+    cssClass: icon-registry
+    encodeNum: e616
+  -
+    cssClass: icon-utilization
+    encodeNum: e617
+  -
+    cssClass: icon-search2
+    encodeNum: e608 
+  -
+    cssClass: icon-checkmark2
+    encodeNum: e612 
+---
+
+<% content_for :stylesheets do %>
+  <%= stylesheet_link_tag 'style-guide' %>
+<% end %>
+
+<div class="row clearfix">
+  <div class="col desktop-12col-span12 tablet-12col-span12 mobile-12col-span12">
+    <h2>Fonts</h2>
+    <table class="table-bordered table-striped">
+      <tr>
+        <th>Font Name</th>
+        <th>CSS</th>
+      </tr>
+      <tr>
+        <td class="helvLight">Helvetica Neue Light</td>
+        <td>
+<pre>
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-weight: 300;  /* Firefox */
+</pre>          
+        </td>
+      </tr>
+    </table>
+
+    <div class="row clearfix">
+      <h2>Primary Colors</h2>
+      <%
+        primaryColorsLength = current_page.data.primaryColors.length
+        primaryColorsHalf = primaryColorsLength / 2
+
+        current_page.data.primaryColors.each_with_index do |k, index|
+      %>
+        <% if (index == 0) || (index == primaryColorsHalf) then %>
+          <div class="col desktop-12col-span6 tablet-12col-span6 mobile-12col-span12">
+            <table class="table-bordered table-striped">
+              <tr>
+                <th>SCSS Variable</th>
+                <th>Hex Value</th>
+                <th class="swatch-col">Color</th>
+              </tr>
+        <% end %>
+
+            <tr>
+              <td><%= k.scssVar %></td>     
+              <td>#<%= k.hexColor %></td>
+              <td class="swatch-col" style="background-color:#<%= k.hexColor %>"></td>
+            </tr>
+
+        <% if (index == (primaryColorsHalf - 1)) || (index == (primaryColorsLength - 1)) then %>
+            </table>
+          </div><!-- .col--> 
+        <% end %>
+
+      <% end %>
+    </div><!-- .row -->
+
+
+    <h2>Buttons</h2>
+    <table class="table-bordered">
+      <tr>
+        <th>Button</th>
+        <th>Usage</th>
+        <th>HTML</th>
+      </tr>
+      <tr>
+        <td class="helvLight"><a href="#" class="btn-primary">Connect</a></td>
+        <td>Primary button</td>
+        <td>
+<pre>
+&lt;a href="#" class="btn-primary"&gt;Connect&lt;/a&gt;
+</pre>          
+        </td>
+      </tr>
+      <tr>
+        <td class="helvLight"><a href="#" class="btn-primary withSidebar clearfix"><span>Watchlist</span> <span>3</span></a></td>
+        <td>Primary button with Sidebar</td>
+        <td>
+<pre>
+&lt;a href="#" class="btn-primary withSidebar clearfix"&gt;
+  &lt;span&gt;Watchlist&lt;/span&gt; &lt;span&gt;3&lt;/span&gt;
+&lt;/a&gt;
+</pre>          
+        </td>
+      </tr>
+      <tr>
+        <td class="helvLight"><a href="#" class="btn-secondary">Connect</a></td>
+        <td>Secondary button</td>
+        <td>
+<pre>
+&lt;a href="#" class="btn-secondary"&gt;Connect&lt;/a&gt;
+</pre>          
+        </td>
+      </tr>
+      <tr>
+        <td class="helvLight"><a href="#" class="btn-secondary withSidebar clearfix"><span>Watchlist</span> <span>3</span></a></td>
+        <td>Secondary button with Sidebar</td>
+        <td>
+<pre>
+&lt;a href="#" class="btn-secondary withSidebar clearfix"&gt;
+  &lt;span&gt;Watchlist&lt;/span&gt; &lt;span&gt;3&lt;/span&gt;
+&lt;/a&gt;
+</pre>          
+        </td>
+      </tr>
+    </table>
+
+
+    <h2>Icon Fonts</h2>
+    <p>Icon fonts were created with <a href="http://icomoon.io/" target="_blank">IcoMoon</a>.</p>
+    <p>The "/fonts/_svg-icons" folder contains the original ".svg" icon files. You can import the ".svg" files, or the "selection.json", back to the <a href="http://icomoon.io/app/" target="_blank">IcoMoon app</a> using the *Import Icons* button (or via Main Menu > Manage Projects) to retrieve the previous icon selection.</p>
+
+    <p>With the font-encoding number, you can use it as an html-entity or in the CSS ':before' selector in the 'content' property. Example:</p>
+
+    <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span12">
+      <strong>Font encoding number</strong>
+<pre>
+e600
+</pre>  
+    </div>
+    
+    <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span12">
+      <strong>HTML entity</strong>
+<pre>
+&amp;#xe600;
+</pre>  
+    </div>
+
+    <div class="col desktop-12col-span4 tablet-12col-span4 mobile-12col-span12">
+      <strong>CSS class</strong>
+<pre>
+.icon-cog:before {
+  content: "\e600";
+}
+</pre> 
+    </div>
+
+    <div class="row clearfix">   
+      <%
+        fontIconsLength = current_page.data.fontIcons.length
+        fontIconsHalf = fontIconsLength / 2
+
+        current_page.data.fontIcons.each_with_index do |k, index|
+      %>
+        <% if (index == 0) || (index == (fontIconsHalf)) then %>
+          <div class="col desktop-12col-span6 tablet-12col-span6 mobile-12col-span12">
+          <table class="table-bordered table-striped">
+            <tr>
+              <th>Icon</th>
+              <th>CSS class</th>
+              <th>Font encoding number</th>
+            </tr>
+        <% end %>
+
+            <tr>
+              <td class="fontIcons"><i class="<%= k.cssClass %>"></i></td>     
+              <td>.<%= k.cssClass %></td>
+              <td><%= k.encodeNum %></td>
+            </tr>
+
+        <% if (index == (fontIconsHalf - 1)) || (index == (fontIconsLength - 1)) then %>
+            </table>
+          </div><!-- .col--> 
+        <% end %>
+
+      <% end %>
+    </div><!-- .row -->
+
+    <hr/>
+
+    <h2>Grid system</h2>
+    <p>This site uses a 12-column fluid grid constructed with the <a href="http://susy.oddbird.net/" target="_blank">Susy</a> grid plugin for SASS/Compass. CSS classes are prefixed with the breakpoint ("mobile", "tablet", or "desktop"), followed by the number at the end that indicates the number of columns to span within the 12-column grid. Example:</p>
+
+    <p>
+      <span class="breakpoint"><strong>breakpoint:</strong> <span><span></span><br/>
+      <i>(resize the screen to see the divs respond)</i>
+    </p>
+
+    <div class="row clearfix"> 
+      <div class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12" style="border: 1px dashed black;">
+        <div class="item">
+          class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12"
+        </div>
+      </div>
+      <div class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12" style="border: 1px dashed black;">
+        <div class="item">
+          class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12"
+        </div>
+      </div>
+      <div class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12" style="border: 1px dashed black;">
+        <div class="item">
+          class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12"
+        </div>
+      </div>
+      <div class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12" style="border: 1px dashed black;">
+        <div class="item">
+          class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12"
+        </div>
+      </div>
+    </div><!-- .row -->
+
+    <p>&nbsp;</p>
+    
+    <strong>HTML markup</strong>
+<pre>
+  &lt;div class="col desktop-12col-span3 tablet-12col-span6 mobile-12col-span12"&gt;
+      This div spans 3 columns on the 'desktop' breakpoint,
+      6 columns on the 'tablet' breakpoint,
+      and 12 columns on the 'mobile' breakpoint.
+  &lt;/div&gt;
+</pre> 
+
+    <p>Gutters are created by padding declared in the .col class.</p>  
+    <p>If you're familiar with <a href="http://getbootstrap.com/css/#grid-options" target="_blank">Bootstrap's grid system</a>, the concepts and css class structure above should have sounded very similar.</p>    
+
+    <hr/>
+
+    <h2>Toggling Breakpoint classes in the &lt;html&gt; tag</h2>    
+    <p>In addition to media-queries in the .css, a simple script in "/js/main.js" toggles between breakpoint classes in the &lt;html&gt; tag on window 'resize'. This should be a very simple script to add or modify if you need other breakpoints.</p>  
+
+    <p>
+      <span class="breakpoint2"><strong>&lt;html&gt; breakpoint class:</strong> <span><span></span>
+    </p>
+
+<pre>
+  function toggleBreakpoint() {
+    var windowWidth = $window.width();
+     // toggle breakpoint classes
+    $html.toggleClass('desktop', (windowWidth >= 1025));
+    $html.toggleClass('tablet-lnd', ( (windowWidth >= 769) && (windowWidth <= 1024) ));
+    $html.toggleClass('tablet-ptr', ( (windowWidth >= 640) && (windowWidth <= 768) ));          
+    $html.toggleClass('mobile', (windowWidth <= 639) );
+  }
+
+  toggleBreakpoint();   // on initial load
+  
+  $(window).on('resize', function () {
+      toggleBreakpoint();   // on window resize
+  });
+</pre> 
+
+    <hr/>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div><!-- .col-->
+</div><!-- .row -->

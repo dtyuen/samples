@@ -1,0 +1,69 @@
+// -----------------------------------------------------------------
+//  Mixin for rem units
+//  http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+//
+//  example:
+//    @include rem-fallback(margin, 10, 20, 30, 40);
+//
+//  returns:
+//     body {
+//       margin: 100px 200px 300px 400px;
+//       margin: 10rem 20rem 30rem 40rem; 
+//     }
+// -----------------------------------------------------------------
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;  //base font-size of 16px
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}
+
+
+// -----------------------------------------------------------------
+//  Generate class for each column-span in a Susy layout in 12-column grid
+// -----------------------------------------------------------------
+@mixin make-colSpans-withPrefix($num, $prefix) {
+  @for $i from 1 through $num {
+    .#{$prefix}-#{$num}col-span#{$i} {
+      @include span-columns($i);
+    }
+  }
+  .#{$prefix}-#{$num}col-hide {
+    display: none !important;
+  }
+  .#{$prefix}-#{$num}col-omega {
+    @include omega;
+  }
+  html:after { 
+    content: "#{$prefix}";
+    display: none;
+  } 
+}
+
+
+
+

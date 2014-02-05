@@ -1,0 +1,24 @@
+@import "sassy-buttons";
+
+.gradient-example-button {@include sassy-button;}
+
+.gradient-button-simple {
+  @include sassy-button("simple");  
+}
+
+.gradient-button-matte {
+  @include sassy-button("matte");  
+}
+
+.gradient-button-shiny {
+  @include sassy-button("shiny");  
+}
+
+.gradient-button-glass {
+  @include sassy-button("glass");  
+}
+
+.gradient-button-flat {
+  @include sassy-button("flat");  
+}
+

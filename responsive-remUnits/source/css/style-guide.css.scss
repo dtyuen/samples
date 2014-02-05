@@ -1,0 +1,141 @@
+@import "partials/my-mixins";
+
+$tableBorder: #D5D9D8;
+
+.container {
+  font-family: arial, sans-serif;
+}
+
+.helvLight {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;  /* Firefox */
+}
+
+table {
+  width: 100%;
+  margin: 0 0 1rem 0;
+
+  th {
+    background-color: #F2F4F3;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    
+    &.swatch-col {
+      width: 40px;
+    }
+
+    &.fontIcons {
+      font-size: 1.5rem;
+    }
+  }
+
+  &.table-bordered {
+    border: 1px solid $tableBorder;    
+    border-collapse: separate;     // Done so we can round those corners!    
+    *border-collapse: collapsed;   // IE7 can't round corners anyway
+    //background-clip: padding-box;
+    //border-radius: 5px;
+
+    th, td {
+      border-left: 1px solid $tableBorder;
+      border-top: 1px solid $tableBorder;
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+
+    tr:first-child {      
+      th, td {
+        border-top: 0;
+      }  
+    }
+  }
+
+  &.table-striped {
+    tr:nth-child(odd) td {
+      background-color: #F2F4F3;
+    }
+  }
+
+}
+
+pre, code {
+  background-color: #F5F5F5;
+  border: 1px solid $tableBorder;
+  border-radius: 4px;
+  display: block;
+  @include rem-fallback(font-size, 0.875);
+  margin: 0 0 1rem 0;
+  padding: 8px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: left;
+
+  &:first-child, &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.live-style-guide {
+  #panel {
+    display: none;
+  }
+
+  .col .item {
+    min-height: 0;
+  }
+
+}
+
+.mobile .live-style-guide {
+  .breakpoint > span:before {
+    background-color: rgba(0, 0, 255, 0.4);
+    content: "mobile";
+  } 
+  .breakpoint2 > span:before {
+    background-color: rgba(0, 0, 255, 0.4);
+    content: "mobile";
+  } 
+}
+
+.tablet-ptr .live-style-guide {  
+  .breakpoint > span:before  {
+    background-color: rgba(255, 0, 0, 0.4);
+    content: "tablet (portrait)";
+  }  
+  .breakpoint2 > span:before {
+    background-color: rgba(255, 0, 0, 0.4);
+    content: "tablet-ptr";
+  } 
+}
+
+.tablet-lnd .live-style-guide {  
+  .breakpoint > span:before  {
+    background-color: rgba(0, 255, 0, 0.4);
+    content: "tablet (landscape)";
+  }  
+  .breakpoint2 > span:before  {
+    background-color: rgba(0, 255, 0, 0.4);
+    content: "tablet-lnd";
+  } 
+}
+
+.desktop .live-style-guide {
+  .breakpoint > span:before  {
+    background-color: rgba(255, 140, 0, 0.3);
+    content: "desktop";
+  }  
+  .breakpoint2 > span:before  {
+    background-color: rgba(255, 140, 0, 0.3);
+    content: "desktop";
+  } 
+}
+
+
+
+

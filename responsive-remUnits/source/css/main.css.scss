@@ -1,0 +1,786 @@
+@import "susy";
+@import "sassy-buttons";
+@import "partials/my-mixins";
+
+@font-face {
+  font-family: 'iconfonts';
+  src:url('../fonts/iconfonts.eot');
+  src:url('../fonts/iconfonts.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfonts.woff') format('woff'),
+    url('../fonts/iconfonts.ttf') format('truetype'),
+    url('../fonts/iconfonts.svg#iconfonts') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$mobile: "mobile";
+$tablet: "tablet";
+$desktop: "desktop";
+
+$total-columns: 12;       // min default grid
+$column-width: 6.25rem;   // width each column
+$gutter-width: 0rem;      // width of each gutter
+$grid-padding: 0.625rem;  // grid-padding
+
+$container-style: fluid;
+
+$whiteMedium: #f5f5f5;
+$whiteDark: #e5e5e5;
+$grayLight: #d4d4d4;
+$grayMedium: #bbb;
+$grayDark: #9b9b9b;
+$blackLight: #828282;
+$blackMedium: #4A4A4A;
+$blueLight: #D3EBF5;
+$blueMedium: #4ABAE2;
+$hoverBlue: #81C9E3;
+
+/* --------------------------------------------------------------
+  Default styles
+----------------------------------------------------------------- */
+html {
+  // Susy 'at-breakpoint' calculates with base of 1rem = 16px, so do not use base of 62.5% below:
+  //set baseline to 1rem = 10px ... http://snook.ca/archives/html_and_css/font-size-with-rem
+  //font-size: 62.5%;
+}
+
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;  /* Firefox */
+  color: #000;
+  overflow-x: hidden;
+  line-height: 1.3;
+  //@include rem-fallback(font-size, 1.3);
+  @include rem-fallback(padding-top, 4.625);  // add padding-top for bootstrap .navbar-fixed-top
+}
+
+a {
+  color: $blueMedium;
+  text-decoration: none;
+
+  &:hover {
+    color: $blueLight;
+  }
+}
+
+p, pre, code, h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  @include rem-fallback(font-size, 2);
+}
+
+h2 {
+  @include rem-fallback(font-size, 1.5);
+}
+
+h3 {
+  @include rem-fallback(font-size, 1.1875);
+}
+
+h4 {
+  @include rem-fallback(font-size, 1);
+}
+
+h5 {
+  @include rem-fallback(font-size, 0.8125);
+}
+
+h6 {
+  @include rem-fallback(font-size, 0.8125);
+}
+
+.container { 
+  @include container($total-columns);  // establish the outer grid-containing element
+  //@include susy-grid-background;
+  //border: 1px solid red;
+
+  ol, ul {
+    text-align:left;
+  }
+}
+
+.row {
+  width: 100%;
+  //background-color: #999;
+  //@include rem-fallback(margin, 1, 0);
+}
+
+.col {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* all others */
+  @include rem-fallback(padding, 0.625);
+  //background-color: #ccc;
+
+  .item {
+    @include rem-fallback(min-height, 11);
+    background-color: $whiteDark;
+    position: relative;
+    width: 100%;
+  }
+}
+
+/*---- icons ----*/
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'iconfonts';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cog:before {
+  content: "\e600";
+}
+.icon-checkmark:before {
+  content: "\e607";
+}
+.icon-close:before {
+  content: "\e609";
+}
+.icon-users:before {
+  content: "\e60c";
+}
+.icon-bubble:before {
+  content: "\e60d";
+}
+.icon-menu:before {
+  content: "\e60e";
+}
+.icon-grid:before {
+  content: "\e60f";
+}
+.icon-checkmark-circle:before {
+  content: "\e610";
+}
+.icon-bars:before {
+  content: "\e611";
+}
+.icon-save:before {
+  content: "\e601";
+}
+.icon-download:before {
+  content: "\e602";
+}
+.icon-print:before {
+  content: "\e603";
+}
+.icon-down-arrow:before {
+  content: "\e604";
+}
+.icon-hotspot:before {
+  content: "\e605";
+}
+.icon-up-arrow:before {
+  content: "\e606";
+}
+.icon-dots:before {
+  content: "\e60a";
+}
+.icon-search:before {
+  content: "\e60b";
+}
+.icon-calendar:before {
+  content: "\e613";
+}
+.icon-quality:before {
+  content: "\e614";
+}
+.icon-user:before {
+  content: "\e615";
+}
+.icon-registry:before {
+  content: "\e616";
+}
+.icon-utilization:before {
+  content: "\e617";
+}
+.icon-search2:before {
+  content: "\e608";
+}
+.icon-checkmark2:before {
+  content: "\e612";
+}
+
+
+/*---- links and buttons ----*/
+a {
+  color: $blueMedium;
+  text-decoration: none;
+
+  &:hover {
+    color: $hoverBlue;
+  }
+
+  &.btn-primary {
+    background-color: $blueMedium;     
+    border: 1px solid transparent;
+    border-radius: 4px;
+    float: left;
+    vertical-align: top;
+    @include rem-fallback(margin, 0.375, 0.75, 0, 0);
+    @include rem-fallback(padding, 0.2, 0.75);
+    @include rem-fallback(font-size, 1.125);
+    //@include sassy-button-gradient("glass");
+    color: white;
+
+    &:last-child {
+      @include rem-fallback(margin-right, 0);
+    }
+
+    &:hover {
+      background-color: $hoverBlue;
+    }
+  }
+
+  &.withSidebar {
+    padding: 0;
+    display: block;
+    min-width: 8.5rem;
+
+    span {
+      float: left;
+      @include rem-fallback(padding, 0.2, 0.75);
+
+      &:last-child {
+        border-left: 1px solid white;
+      }
+    }
+  }
+
+  &.btn-secondary {
+    @extend a.btn-primary;
+    background-color: $whiteMedium;
+    border: 1px solid $grayDark;
+    color: $grayDark;
+
+    &:hover {
+      background-color: $whiteDark;
+    }
+    
+    &.withSidebar span:last-child {
+      border-left: 1px solid $grayDark;
+    }
+  }
+
+  &.icon-search {
+    //@include rem-fallback(padding, 0, 0, 0, 0.375);
+    padding: 0;
+    line-height: 1.25;
+    @include rem-fallback(width, 1.5);
+    @include rem-fallback(height, 1.875);
+    @include rem-fallback(font-size, 1.375);
+    background-color: transparent;
+
+    &:before {
+      color: $blueMedium;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      &:before {
+        color: $hoverBlue;
+      }        
+    }
+  }
+}
+
+/*---- nav ----*/
+nav {
+  background-color: $whiteDark;
+  width: 100%;
+  @include rem-fallback(font-size, 1.25);
+  //@include rem-fallback(padding, 0.625, 0);
+
+  .container {
+    @include rem-fallback(padding, 0 ,1);    
+  }
+
+  h1, h2 {
+    color: $grayDark; 
+    font-weight: normal;
+    font-weight: 300;
+    float: left;
+    @include rem-fallback(margin, 0, 1.25, 0, 0);
+  }
+
+  h1 {
+    line-height: 1;
+    @include rem-fallback(font-size, 1.0625);  
+    @include rem-fallback(padding-right, 1.25);
+    border-right: 1px solid $grayDark;
+
+    strong {
+     @include rem-fallback(font-size, 1.5625);    
+    }
+  }
+
+  h2 {
+    vertical-align: top;
+    line-height: 1.5;
+    @include rem-fallback(font-size, 1.875);
+  }
+
+  .navbar-left {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* all others */
+    @include rem-fallback(min-width, 21.75);
+    float:left !important;
+    @include rem-fallback(padding, 0.625);
+
+    .dropdown-menu {
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* all others */
+      @include rem-fallback(min-width, 21.75);
+      background-color: $whiteDark;
+    }
+ 
+    &.isActive {
+      background-color: $grayDark;
+
+      h1 {
+        border-right: 1px solid $whiteDark;      
+      }
+
+      h1, h2 {
+        color: $whiteDark;      
+      }
+
+      button {
+        &.dropdown-toggle {
+          background-color: $whiteDark;
+
+          .icon-bar {
+            background-color: $grayDark;         
+          }
+        }      
+      }
+    }
+  }
+
+  .navbar-left.noDropdown {
+    min-width: 0;
+  }
+
+  .navbar-right {
+    float: right !important;
+    @include rem-fallback(padding, 0.625);
+  }
+
+  button {
+    &.dropdown-toggle {
+      @include rem-fallback(padding, 0.375);
+      @include rem-fallback(margin-right, 0.625);
+      background-color: $grayDark;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      @include rem-fallback(width, 2.75);
+      @include rem-fallback(height, 2.75);
+
+      &:hover {
+        background-color: $grayMedium;
+      }
+
+      .icon-bar {
+        display: block;
+        @include rem-fallback(height, 0.375);
+        border-radius: 3px;
+        background-color: $whiteDark;
+
+        + .icon-bar {
+          @include rem-fallback(margin-top, 0.375);
+        }
+      }
+    }
+  }
+
+  .dropdown-menu {
+    @include rem-fallback(font-size, 0.9375);
+    font-weight: 300;
+    color: $blackLight;
+
+    a {
+      color: $blackLight;
+
+      &:hover {
+        color: $blackMedium;
+      }      
+    }
+
+    ul.mainLinks {
+      list-style: none;
+      padding: 0;
+      width: 46%;
+      border: 1px solid $grayDark;
+      border-bottom: none;
+      border-top: none;
+
+      li a {
+        border-bottom: 1px solid $grayDark;
+        padding: 0.625rem 0.75rem;
+        padding-right: 0;
+
+
+        &:hover {
+          background-color: white;
+          
+        }
+
+        &.selected {
+          background-color: $grayDark;
+          color: $whiteDark; 
+        }
+
+        i[class*="icon-"] {
+          padding-right: 10px;
+        }
+      }       
+    }
+   
+    .rightLinks {
+      list-style: none;
+      padding: 0;
+      position: absolute;
+      left: 51%;
+      top: 20px;
+
+      .pic-clip {
+        float: left;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 100%;
+        margin: -5px 10px 10px 0;
+      }
+    }
+  }
+}
+
+/*---- corner ribbons ----*/
+.ribbon {
+  width: 0;
+  height: 0;
+  position: static !important;
+
+  i {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    @include rem-fallback(font-size, 2.75);
+    line-height: 3rem;
+    color: white;
+  }
+
+  &:before {
+    border-color: rgba(74, 186, 226, 0.7) rgba(74, 186, 226, 0.7) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    border-style: solid;
+    @include rem-fallback(border-width, 3);
+    content: "";
+    display: block;
+    position: absolute;
+    right:0;
+    top:0;
+    width: 0;
+    height: 0;
+  }
+  &.warning:before {
+    border-left: 4rem solid rgba(255, 187, 77, 0.88);
+    border-top: 4rem solid rgba(255, 187, 77, 0.88);
+  }  
+  &.hotspot {
+    &:before {
+      @include rem-fallback(width, 1.875);
+      @include rem-fallback(height, 1.875);
+      border: none;
+      background-color: $blueMedium;
+      right:10px;
+      top:10px;
+      border-radius: 4px;
+    }
+    i {
+      @include rem-fallback(font-size, 1.25);
+      line-height: 2rem; 
+      right: 17px;
+      top: 8px;     
+    }
+  }
+  &.dots {
+    &:before {
+      border: none;
+      background-color: none;      
+    }
+    i {
+      @include rem-fallback(font-size, 0.4375);
+      line-height: 0.5;
+      right: 5px;
+      top: 10px;
+
+      a.icon-dots {
+        color: $grayDark;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover {
+          color: $blueMedium;
+        } 
+      }      
+    }
+  }
+}
+
+/*---- info-panel ----*/
+#panel {
+  z-index: 1050;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px 30px 10px 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 21px;
+  color: #000;
+  border-radius: 10px;
+  font-family: arial, sans-serif;
+  //border-top-right-radius: 10px;
+
+  dl {
+    margin: 0;
+    padding: 0;
+
+    dt, dd {
+      float: left;
+      margin: 0;
+      padding: 0;
+      text-align: left;      
+    }
+
+    dt {
+      width: 120px;
+      font-weight: bold;
+    }
+
+    dd + dt {
+      clear: both;      
+    }
+  }
+
+  a.close-x {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: white;
+    display: block;
+    border-radius: 10px;
+    background-color: black;
+    font-weight: bold;
+    padding: 5px 7px 8px 7px;
+    line-height: .5;
+    cursor: pointer;
+
+    &:hover {
+      background-color: orange;
+    }
+  }
+}
+
+.mobile #panel {
+  background-color: rgba(0, 0, 255, 0.4);
+  .breakpoint:before {
+    content: "mobile";
+  } 
+}
+.tablet-ptr #panel {
+  background-color: rgba(255, 0, 0, 0.4);
+  .breakpoint:before  {
+    content: "tablet (portrait)";
+  }  
+}
+.tablet-lnd #panel {
+  background-color: rgba(0, 255, 0, 0.4);
+  .breakpoint:before  {
+    content: "tablet (landscape)";
+  }  
+}
+.desktop #panel {
+  .breakpoint:before  {
+    content: "desktop";
+  }  
+}
+
+
+/* mobile */
+@media screen and (max-width: 479px) { html { font-size: 11px; } }
+@media screen and (min-width: 480px) { html { font-size: 12px; } }
+
+/* tablet */
+@media screen and (min-width: 576px) { html { font-size: 12px; } }
+//@media screen and (min-width: 624px) { html { font-size: 13px; } }
+//@media screen and (min-width: 672px) { html { font-size: 14px; } }
+//@media screen and (min-width: 720px) { html { font-size: 15px; } }
+//@media screen and (min-width: 768px) { html { font-size: 16px; } }
+//@media screen and (min-width: 816px) { html { font-size: 17px; } }
+//@media screen and (min-width: 864px) { html { font-size: 18px; } }
+
+/* desktop / tablet-landscape */
+//@media screen and (min-width: 885px) { html { font-size: 12px; } }
+@media screen and (min-width: 959px) { html { font-size: 13px; } }
+@media screen and (min-width: 1033px) { html { font-size: 14px; } }
+@media screen and (min-width: 1106px) { html { font-size: 15px; } }
+@media screen and (min-width: 1180px) { html { font-size: 16px; } }
+@media screen and (min-width: 1254px) { html { font-size: 17px; } }
+@media screen and (min-width: 1328px) { html { font-size: 18px; } }
+
+
+/* --------------------------------------------------------------
+  Media-query for Mobile breakpoint
+----------------------------------------------------------------- */
+@media only screen and (max-width: 639px) {  
+  @include make-colSpans-withPrefix($total-columns, $mobile);
+
+  .element {
+    &.#{$mobile}-12col-span4, &.#{$mobile}-12col-span8, &.#{$mobile}-12col-span12 {
+      &.height2 {
+        .item {
+          height: 23.45rem;
+        } 
+      }
+    }
+  }
+
+  nav .navbar-left {
+    min-width: 20rem;
+
+    .dropdown-menu {
+      min-width: 20rem;
+    }
+  }
+
+}
+
+/* --------------------------------------------------------------
+  Media-query for Tablet breakpoint
+----------------------------------------------------------------- */
+/* iPads (portrait and landscape) */
+//@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+  @include make-colSpans-withPrefix($total-columns, $tablet);
+
+  .element {
+    &.#{$tablet}-12col-span2, &.#{$tablet}-12col-span4, &.#{$tablet}-12col-span6 {
+      &.height2 {
+        .item {
+          height: 23.35rem;
+        } 
+      }
+    }
+  }
+
+}
+
+/* iPads (portrait) */
+//@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  /* Styles */
+  //body {background-color:red;}
+}
+
+/* iPads (landscape) */
+//@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles */
+  //body {background-color:green;}
+}
+
+
+/* --------------------------------------------------------------
+  Media-query for Desktop breakpoint
+----------------------------------------------------------------- */
+@media only screen and (min-width: 1025px) {
+  @include make-colSpans-withPrefix($total-columns, $desktop); 
+
+  .element {
+    &.#{$desktop}-12col-span2, &.#{$desktop}-12col-span4, &.#{$desktop}-12col-span6 {
+      &.height2 {
+        .item {
+          height: 23.35rem;
+        } 
+      }
+    }
+  }
+
+}
+
+/* --------------------------------------------------------------
+  other default styles
+----------------------------------------------------------------- */
+.omega {
+  @include omega;
+}
+
+/*---- dashboard isotope styles ----*/
+.element {
+  float: left;
+  overflow: hidden;
+  position: relative;
+
+  &.category2 .item { background: #F0D58C;}
+  &.category1 .item  { background: #FFCCCC;}
+  &.category3 .item { background: #99FF99;}
+
+  .item {
+    border-radius: 5px;
+    border: 1px solid $grayDark;
+  }
+
+  .desc, .number, .date {
+    position: absolute;
+    margin: 0;
+    @include rem-fallback(left, 1);
+  }
+
+  .desc {
+    top: 0.625rem;
+    
+    h3 {
+      @include rem-fallback(font-size, 1.6);
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  .number {
+    @include rem-fallback(font-size, 2);
+    top: 4.5rem;
+  }
+
+  .date {
+    bottom: 0.625rem;
+    @include rem-fallback(font-size, 0.75);
+  }
+
+  /*&.white {
+    .item {
+      background-color: white;
+    }
+  }*/
+}
+
+.clickable .element {
+  
+  &.category2:hover .item { background: $whiteDark;}
+  &.category1:hover .item  { background: $whiteDark;}
+  &.category3:hover .item { background: $whiteDark;}
+
+}

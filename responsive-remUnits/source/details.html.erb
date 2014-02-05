@@ -1,0 +1,61 @@
+---
+title: Details
+nav: partials/nav-2
+---
+
+<div class="row clearfix">
+  <div class="col desktop-12col-span6 tablet-12col-span6 mobile-12col-span12">
+    <div class="item">
+      <div class="ribbon">
+        <i class="icon-hotspot"></i>
+      </div>
+      people count: <%= data.people.friends.count %>
+      <ul>
+        <% data.people.friends.each_with_index do |f, index| %>
+        <li><%= index + 1 %>: <%= f %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span6 tablet-12col-span6 mobile-12col-span12">
+    <div class="item">
+      <div class="ribbon">
+        <i class="icon-hotspot"></i>
+      </div>
+      sidebar count: <%= data.sidebar.count %>
+      <ul>
+        <% 1.upto(5) do |num| %>
+            <li><%= num %>: <%= data.sidebar[num] %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span3 tablet-12col-span3 mobile-12col-span6">
+    <div class="item">
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span3 tablet-12col-span3 mobile-12col-span6">
+    <div class="item">
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span3 tablet-12col-span3 mobile-12col-span6">
+    <div class="item">
+    </div>
+  </div>
+
+  <div class="col desktop-12col-span3 tablet-12col-span3 mobile-12col-span6">
+    <div class="item">
+    </div>
+  </div>
+</div><!-- .row -->
+
+<div class="row clearfix">
+  <div class="col desktop-12col-span12 tablet-12col-span12 mobile-12col-span12">
+    <div class="item">
+    </div>
+  </div>
+</div><!-- .row -->
