@@ -1,4 +1,4 @@
-This is the static code for:
+This is the static code for:  
 http://www.defiance.com/en/game/overview/faq/
 
 "faq.js" is the unminified file.
