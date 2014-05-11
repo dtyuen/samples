@@ -1,0 +1,117 @@
+<!doctype html>
+</html>
+<head>
+  <style>
+    body, html {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+    ul {margin-top: 5px;}
+    p {text-align:center;}
+
+    p#slide1_controls {
+      text-align:center;
+    }
+    #slide1_controls span {
+      padding-right:2em;
+      cursor:pointer;
+    }
+    #slide1_container {
+      width:450px;
+      height:280px;
+      margin:0 auto;
+      border: 2px solid red;
+      position: relative;
+    }
+    .toggleOverflow {
+      overflow:hidden;
+    }
+    #slide1_images {
+      /*width:1800px;*/
+    }
+    #slide1_images img {
+      padding:0;
+      margin:0;
+      /*float:left;*/
+      position: absolute;
+      left: 450px;
+      top: 0;
+      z-index: 10;
+      -webkit-transition: transform 1.0s ease-in-out;
+      -moz-transition: transform 1.0s ease-in-out;
+      -o-transition: transform 1.0s ease-in-out;
+      transition: transform 1.0s ease-in-out;
+    }
+    #slide1_images img:first-child {
+      transform: translateX(-450px);
+    }
+  </style>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      /*
+      $('#slide1_controls').on('click', 'span', function(){
+        $("#slide1_images").css("transform","translateX("+$(this).index() * -450+"px)");
+        $("#slide1_controls span").removeClass("selected");
+        $(this).addClass("selected");
+      });
+      */
+
+      var i = 1;
+      var id = setInterval(function () {
+          //alert( i + "|" + $('#slide1_container').innerWidth() );
+          //alert(i + " | " + $("#slide1_images").find('img').length );
+          $("#slide1_images").find('img:nth-child('+i+')').css({"transform":"translateX("+ -900 +"px)",'z-index':10});
+
+          if (i == 1) {
+            $("#slide1_images").find('img:last-child').css({'transform':'none','z-index':5});
+          } 
+          if (i > 1) {
+            $("#slide1_images").find('img:nth-child('+(i-1)+')').css({'transform':'none','z-index':5});
+          }
+          if ( i == $("#slide1_images").find('img').length ) {
+            i = 0;
+          } 
+
+          $("#slide1_images").find('img:nth-child('+(i+1)+')').css({"transform":"translateX("+ -450 +"px)",'z-index':10});
+
+          i++;  
+        }, 3000);
+
+      $('#toggleOverflow').click(function() {
+        $('#slide1_container').toggleClass('toggleOverflow');
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+<h3>Slider with CSS3 transition and translateX</h3>
+TODOs:
+<ul>
+  <li>Try to make flexible/responsive.</li>
+  <li>Might be able to replace javascript with CSS keyframe-animation.</li>
+</ul>
+
+<div id="slide1_container" class="toggleOverflow">
+  <div id="slide1_images">
+    <img src="img/boats.jpg">
+    <img src="img/sunset.jpg">
+    <img src="img/waterfall.jpg">
+    <img src="img/trees.jpg">
+  </div>
+</div>
+
+<p>
+  Container viewport indicated by red outlines.<br>
+  <button id="toggleOverflow">Toggle Container Overflow</button>
+</p>
+
+<!--p id="slide1_controls"><span class="selected">Image 1</span><span>Image 2</span><span>Image 3</span><span>Image 4</span></p-->
+
+</body>
+</html>
