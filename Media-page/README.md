@@ -1,6 +1,5 @@
-Please visit:  
+This is the static code formerly on:  
 http://www.defiance.com/en/media/videos/trailers/
 
-Then select from the "Filter by" dropmenu.
-
-"trailers-filter.js" is the unminified file.
+"trailers-filter.js" is the unminified file.  
+View 'defiance-trailers.html', and select from the "Filter by" dropmenu.
