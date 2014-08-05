@@ -1,0 +1,89 @@
+.vertical-align, .vertical-align-50, .vertical-align-60 {
+  top: 20px;
+
+  .card.pad-0 & {
+    top: 0;
+  }
+}
+
+.card {
+  h2 {
+    top: 20px;
+  }
+}
+
+header {
+  nav#navMenu {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.mainCTA {
+  .content {
+    a:hover {
+      background-color: #2eb135;
+    }
+  }
+}
+
+.modal {
+  form {
+    label {
+      display: block;
+    }
+
+    .select-bg {
+      select {
+        border: 1px inset #f2f2f2;
+      }
+    }
+  }
+}
+
+/*-- Team page --*/
+.team {
+  .photo {
+    .content {
+      cursor: pointer;
+
+      .bio {
+        display: none;
+      }
+
+      &:hover {
+        .bio {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+/*-- Jobs page --*/
+.jobs {
+  .cardDetail {
+    i.icon-stars {
+      top: auto;
+      bottom: -55px;
+    }
+
+    ul.benefits {
+      margin-top: 60px;
+    }
+  }
+}
+
+/*-- Press page --*/
+.press {
+  .pressLogo {
+    .cardDetail {
+      .vertical-align-50 {
+        top: 0;
+      }
+    }
+  }
+}

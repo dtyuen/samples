@@ -1,0 +1,50 @@
+.vertical-align,
+.vertical-align-50,
+.vertical-align-60 {
+  top: 20px;
+}
+.card.pad-0 .vertical-align,
+.card.pad-0 .vertical-align-50,
+.card.pad-0 .vertical-align-60 {
+  top: 0;
+}
+.card h2 {
+  top: 20px;
+}
+header nav#navMenu {
+  display: none;
+}
+header nav#navMenu.active {
+  display: block;
+}
+.mainCTA .content a:hover {
+  background-color: #2eb135;
+}
+.modal form label {
+  display: block;
+}
+.modal form .select-bg select {
+  border: 1px inset #f2f2f2;
+}
+/*-- Team page --*/
+.team .photo .content {
+  cursor: pointer;
+}
+.team .photo .content .bio {
+  display: none;
+}
+.team .photo .content:hover .bio {
+  display: block;
+}
+/*-- Jobs page --*/
+.jobs .cardDetail i.icon-stars {
+  top: auto;
+  bottom: -55px;
+}
+.jobs .cardDetail ul.benefits {
+  margin-top: 60px;
+}
+/*-- Press page --*/
+.press .pressLogo .cardDetail .vertical-align-50 {
+  top: 0;
+}
