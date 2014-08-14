@@ -2,14 +2,14 @@ Redesign project
 =====
 
 This is the initial html for a redesign project at:  
-https://www.wepay.com  
-https://www.wepay.com/team  
-https://www.wepay.com/platforms  
-https://www.wepay.com/about  
-https://www.wepay.com/features  
-https://www.wepay.com/jobs  
-https://www.wepay.com/customers  
-https://www.wepay.com/press  
+https://stage.wepay.com  
+https://stage.wepay.com/team  
+https://stage.wepay.com/platforms  
+https://stage.wepay.com/about  
+https://stage.wepay.com/features  
+https://stage.wepay.com/jobs  
+https://stage.wepay.com/customers  
+https://stage.wepay.com/press  
 
 Middleman
 =====
