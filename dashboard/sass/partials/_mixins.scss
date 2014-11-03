@@ -1,0 +1,81 @@
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; } 
+}
+
+@mixin x-appearance ($value) {
+  -webkit-appearance: $value;
+     -moz-appearance: $value;
+          appearance: $value;
+}
+
+//Also can use built in user-select: @include user-select(none);
+@mixin user-select ($value) {
+  -webkit-touch-callout: $value;
+  -webkit-user-select: $value;
+  -khtml-user-select: $value;
+  -moz-user-select: $value;
+  -ms-user-select: $value;
+  user-select: $value;
+}
+
+@mixin x-opacity ($value: 1) {
+  opacity: $value;
+  filter: alpha(opacity=$value * 100);
+}
+
+// Media Queries
+$tablet: 768px;
+$desk-md: 992px;
+$desk-lg: 1200px;
+
+@mixin responsive($width) {
+  @if $width == desk-lg {
+    @media only screen and (min-width: $desk-lg) {
+      @content;
+    }
+  }
+  @else if $width == desk-md {
+    @media only screen and (min-width: $desk-md) {
+      @content;
+    }
+  }
+  @else if $width == tablet {
+    @media only screen and (min-width: $tablet) {
+      @content;
+    }
+  }
+}
+
+%ellipsis {
+  display: block;
+  width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+%pseudo {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: 1;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%success {
+  content: "";
+  position: absolute;
+  top: 0.55rem;
+  left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../img/icon-circle-success.png);
+  background-repeat: no-repeat;
+  background-size: 1rem;
+}

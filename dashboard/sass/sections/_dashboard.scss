@@ -1,0 +1,1425 @@
+$dashboard-bg: #f6faff;
+$internet-bg: #3e93b4;
+$vpn-bg: #764cd5;
+$private-bg: #16a98f;
+$unused-bg: #5ab9dd;
+$widget-green: #72bd3d;
+
+@mixin widget-borders {
+  border-bottom: 2px solid $box-border;
+  border-right: 1px solid $box-border;
+}
+
+[data-view="dashboard"] #content {
+  background-color: $dashboard-bg;
+}
+
+#dashboard {
+  padding-bottom: 1rem;
+
+  .popover {
+    max-width: none;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+  }
+
+  i[class^="icon-"], i[class*=" icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .welcome-hdr {
+    background-color: $highlighted;
+    border-bottom: 2px solid #90cfe9;
+    border-right: 1px solid $box-border;
+    margin-top: 1rem;
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.375rem;
+      font-weight: bold;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .footnote {
+    font-size: .875rem;
+    color: $text-3;
+    position: relative;
+    top: -1rem;
+    padding-left: .5rem;
+  }
+
+  .welcome-intro {
+    background-color: white;
+    padding: 1.5rem 0 1rem 1rem;
+    margin-bottom: 1rem;
+    @include widget-borders;
+
+    ul li {
+      margin-bottom: .75rem;
+      color: $text-4;
+
+      h4 {
+        font-size: 1.375rem;
+        position: relative;
+
+        input[type="checkbox"] {
+          opacity: 0;
+          position: absolute;
+          left: 0;
+        }
+ 
+        a {
+          color: $text-4;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          em {
+            font-size: .75em;
+            display: none;
+          }
+        }
+
+        .num {
+          display: inline-block;
+          vertical-align: middle;
+          width: 1rem;
+        }
+      }
+
+      p {
+        margin: 0 0 1rem 2.875rem;
+      }
+
+      &.active {
+        h4, p, a {
+          color: $link-color;
+        }
+        h4 a em {
+          display: inline;
+        }
+      }
+    }
+
+    .grayout, .disabled {
+      h4, p {
+        color: #333;
+      }
+      h4 a {
+        color: #333;
+        &:hover {
+          text-decoration: none;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .row.widget-row {
+    margin-right: -.5rem;
+    margin-left: -.5rem;
+
+    div[class^="col-"] {
+      padding: .5rem;
+    }
+
+    .widget-container {
+      margin-bottom: 1rem;
+
+      h4 {
+        margin: .5rem 0;
+        font-weight: bold;
+        color: $text-4;
+
+        em {
+          font-size: .875rem;
+          color: $text-3;
+        }
+      }
+
+      h5 {
+        margin: .5rem 0;
+        color: $text-3;
+        font-size: 1.125rem;
+
+        em {
+          font-size: .8125rem;
+        }
+      }
+
+      h6 {
+        font-size: 1rem;
+        margin: .5rem 0;
+        color: $text-3;
+
+        em {
+          font-size: .75rem;
+        }
+      }
+
+      .sites-aside {
+        color: $text-4;
+
+        .sites-hdr {
+          font-size: 1.25rem;
+          color: $text-3;
+          padding-right: .375rem;
+        }
+
+        .stats {
+          padding: 0 .375rem;
+
+          em {
+            font-size: 1.375rem;
+          }
+        }
+      }
+
+      .left-col, .right-col {
+        float: left;
+        position: relative;
+
+        p {
+          font-size: 1.25rem;
+          color: $text-3;
+
+          em {
+            font-size: .75rem;
+          } 
+        }
+      }
+
+      .left-col {
+        width: 50%;
+        border-right: 1px solid #cbcfd3;
+      }
+      .right-col {
+        width: 50%;
+        padding-left: 1rem;
+
+        h5, p {
+          color: $widget-green;
+        }
+      }
+
+      &.widget-1 .widget-bx {
+        min-height: 30.15rem;
+      }
+      &.widget-2 .widget-bx {
+        min-height: 9rem;
+      }
+      &.widget-3 .widget-bx {
+        min-height: 14rem;
+      }
+
+      .widget-bx {
+        @include widget-borders;
+        background-color: white;
+        padding: 1rem;
+
+        .dots-popover, .wan-popover, .slider-popover {
+          font-size: 1.5rem;
+
+          span {
+            display: block;
+            font-size: .75rem;
+            color: $text-3;
+            text-transform: uppercase;
+          }
+
+          em {
+            font-size: .875rem;
+          }
+        }
+        .slider-popover {
+          min-width: 19rem;
+
+          .right-col {
+            padding-right: 2rem;
+          }
+
+          span {
+            white-space: nowrap;
+          }
+        }
+
+        .widget-dots {
+          padding: .5rem 0 1rem 0;
+          max-width: 125px;
+
+          & ~ p {
+            font-size: 4.5rem;
+          }
+
+          & + .popover.top {
+            margin-top: -5px;
+            margin-left: -7px;
+          }
+          & + .popover.bottom {
+            margin-top: -10px;
+            margin-left: -7px;
+          }
+
+          div {
+            width: 13px;
+            height: 18px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 .5rem .5rem 0;
+            background-color: transparent;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            background-image: url('../img/dashboard/dot-inactive@2x.png');
+            background-size: 13px;
+
+          }
+
+          &.progress-1, &.progress-2, &.progress-3 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-4, &.progress-5, &.progress-6 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-7, &.progress-8, &.progress-9 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-10 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-11, &.progress-12, &.progress-13 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(2) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-14, &.progress-15, &.progress-16 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(2) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-17, &.progress-18, &.progress-19 {
+            div:nth-of-type(1) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(2) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-20 {
+            div:nth-of-type(-n+2) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-21, &.progress-22, &.progress-23 {
+            div:nth-of-type(-n+2) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(3) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');   
+            }
+          }
+
+          &.progress-24, &.progress-25, &.progress-26 {
+            div:nth-of-type(-n+2) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(3) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');   
+            }
+          }
+
+          &.progress-27, &.progress-28, &.progress-29 {
+            div:nth-of-type(-n+2) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(3) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');   
+            }
+          }
+
+          &.progress-30 {
+            div:nth-of-type(-n+3) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-31, &.progress-32, &.progress-33 {
+            div:nth-of-type(-n+3) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(4) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');  
+            }
+          }
+
+          &.progress-34, &.progress-35, &.progress-36 {
+            div:nth-of-type(-n+3) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(4) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');  
+            }
+          }
+
+          &.progress-37, &.progress-38, &.progress-39 {
+            div:nth-of-type(-n+3) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(4) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');  
+            }
+          }
+
+          &.progress-40 {
+            div:nth-of-type(-n+4) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-41, &.progress-42, &.progress-43 {
+            div:nth-of-type(-n+4) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(5) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-44, &.progress-45, &.progress-46 {
+            div:nth-of-type(-n+4) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(5) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-47, &.progress-48, &.progress-49 {
+            div:nth-of-type(-n+4) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(5) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-50 {
+            div:nth-of-type(-n+5) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-51, &.progress-52, &.progress-53 {
+            div:nth-of-type(-n+5) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(6) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-54, &.progress-55, &.progress-56 {
+            div:nth-of-type(-n+5) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(6) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-57, &.progress-58, &.progress-59 {
+            div:nth-of-type(-n+5) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(6) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-60 {
+            div:nth-of-type(-n+6) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-61, &.progress-62, &.progress-63 {
+            div:nth-of-type(-n+6) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(7) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-64, &.progress-65, &.progress-66 {
+            div:nth-of-type(-n+6) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(7) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-67, &.progress-68, &.progress-69 {
+            div:nth-of-type(-n+6) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(7) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-70 {
+            div:nth-of-type(-n+7) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+          }
+
+          &.progress-71, &.progress-72, &.progress-73 {
+            div:nth-of-type(-n+7) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+            div:nth-of-type(8) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-74, &.progress-75, &.progress-76 {
+            div:nth-of-type(-n+7) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+            div:nth-of-type(8) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-77, &.progress-78, &.progress-79 {
+            div:nth-of-type(-n+7) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+            div:nth-of-type(8) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+
+          &.progress-80 {
+            div:nth-of-type(-n+8) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+          }
+
+          &.progress-81, &.progress-82, &.progress-83 {
+            div:nth-of-type(-n+8) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(9) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-84, &.progress-85, &.progress-86 {
+            div:nth-of-type(-n+8) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(9) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-87, &.progress-88, &.progress-89 {
+            div:nth-of-type(-n+8) {
+              background-image: url('../img/dashboard/dot-active@2x.png');
+            }
+            div:nth-of-type(9) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-90 {
+            div:nth-of-type(-n+9) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+          }
+
+          &.progress-91, &.progress-92, &.progress-93 {
+            div:nth-of-type(-n+9) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+            div:nth-of-type(10) {
+              background-image: url('../img/dashboard/dot-active-quarter@2x.png');
+            }
+          }
+
+          &.progress-94, &.progress-95, &.progress-96 {
+            div:nth-of-type(-n+9) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+            div:nth-of-type(10) {
+              background-image: url('../img/dashboard/dot-active-half@2x.png');
+            }
+          }
+
+          &.progress-97, &.progress-98, &.progress-99 {
+            div:nth-of-type(-n+9) {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+            div:nth-of-type(10) {
+              background-image: url('../img/dashboard/dot-active-3quarter@2x.png');
+            }
+          }
+
+          &.progress-100 {
+            div {
+              background-image: url('../img/dashboard/dot-active@2x.png');  
+            }
+          }
+
+          &.green-theme {
+            &.progress-1, &.progress-2, &.progress-3 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-4, &.progress-5, &.progress-6 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-7, &.progress-8, &.progress-9 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-10 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-11, &.progress-12, &.progress-13 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(2) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-14, &.progress-15, &.progress-16 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(2) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-17, &.progress-18, &.progress-19 {
+              div:nth-of-type(1) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(2) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-20 {
+              div:nth-of-type(-n+2) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-21, &.progress-22, &.progress-23 {
+              div:nth-of-type(-n+2) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(3) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');   
+              }
+            }
+
+            &.progress-24, &.progress-25, &.progress-26 {
+              div:nth-of-type(-n+2) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(3) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');   
+              }
+            }
+
+            &.progress-27, &.progress-28, &.progress-29 {
+              div:nth-of-type(-n+2) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(3) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');   
+              }
+            }
+
+            &.progress-30 {
+              div:nth-of-type(-n+3) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-31, &.progress-32, &.progress-33 {
+              div:nth-of-type(-n+3) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(4) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');  
+              }
+            }
+
+            &.progress-34, &.progress-35, &.progress-36 {
+              div:nth-of-type(-n+3) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(4) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');  
+              }
+            }
+
+            &.progress-37, &.progress-38, &.progress-39 {
+              div:nth-of-type(-n+3) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(4) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');  
+              }
+            }
+
+            &.progress-40 {
+              div:nth-of-type(-n+4) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-41, &.progress-42, &.progress-43 {
+              div:nth-of-type(-n+4) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(5) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-44, &.progress-45, &.progress-46 {
+              div:nth-of-type(-n+4) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(5) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-47, &.progress-48, &.progress-49 {
+              div:nth-of-type(-n+4) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(5) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-50 {
+              div:nth-of-type(-n+5) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-51, &.progress-52, &.progress-53 {
+              div:nth-of-type(-n+5) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(6) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-54, &.progress-55, &.progress-56 {
+              div:nth-of-type(-n+5) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(6) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-57, &.progress-58, &.progress-59 {
+              div:nth-of-type(-n+5) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(6) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-60 {
+              div:nth-of-type(-n+6) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-61, &.progress-62, &.progress-63 {
+              div:nth-of-type(-n+6) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(7) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-64, &.progress-65, &.progress-66 {
+              div:nth-of-type(-n+6) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(7) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-67, &.progress-68, &.progress-69 {
+              div:nth-of-type(-n+6) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(7) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-70 {
+              div:nth-of-type(-n+7) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+            }
+
+            &.progress-71, &.progress-72, &.progress-73 {
+              div:nth-of-type(-n+7) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+              div:nth-of-type(8) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-74, &.progress-75, &.progress-76 {
+              div:nth-of-type(-n+7) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+              div:nth-of-type(8) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-77, &.progress-78, &.progress-79 {
+              div:nth-of-type(-n+7) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+              div:nth-of-type(8) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+
+            &.progress-80 {
+              div:nth-of-type(-n+8) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+            }
+
+            &.progress-81, &.progress-82, &.progress-83 {
+              div:nth-of-type(-n+8) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(9) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-84, &.progress-85, &.progress-86 {
+              div:nth-of-type(-n+8) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(9) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-87, &.progress-88, &.progress-89 {
+              div:nth-of-type(-n+8) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');
+              }
+              div:nth-of-type(9) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-90 {
+              div:nth-of-type(-n+9) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+            }
+
+            &.progress-91, &.progress-92, &.progress-93 {
+              div:nth-of-type(-n+9) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+              div:nth-of-type(10) {
+                background-image: url('../img/dashboard/dot-active-green-quarter@2x.png');
+              }
+            }
+
+            &.progress-94, &.progress-95, &.progress-96 {
+              div:nth-of-type(-n+9) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+              div:nth-of-type(10) {
+                background-image: url('../img/dashboard/dot-active-green-half@2x.png');
+              }
+            }
+
+            &.progress-97, &.progress-98, &.progress-99 {
+              div:nth-of-type(-n+9) {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+              div:nth-of-type(10) {
+                background-image: url('../img/dashboard/dot-active-green-3quarter@2x.png');
+              }
+            }
+
+            &.progress-100 {
+              div {
+                background-image: url('../img/dashboard/dot-active-green@2x.png');  
+              }
+            }
+          }
+        } /*-- .widget-dots --*/
+
+        .widget-radial {
+          margin-right: 20%;
+          float: left;
+          position: relative;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          span.num {
+            color: $text-3;
+            font-size: 1.25rem;
+
+            em {
+              font-size: .875rem;
+            }
+          }
+
+          &.green-theme {
+            span.num {
+              color: $widget-green;
+            }
+          }
+
+          .radial-wrapper {
+            height: 39px;
+            width: 66px;
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            vertical-align: bottom;
+            margin-right: 2px;
+
+            .radial-dial {
+              width: 38px;
+              height: 11px;
+              background: transparent url('../img/dashboard/radial-dial.png') no-repeat 0 0;
+              background-size: 38px;
+              position: absolute;
+              bottom: 0px;
+              left: 0;
+              z-index: 15;
+              -webkit-transition: -webkit-transform .3s;
+                 -moz-transition: -moz-transform .3s;
+                      transition: transform .3s;
+
+              transform-origin: 33px 5px;
+
+              -webkit-transform: rotate(120deg);
+                  -ms-transform: rotate(120deg);
+                      transform: rotate(120deg);
+            }
+
+            .progress-wrapper {
+              height: 33px;
+              width: 66px;
+              background-color: #bac4cc;
+              overflow: hidden;
+              position: relative;
+
+              .progress-1 {
+                background-color: $widget-green;
+                width: 66px;
+                height: 33px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 5;
+
+                -webkit-transition: -webkit-transform .3s;
+                   -moz-transition: -moz-transform .3s;
+                        transition: transform .3s;
+
+                transform-origin: top center;
+
+                -webkit-transform: rotate(120deg);
+                    -ms-transform: rotate(120deg);
+                        transform: rotate(120deg);
+              }
+              .circle-mask {
+                background: transparent url('../img/dashboard/radial-bg.png') no-repeat 0 0;
+                background-size: 66px;
+                width: 66px;
+                height: 66px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10;
+              }
+            }
+          }
+        }
+
+        .widget-slider {
+          margin: 1.25rem 0;
+
+          .sliderbar {
+            height: 33px;
+            position: relative;
+            overflow: hidden;
+
+            .progress-1, .progress-2 {
+              -webkit-transition: width 1s;
+                 -moz-transition: width 1s;
+                      transition: width 1s;
+            }
+
+            .progress-1 {
+              background-color: #919da6;
+              height: 13px;
+              margin-top: 10px;
+            }
+            .progress-2 {
+              background-color: $widget-green;
+              height: 33px;
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 20%;
+            }
+            .slider-handle {
+              width: 12px;
+              height: 33px;
+              background: transparent url('../img/dashboard/slider-handle.png') no-repeat 0 0;
+              background-size: 12px;
+              position: absolute;
+              top: 0;
+              right: 20%;
+
+              -webkit-transition: right 1s;
+                 -moz-transition: right 1s;
+                      transition: right 1s;
+            }
+          }
+        }
+
+        .widget-wan {
+          margin-top: 2rem;
+
+          .popover.right {
+            margin-left: -15px;
+          }
+          .popover.top {
+            margin-top: -12px;
+          }
+          .popover.bottom {
+            margin-top: 12px;
+          }
+
+          ul {
+            float: left;
+            width: 25%;
+            height: 308px;
+            overflow: hidden;
+            padding-top: 93px;
+            padding-right: 65px;
+            background-position: right 0;
+            background-repeat: no-repeat;
+            background-image: url('../img/dashboard/graph-mid.png');
+            background-size: 65px;
+
+            li {
+              height: 40px;
+              margin-bottom: 1px;
+              //width: 135px;
+              padding: .75rem 0 0 .75rem;
+              color: white;
+              text-transform: uppercase;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+
+              &.internet {
+                background-color: $internet-bg;
+              }
+              &.vpn {
+                background-color: $vpn-bg;
+              }
+              &.private {
+                background-color: $private-bg;
+              }
+              &.unused {
+                background-color: $unused-bg;
+              }
+            }
+          }
+
+          .progress-wrapper {
+            //overflow: hidden;
+            height: 308px;
+            float: left;
+            width: 75%;
+
+            .progressbars {
+              height: 102px;
+              margin-bottom: 1px;
+              position: relative;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              span.num {
+                padding-left: .75rem;
+                font-size: 2.5rem;
+                color: $text-4;
+
+                em {
+                  font-size: 1rem;
+                }
+              }
+
+              .progress-1, .progress-2 {
+                height: 102px;
+                max-width: 100%;
+                -webkit-transition: width 1s;
+                   -moz-transition: width 1s;
+                        transition: width 1s;              
+              }
+
+              .progress-1b, .progress-2b {
+                height: 60px;
+                max-width: 100%;
+                -webkit-transition: width 1s;
+                   -moz-transition: width 1s;
+                        transition: width 1s;              
+              }
+
+              .progress-1 {
+                background-color: #c6dfe9;                
+                display: inline-block;
+                vertical-align: bottom;
+              }
+              .progress-2 {
+                background-color: $internet-bg;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 20;
+              }
+              .progress-1b, .progress-2b {                
+                position: absolute;
+                top: 20px;
+                left: 0;
+              }
+              .progress-1b {
+                z-index: 10;                
+                //background-color: red !important;
+              }
+              .progress-2b {
+                z-index: 30;
+                //background-color: green !important;
+              }
+
+              &.internet {
+                .progress-1, .progress-1b {
+                  background-color: #c6dfe9;
+                  width: 73%;
+                }              
+                .progress-2, .progress-2b {
+                  background-color: $internet-bg;
+                  width: 60%;
+                }
+              }
+              &.private {
+                .progress-1, .progress-1b {
+                  background-color: #b4e3db;
+                  width: 62%;
+                }              
+                .progress-2, .progress-2b {
+                  background-color: $private-bg;
+                  width: 50%;
+                }
+              }
+              &.vpn {
+                .progress-1, .progress-1b {
+                  background-color: #d3c5f1;
+                  width: 45%;
+                }              
+                .progress-2, .progress-2b {
+                  background-color: $vpn-bg;
+                  width: 30%;
+                }
+              }
+              &.unused {
+                .progress-1, .progress-1b {
+                  background-color: #bfe3f3;
+                  width: 25%;
+                }              
+                .progress-2, .progress-2b {
+                  background-color: $unused-bg;
+                  width: 10%;
+                }
+              }
+
+            }
+          }
+        } /*-- .widget-wan --*/
+ 
+      } /*-- .widget-bx --*/  
+
+
+      @media only screen and (max-width: 340px) {
+        .widget-bx {
+          .widget-wan {
+            ul {
+              width: 35%;
+            } 
+
+            .progress-wrapper {
+              width: 65%;
+
+              .progressbars {
+                span.num {
+                  padding-left: 0;
+                  font-size: 1.25rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media only screen and (min-width: 341px) and (max-width: 1024px) {
+        .widget-bx {
+          .widget-wan {
+            .progress-wrapper .progressbars {
+              span.num {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      @media only screen and (max-width: 1280px) {
+        &.widget-1 .widget-bx {
+          min-height: 31.25rem;
+        }
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 1013px) {
+        &.widget-2 {
+          // .left-col {
+          //   width: 100%;
+          //   padding-bottom: .5rem;
+          //   border-right: none;
+          //   border-bottom: 1px solid #cbcfd3;
+          // }
+          // .right-col {
+          //   width: 100%;
+          //   padding-left: 0;
+          //   padding-top: .5rem;
+          // }
+
+          .widget-dots {
+            div {
+              margin-right: 0;
+            }
+
+            & ~ p {
+              font-size: 3rem;
+            }
+          }
+        }      
+
+        .widget-bx {
+          .widget-radial {
+            float: none;
+            margin-right: 0;
+            margin-bottom: 1rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }       
+        }
+
+        &.widget-1 .widget-bx {
+          min-height: 33.15rem;
+        }
+      }
+
+      @media only screen and (min-width: 1014px) and (max-width: 1199px) {
+        .widget-bx {
+          .widget-radial {
+            margin-right: 8%;
+          }
+        }      
+      }
+
+      @media only screen and (min-width: 768px) and (max-width: 942px) {
+        &.widget-1 .widget-bx {
+          min-height: 35.25rem;
+        }
+        
+        &.widget-2 {
+          .widget-dots {
+            float: none;
+            margin-right: 0;
+          }
+        }
+      }
+
+    } /*-- .widget-container --*/
+
+    .dash-disabled {
+      display: none;
+    }
+    p.dash-enabled {
+      display: block;
+    }
+    span.dash-enabled {
+      display: inline;
+    }
+
+
+    &.grayout { 
+      .popover {
+        display: none !important;
+      }
+
+      p.dash-disabled {
+        display: block;
+      }
+      span.dash-disabled {
+        display: inline;
+      }
+      .dash-enabled {
+        display: none;
+      }
+      .footnote {
+        visibility: hidden
+      }
+
+      .widget-container {
+        .widget-bx {
+          .widget-dots {
+            div {
+              background-image: url('../img/dashboard/dot-inactive@2x.png') !important;
+            }
+          }
+
+          .widget-slider {
+            .sliderbar {
+              .progress-2 {
+                width: 0;
+              }
+              .slider-handle {
+                right: 0;
+              }
+            }
+          }
+
+          .widget-radial {
+            .radial-wrapper .progress-1, .radial-dial {
+              -webkit-transform: rotate(0deg);
+                  -ms-transform: rotate(0deg);
+                      transform: rotate(0deg);
+            }            
+          }
+
+          .widget-wan {
+            ul {
+              background-image: url('../img/dashboard/graph-mid-gray.png') !important;
+              
+              li {
+                &.internet {
+                  background-color: #ccd3da;
+                }
+                &.private {
+                  background-color: #cfd5dc;
+                }
+                &.vpn {
+                  background-color: #d4dae0;
+                }
+                &.unused {
+                  background-color: #d4dae0;
+                }
+              }          
+            }
+            span.num {
+              display: none;
+            }
+            .progress-wrapper .progressbars {
+              .progress-1, .progress-2, .progress-1b, .progress-2b {
+                width: 0;             
+              }
+            }
+          }
+        }
+      }
+
+    } /*-- .grayout --*/
+
+  } /*-- .row.widget-row --*/
+}

@@ -1,0 +1,27 @@
+@import "compass";
+
+@import "compass/reset";
+
+// variables
+@import "partials/variables";
+
+//mixins
+@import "partials/mixins";
+
+// bootstrap changes
+@import "partials/bootstrapped";
+
+//base styles
+@import "partials/base";
+
+// buttons
+@import "partials/buttons";
+
+// tables
+@import "partials/tables";
+
+// Dashboard
+@import "sections/dashboard";
+
+// Policies
+@import "sections/details";

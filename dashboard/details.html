@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <!--html class="no-js"--><html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>Dashboard</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <!--meta name="viewport" content="initial-scale=1"-->
+  <!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"-->
+  <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div data-view="details">  
+  <section id="content">
+    <div id="details">
+      <h2 class="headline">Lorem epsum dolor sit enum. <a href="#" class="siteslist-link">Click me</a></h2>
+
+      <div class="container-fluid">
+        <div class="row policy-wrapper">
+
+          <div class="col-xs-4 col-sm-2" id="col-side">     
+            <div class="dropdown" id="groupbyMenu">
+              <span class="title">GROUP BY</span><br/>
+              <button class="btn btn-default dropdown-toggle" type="button" id="groupDropmenu" data-toggle="dropdown">
+                <span class="select-ed">Priority</span>
+                <span class="arrow"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="groupDropmenu">
+                <li class="current"><a tabindex="-1" href="#">Priority</a></li>
+                <li><a tabindex="-1" href="#">Paths</a></li>
+                <li><a tabindex="-1" href="#">User Group</a></li>
+                <li><a tabindex="-1" href="#">Service</a></li>
+                <li><a tabindex="-1" href="#">VXWAN</a></li>
+              </ul>
+            </div>
+
+            <ul class="policy-submenu" id="priority-submenu">
+              <li class="active"><a href="#">Platinum (150)</a></li>
+              <li><a href="#">Gold (200)</a></li>
+              <li><a href="#">Silver (175)</a></li>
+              <li><a href="#">Bronze (150)</a></li>
+            </ul>
+
+            <ul class="policy-submenu" id="path-submenu">
+              <li class="active"><a href="#">
+                <span class="item internet"><i class="icon-box"></i> Category 1</span>
+                <span class="item vpn"><i class="icon-box"></i> Category 2</span>
+                <span class="item private"><i class="icon-box"></i> Category 3</span>
+                (150)
+              </a></li>
+              <li><a href="#">
+                <span class="item internet"><i class="icon-box"></i> Category 1</span>
+                <span class="item vpn"><i class="icon-box"></i> Category 2</span>
+                (200)
+              </a></li>
+              <li><a href="#">
+                <span class="item internet"><i class="icon-box"></i> Category 1</span>
+                (150)
+              </a></li>
+              <li><a href="#">
+                <span class="item private"><i class="icon-box"></i> Category 3</span>
+                (150)
+              </a></li>
+            </ul>
+
+          </div><!-- col-left -->
+
+          <div class="col-xs-8 col-sm-10" id="col-main">
+            <div class="top-hdr clearfix">
+              <h3>6 Items</h3>
+              <div class="top-links">
+                <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize</a>
+                <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                <a href="javascript:void(0);" class="disabled grayout"><i class="icon-checkbox"></i> Select all</a>
+              </div>
+              <div class="search-wrapper">
+                <form action="#">
+                  <input type="search" name="search" placeholder="Search" />
+                  <input type="submit" value="Submit" />
+                </form>
+              </div>
+            </div><!-- top-hdr -->
+
+            <div class="row card-wrapper">
+
+              <div class="col-sm-12 col-md-6">
+                <div class="card clearfix">
+                  <h4>15 Items for...</h4>
+                  <div class="left-col clearfix">
+                    <p class="apps">
+                      <b>APPS</b>
+                      <em>15</em>
+                      <span class="app-img">
+                        <img src="img/logos/linkedin-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/google-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/facebook-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/lync@2x.png" width="20" height="20" />
+                      </span>
+                      <span class="more">More...</span>
+                    </p>
+
+                    <p class="usergroups">
+                      <b>USER GROUPS</b>
+                      <img src="img/users@2x.png" width="22" height="16" /> All Users
+                    </p>
+                  </div>
+
+                  <div class="right-col clearfix">
+                    <p class="paths">
+                      <b>ALLOWED PATHS</b>
+                      <span class="button internet">Category 1</span> <span class="button vpn">Category 2</span> <span class="button private">Category 3</span>
+                    </p>
+
+                    <p class="services grayout">
+                      <b>SERVICES</b>
+                      Coming Soon
+                    </p>
+
+                    <p class="wan grayout">
+                      <b>EXTRAS</b>
+                      Coming Soon
+                    </p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="bottom-links">
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize Group</a>
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                  </div>
+                </div><!-- card -->
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="card clearfix">
+                  <h4>15 Items for...</h4>
+                  <div class="left-col clearfix">
+                    <p class="apps">
+                      <b>APPS</b>
+                      <em>15</em>
+                      <span class="app-img">
+                        <img src="img/logos/linkedin-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/google-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/facebook-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/lync@2x.png" width="20" height="20" />
+                      </span>
+                      <span class="more">More...</span>
+                    </p>
+
+                    <p class="usergroups">
+                      <b>USER GROUPS</b>
+                      <img src="img/users@2x.png" width="22" height="16" /> All Users
+                    </p>
+                  </div>
+
+                  <div class="right-col clearfix">
+                    <p class="paths">
+                      <b>ALLOWED PATHS</b>
+                      <span class="button internet grayout">Category 1</span> <span class="button vpn">Category 2</span> <span class="button private">Category 3</span>
+                    </p>
+
+                    <p class="services grayout">
+                      <b>SERVICES</b>
+                      Coming Soon
+                    </p>
+
+                    <p class="wan grayout">
+                      <b>EXTRAS</b>
+                      Coming Soon
+                    </p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="bottom-links">
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize Group</a>
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                  </div>
+                </div><!-- card -->
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="card clearfix">
+                  <h4>15 Items for...</h4>
+                  <div class="left-col clearfix">
+                    <p class="apps">
+                      <b>APPS</b>
+                      <em>15</em>
+                      <span class="app-img">
+                        <img src="img/logos/linkedin-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/google-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/facebook-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/lync@2x.png" width="20" height="20" />
+                      </span>
+                      <span class="more">More...</span>
+                    </p>
+
+                    <p class="usergroups">
+                      <b>USER GROUPS</b>
+                      <img src="img/users@2x.png" width="22" height="16" /> All Users
+                    </p>
+                  </div>
+
+                  <div class="right-col clearfix">
+                    <p class="paths">
+                      <b>ALLOWED PATHS</b>
+                      <span class="button internet">Category 1</span> <span class="button vpn grayout">Category 2</span> <span class="button private">Category 3</span>
+                    </p>
+
+                    <p class="services grayout">
+                      <b>SERVICES</b>
+                      Coming Soon
+                    </p>
+
+                    <p class="wan grayout">
+                      <b>EXTRAS</b>
+                      Coming Soon
+                    </p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="bottom-links">
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize Group</a>
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                  </div>
+                </div><!-- card -->
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="card clearfix">
+                  <h4>15 Items for...</h4>
+                  <div class="left-col clearfix">
+                    <p class="apps">
+                      <b>APPS</b>
+                      <em>15</em>
+                      <span class="app-img">
+                        <img src="img/logos/linkedin-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/google-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/facebook-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/lync@2x.png" width="20" height="20" />
+                      </span>
+                      <span class="more">More...</span>
+                    </p>
+
+                    <p class="usergroups">
+                      <b>USER GROUPS</b>
+                      <img src="img/users@2x.png" width="22" height="16" /> All Users
+                    </p>
+                  </div>
+
+                  <div class="right-col clearfix">
+                    <p class="paths">
+                      <b>ALLOWED PATHS</b>
+                      <span class="button internet">Category 1</span> <span class="button vpn">Category 2</span> <span class="button private grayout">Category 3</span>
+                    </p>
+
+                    <p class="services grayout">
+                      <b>SERVICES</b>
+                      Coming Soon
+                    </p>
+
+                    <p class="wan grayout">
+                      <b>EXTRAS</b>
+                      Coming Soon
+                    </p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="bottom-links">
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize Group</a>
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                  </div>
+                </div><!-- card -->
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="card clearfix">
+                  <h4>15 Items for...</h4>
+                  <div class="left-col clearfix">
+                    <p class="apps">
+                      <b>APPS</b>
+                      <em>15</em>
+                      <span class="app-img">
+                        <img src="img/logos/linkedin-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/google-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/facebook-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/lync@2x.png" width="20" height="20" />
+                      </span>
+                      <span class="more">More...</span>
+                    </p>
+
+                    <p class="usergroups">
+                      <b>USER GROUPS</b>
+                      <img src="img/users@2x.png" width="22" height="16" /> All Users
+                    </p>
+                  </div>
+
+                  <div class="right-col clearfix">
+                    <p class="paths">
+                      <b>ALLOWED PATHS</b>
+                      <span class="button internet">Category 1</span> <span class="button vpn grayout">Category 2</span> <span class="button private">Category 3</span>
+                    </p>
+
+                    <p class="services grayout">
+                      <b>SERVICES</b>
+                      Coming Soon
+                    </p>
+
+                    <p class="wan grayout">
+                      <b>EXTRAS</b>
+                      Coming Soon
+                    </p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="bottom-links">
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize Group</a>
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                  </div>
+                </div><!-- card -->
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="card clearfix">
+                  <h4>15 Items for...</h4>
+                  <div class="left-col clearfix">
+                    <p class="apps">
+                      <b>APPS</b>
+                      <em>15</em>
+                      <span class="app-img">
+                        <img src="img/logos/linkedin-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/google-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/facebook-logo-small@2x.png" width="20" height="20" /> <img src="img/logos/lync@2x.png" width="20" height="20" />
+                      </span>
+                      <span class="more">More...</span>
+                    </p>
+
+                    <p class="usergroups">
+                      <b>USER GROUPS</b>
+                      <img src="img/users@2x.png" width="22" height="16" /> All Users
+                    </p>
+                  </div>
+
+                  <div class="right-col clearfix">
+                    <p class="paths">
+                      <b>ALLOWED PATHS</b>
+                      <span class="button internet">Category 1</span> <span class="button vpn">Category 2</span> <span class="button private grayout">Category 3</span>
+                    </p>
+
+                    <p class="services grayout">
+                      <b>SERVICES</b>
+                      Coming Soon
+                    </p>
+
+                    <p class="wan grayout">
+                      <b>EXTRAS</b>
+                      Coming Soon
+                    </p>
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <div class="bottom-links">
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-visualize"></i> Visualize Group</a>
+                    <a href="javascript:void(0);" class="disabled grayout"><i class="icon-viewdetails"></i> View Details</a>
+                  </div>
+                </div><!-- card -->
+              </div>
+
+            </div><!-- card-wrapper -->
+          </div><!-- col-main -->
+
+        </div><!-- row --> 
+      </div><!-- container-fluid -->
+
+
+      <div class="dialog-list" id="details-siteslist">
+        <div class="container">
+          <div class="pull-left">
+            <button type="button" class="btn btn-clear btn-device-active active"><span><em class="integer">8</em> Active</span></button>
+            <button type="button" class="btn btn-clear btn-device-inactive"><span><em class="integer">6</em> Inactive</span></button>
+          </div>
+          <div class="pull-right">
+            Click the "Activate" buttons below. &nbsp;&nbsp; 
+            <button type="button" class="btn btn-default closeme">close</button>
+          </div>
+        </div>
+
+        <div class="table-container table-list">
+          <div class="table-header-background tablesaw-header-background"></div>
+          <div class="table-scroll">
+            <table id="tableDetails" class="table tablesaw tablesaw-stack table-hover" data-sortable data-mode="stack">
+              <thead>
+                <tr>
+                  <th data-sortable-col data-sortable-default-col>Name &amp; Description</th>
+                  <th data-sortable-col>Location</th>
+                  <th data-sortable-col>Labels</th>
+                  <th data-sortable-col>Prefixes</th>
+                  <th data-sortable-col>Status</th>
+                  <th data-sortable-col>&nbsp;</th><!-- activate button -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-title"><div class="slideme"><strong>Acme-01</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div></td>
+                  <td class="td-address"><div class="slideme"><strong>San Francisco, CA 94111</strong>1234 Pine St.</div></td>
+                  <td class="td-labels"><div class="slideme">Comet, Jupiter</div></td>
+                  <td class="td-prefixes"><div class="slideme"><strong>12168124</strong><strong>1168296</strong></div></td>
+                  <td class="td-status"><div class="slideme"><strong>Inactive</strong></div></td>
+                  <td class="td-activate"><div class="slideme"><button type="button" class="btn btn-primary btn-activate" data-toggle="modal" data-target="#siteslistModal">Activate</button></div></td>
+                </tr>
+                <tr>
+                  <td class="td-title"><div class="slideme"><strong>Beatle-02</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div></td>
+                  <td class="td-address"><div class="slideme"><strong>Oakland, CA 94111</strong>1234 Pine St.</div></td>
+                  <td class="td-labels"><div class="slideme">Atomic</div></td>
+                  <td class="td-prefixes"><div class="slideme"><strong>50168124</strong><strong>191681296</strong></div></td>
+                  <td class="td-status"><div class="slideme"><strong>Inactive</strong></div></td>
+                  <td class="td-activate"><div class="slideme"><button type="button" class="btn btn-primary btn-activate" data-toggle="modal" data-target="#siteslistModal">Activate</button></div></td>
+                </tr>
+                <tr>
+                  <td class="td-title"><div class="slideme"><strong>Washington-03</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div></td>
+                  <td class="td-address"><div class="slideme"><strong>Anaheim, CA 94111</strong>1234 Pine St.</div></td>
+                  <td class="td-labels"><div class="slideme">Venus, Delta</div></td>
+                  <td class="td-prefixes"><div class="slideme"><strong>92168224</strong><strong>13385276</strong></div></td>
+                  <td class="td-status"><div class="slideme"><strong>Inactive</strong></div></td>
+                  <td class="td-activate"><div class="slideme"><button type="button" class="btn btn-primary btn-activate" data-toggle="modal" data-target="#siteslistModal">Activate</button></div></td>
+                </tr>
+                <tr>
+                  <td class="td-title"><div class="slideme"><strong>Acme-04</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div></td>
+                  <td class="td-address"><div class="slideme"><strong>San Francisco, CA 94111</strong>1234 Pine St.</div></td>
+                  <td class="td-labels"><div class="slideme">Comet</div></td>
+                  <td class="td-prefixes"><div class="slideme"><strong>61684424</strong><strong>734526786</strong></div></td>
+                  <td class="td-status"><div class="slideme"><strong>Inactive</strong></div></td>
+                  <td class="td-activate"><div class="slideme"><button type="button" class="btn btn-primary btn-activate" data-toggle="modal" data-target="#siteslistModal">Activate</button></div></td>
+                </tr>
+                <tr>
+                  <td class="td-title"><div class="slideme"><strong>Delaware-05</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div></td>
+                  <td class="td-address"><div class="slideme"><strong>Los Angeles, CA 94111</strong>1234 Pine St.</div></td>
+                  <td class="td-labels"><div class="slideme">Earth, Mercury</div></td>
+                  <td class="td-prefixes"><div class="slideme"><strong>22435224</strong><strong>3332078996</strong></div></td>
+                  <td class="td-status"><div class="slideme"><strong>Inactive</strong></div></td>
+                  <td class="td-activate"><div class="slideme"><button type="button" class="btn btn-primary btn-activate" data-toggle="modal" data-target="#siteslistModal">Activate</button></div></td>
+                </tr>
+                <tr>
+                  <td class="td-title"><div class="slideme"><strong>Blazing-02</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div></td>
+                  <td class="td-address"><div class="slideme"><strong>Florida, CA 94111</strong>1234 Pine St.</div></td>
+                  <td class="td-labels"><div class="slideme">Atomic, Mercury</div></td>
+                  <td class="td-prefixes"><div class="slideme"><strong>880168124</strong><strong>1191681296</strong></div></td>
+                  <td class="td-status"><div class="slideme"><strong>Inactive</strong></div></td>
+                  <td class="td-activate"><div class="slideme"><button type="button" class="btn btn-primary btn-activate" data-toggle="modal" data-target="#siteslistModal">Activate</button></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div><!-- end Sites-List -->
+
+    </div><!-- details -->
+  </section>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="siteslistModal" tabindex="-1" role="dialog" aria-labelledby="siteslistModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header clearfix">
+        <!--button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button-->
+        <div id="success-message"><strong><i class="icon-success"></i>Success!</strong> Item has been activated.</div>
+        <p id="confirm-question">Are you sure you want to activate?</p>
+        <p><img src="img/devices/site-activation@2x.png" width="118" height="116" /></p>
+        <p>Lorem epsum dolor sit enum.<br/> Lorem epsum dolor.</p>
+      </div>
+      <div class="modal-body">
+        <div class="confirm-container clearfix">
+          <p class="item-hdr"><i class="icon-user"></i><strong>Acme-02</strong><br/>
+          Lorem epsum dolor sit enum. Lorem epsum dolor sit enum.</p>
+          <div class="left-col">
+            <p><strong>Site Location</strong><br/>
+            1234 Pine St, Los Angeles, CA 94903</p>
+            <p><strong>Labels</strong><br/>
+            Comet, Mercury</p>
+          </div>
+          <div class="right-col">
+            <p><strong>Prefixes</strong><br/>
+            3332078996, 880168124, 
+            734526786, 92168224</p>
+          </div>          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary btn-yes pull-right">Yes</button>
+      </div>
+    </div>
+  </div>
+</div><!-- modal -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/vendor/tablesaw.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+
+</body>
+</html>

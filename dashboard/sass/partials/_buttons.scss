@@ -1,0 +1,383 @@
+//*---------------------------------------*
+//  Button - Minus
+//*---------------------------------------*
+.btn-minus {
+  position: absolute;
+  top: 50%;
+  right: -2rem;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0.3;
+  z-index: 10;
+  background: url(../img/btn-minus.png) center left no-repeat;
+  background-size: 1rem; 
+  @include translateY(-50%);
+  @include transition(opacity 0.15s ease-out);
+  -webkit-backface-visibility: hidden;
+      -webkit-transform: translateY(-50%) translateZ(0) scale(1.0, 1.0);
+              transform: translateY(-50%) translateZ(0) scale(1.0, 1.0);
+
+  &:hover { 
+    opacity: 1; 
+  }
+}
+
+//*---------------------------------------*
+//  Button - Back
+//*---------------------------------------*
+.btn-back {
+  
+  span {
+    position: relative;
+    padding-left: 0.75rem;
+
+    &:before {
+      @extend %pseudo;
+      width: 0.5rem;
+      height: 0.5rem;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      z-index: 10;
+      border-left: 2px solid #419cca;
+      border-top: 2px solid #419cca;
+      @include transform(rotate(-45deg) translateY(-50%));
+    }
+  }
+
+  &:hover {
+
+    span:before { 
+      border-color: #fff; 
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Next
+//*---------------------------------------*
+.btn-next {
+  
+  span {
+    position: relative;
+    padding-right: 0.75rem;
+
+    &:before {
+      @extend %pseudo;
+      width: 0.5rem;
+      height: 0.5rem;
+      top: 50%;
+      right: 0;
+      margin-top: -1px;
+      z-index: 10;
+      border-right: 2px solid #fff; 
+      border-top: 2px solid #fff; 
+      @include transform(rotate(45deg) translateY(-50%));
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Form Control 
+//*---------------------------------------*
+button.form-control { 
+  position: relative;
+  color: $btn-default;
+  font-weight: 300;
+  text-align: left; 
+  @include box-shadow(none !important);
+
+  &.btn-add {
+
+    span {
+      padding-left: 1.5rem;
+
+      &:before {
+        @extend %pseudo;
+        top: 50%;
+        left: 0.8rem;
+        width: 1.125rem;
+        height: 1.125rem;
+        background-image: url(../img/btn-plus.png);
+        background-size: 1.125rem;
+        @include translateY(-50%);
+      }
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Clear
+//*---------------------------------------*
+.btn-clear {
+  position: relative;
+  margin: 0 0.625rem 0.5em 0;
+  padding: 0 1rem;
+  height: 2.125rem;
+  color: $link-color;
+  font-size: 0.9375rem;
+  background: transparent;
+  border: 1px solid $btn-default;
+
+  span {
+    position: relative;
+    padding-left: 2rem;
+
+    &:before {
+      @extend %pseudo;
+      top: 50%;
+      left: 0;
+      width: 1.625rem;
+      height: 1.625rem;
+      z-index: 5;
+      @include translateY(-50%);
+    }
+  }
+
+  &:hover { color: $link-color; }
+
+  &:hover,
+  &:active,
+  &.active {
+    background: $highlighted;
+  }
+
+  &.active {
+    color: $text-1;
+    font-weight: 600;
+  }
+
+  &:disabled {
+    color: $btn-default;
+
+    &:before,
+    &:after { display: none; }
+  }
+
+  @include responsive(tablet) { min-width: 10rem; }
+}
+
+//*---------------------------------------*
+//  Button - Existing Site
+//*---------------------------------------*
+.btn-existing-site {
+  @extend .btn-clear;
+
+  span {
+    position: relative;
+
+    &:before {
+      @extend %pseudo;
+      top: 50%;
+      left: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-image: url(../img/circle-users.png);
+      background-position: 0 -3rem;
+      background-size: 1.5rem;
+      @include translateY(-50%);
+    }
+  }
+
+  &[disabled],
+  &.disabled { 
+
+    span:before {
+      -webkit-transform: translateY(-50%) translateZ(0) scale(1.0, 1.0); 
+              transform: translateY(-50%) translateZ(0) scale(1.0, 1.0); 
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - New Site
+//*---------------------------------------*
+.btn-new-site {
+  @extend .btn-clear;
+
+  span {
+    position: relative;
+
+    &:before {
+      @extend %pseudo;
+      top: 50%;
+      left: 0;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-image: url(../img/btn-plus.png);
+      background-size: 1.5rem;
+      @include translateY(-50%);
+    }
+  }
+
+  &[disabled],
+  &.disabled {
+
+    span:before { 
+      -webkit-transform: translateY(-50%) translateZ(0) scale(1.0, 1.0); 
+              transform: translateY(-50%) translateZ(0) scale(1.0, 1.0); 
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - ion3000
+//*---------------------------------------*
+.btn-ion3000 {
+  @extend .btn-clear;
+  padding: 0 1rem;
+  height: 2.625rem;
+  color: $link-color;
+
+  &.active,
+  &:active {
+    color: $text-1;
+    font-weight: 600;
+  }
+
+  span {
+    position: relative;
+    padding-left: 2.2rem;
+
+    &:before {
+      @extend %pseudo;
+      top: 50%;
+      left: 0;
+      width: 2rem;
+      height: 2.1875rem;
+      z-index: 5;
+      background-image: url(../img/devices/branch-device-active-standby.png);
+      background-size: 2rem 2.1875rem;
+      @include translateY(-50%);
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - ion7000
+//*---------------------------------------*
+.btn-ion7000 {
+  @extend .btn-clear;
+  padding: 0 1rem;
+  height: 2.625rem;
+  color: $link-color;
+
+  &.active,
+  &:active {
+    color: $text-1;
+    font-weight: 600;
+  }
+
+  span {
+    position: relative;
+    padding-left: 2.2rem;
+
+    &:before {
+      @extend %pseudo;
+      top: 50%;
+      left: 0;
+      width: 2rem;
+      height: 2.1875rem;
+      z-index: 5;
+      background-image: url(../img/devices/hub-device-active-standby.png);
+      background-size: 2rem 2.1875rem;
+      @include translateY(-50%);
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Branches
+//*---------------------------------------*
+.btn-branches {
+  @extend .btn-clear;
+  height: 2.625rem;
+
+  span:before {
+    background-image: url(../img/circle-users.png);
+    background-size: 1.625rem;
+  }
+
+  &.active {
+
+    span:before {
+      background-position: bottom left;
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Data Centers
+//*---------------------------------------*
+.btn-data-centers {
+  @extend .btn-clear;
+  height: 2.625rem;
+
+  span:before {
+    background-image: url(../img/circle-apps.png);
+    background-size: 1.625rem;
+  }
+
+  &.active {
+
+    span:before {
+      background-position: bottom left;
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Service Hubs
+//*---------------------------------------*
+.btn-service-hubs {
+  @extend .btn-clear;
+  height: 2.625rem;
+
+  span:before {
+    background-image: url(../img/circle-hub.png);
+    background-size: 1.625rem;
+  }
+
+  &.active {
+
+    span:before {
+      background-position: bottom left;
+    }
+  }
+}
+
+//*---------------------------------------*
+//  Button - Device-Active-23
+//*---------------------------------------*
+.btn-device-active {
+  @extend .btn-clear;
+  height: 2.625rem;
+
+  span:before {
+    background-image: url(../img/devices/branch-device-active-23.png);
+    background-size: 1.625rem;
+  }
+}
+
+//*---------------------------------------*
+//  Button - Device-Inactive-23
+//*---------------------------------------*
+.btn-device-inactive {
+  @extend .btn-clear;
+  height: 2.625rem;
+
+  span:before {
+    background-image: url(../img/devices/hub-device-inactive-23.png);
+    background-size: 1.625rem;
+  }
+}
+
+//*---------------------------------------*
+//  Button - Activate
+//*---------------------------------------*
+
+.btn-activate {
+  padding: 0.25rem 1rem;
+  font-size: 0.8125rem;
+}

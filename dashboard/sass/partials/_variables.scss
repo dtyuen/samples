@@ -1,0 +1,56 @@
+// text
+$text-1: #1a2224;
+$text-2: #425363;
+$text-3: #758a99; // #748998; 
+$text-4: #52606d;
+
+// links
+$link-color: #41aed8;
+
+// primary button
+$btn-primary: #72bd3d;
+$btn-primary-hover: #7ed043;
+$btn-primary-pressed: #65a736;
+$btn-primary-disabled: #90bd70;
+
+// default button
+$btn-default: #419cca;
+$btn-default-hover: #419cca;
+$btn-default-pressed: #419cca;
+$btn-default-disabled: #419cca;
+
+// notifications
+$error:  #fe0000;
+$warning: #fbc440;
+$highlighted: #e0f0fb;
+
+// corner radius
+$btn-radius: 3px;
+$box-radius: 6px;
+
+// panels
+$panel-header: #eff3f8;
+$panel-border: #b3babf; 
+
+// placeholder
+$placeholder: #ccd1d5;
+
+// branch element
+$controller: $text-2; 
+$internet: #008aab;
+$wanlan: #52549d;
+$ge: $text-3;
+$vpn: #05a387; 
+
+// modals
+$box-background: #f6f6f6;
+$box-border: #e0e3e8;
+$box-hover: #a0cde4;
+
+// tabs
+$tab-selected: $text-3;
+$tab-setting: $panel-header;
+$tab-text: $panel-border;
+
+// tables
+$table-row-shading: #f7f9fb;
