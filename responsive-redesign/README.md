@@ -1,15 +1,23 @@
 Redesign project
 =====
 
-This is the initial html for a redesign project at:  
+This is a redesign project at:  
 https://stage.wepay.com  
 https://stage.wepay.com/team  
 https://stage.wepay.com/platforms  
 https://stage.wepay.com/about  
-https://stage.wepay.com/features  
-https://stage.wepay.com/jobs  
+https://stage.wepay.com/features    
 https://stage.wepay.com/customers  
 https://stage.wepay.com/press  
+
+I initially built the static-html with Middleman, and then I integrated the html-templates into WePay's PHP view/controller environment. The pages above have changed a little bit since, but you can view my original static-html in the `build` folder.
+
+Technologies used:
+
+* LESS
+* jQuery
+* responsive web (Bootstrap 3)
+* CSS3 transitions and animations
 
 Middleman
 =====
