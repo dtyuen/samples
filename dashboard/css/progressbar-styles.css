@@ -1,0 +1,287 @@
+/* --------------------------------------------------------------
+  compass/reset
+----------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.container:after {
+  clear: both;
+}
+
+
+/* --------------------------------------------------------------
+  Icon Fonts - icomoon.io
+----------------------------------------------------------------- */
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?ajxork');
+  src:url('../fonts/icomoon.eot?#iefixajxork') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ajxork') format('truetype'),
+    url('../fonts/icomoon.woff?ajxork') format('woff'),
+    url('../fonts/icomoon.svg?ajxork#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkmark2:before {
+  content: "\ea11";
+}
+.icon-checkmark {
+  color: #5f7423;
+}
+.target.icon-checkmark {
+  display: none;
+}
+/* --------------------------------------------------------------
+  My styles
+----------------------------------------------------------------- */
+body {
+  padding: 2rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+.widget-progressbar {
+  width: 100%;
+  padding: 2rem 0 2rem 1.5rem;
+  border: 1px solid #999;
+}
+
+.widget-progressbar h3 {
+  text-transform: uppercase;
+  margin-bottom: .75rem;
+}
+
+.widget-progressbar .number {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.widget-progressbar .number .subtitle {
+  font-weight: normal;
+  font-size: .85rem;
+}
+
+.widget-progressbar .col-left {
+  float: left;
+  width: 80%;
+}
+
+.widget-progressbar .col-right {
+  float: left;
+  /*width: 20%*/
+}
+
+.widget-progressbar .col-left .number {
+  float: left;
+  padding-right: 1rem;
+  min-width: 7rem;
+}
+
+.progressbar-wrapper {
+  float: left;
+  position: relative;
+  height: 24px;
+  width: 100%;
+  background-color: #ccc;
+  border: 1px solid #999;
+  border-radius: 3px;
+  margin-bottom: .75rem;
+}
+
+.progressbar-wrapper .progressbar-1 {
+  background-color: #809e2d;
+  /*width: 73%;*/
+  width: 0%;
+  display: inline-block;
+  vertical-align: bottom;
+  height: 22px;
+  max-width: 100%;
+  -webkit-transition: width 1s ease 0s;
+     -moz-transition: width 1s ease 0s;
+          transition: width 1s ease 0s;
+  text-align: right;
+}
+
+.progressbar-wrapper .progressbar-1 span { 
+  color: white;
+  font-weight: bold;
+  line-height: 1.4;
+  padding-right: .5rem;
+}
+
+.progressbar-wrapper .popover {
+  background-color: #de5959;
+  width: 80px;
+  height: 45px;
+  position: relative;
+  bottom: 75px;
+  border: 1px solid #ba1f1f;
+  border-radius: 3px;
+  font-style: italic;
+  color: white;
+  font-weight: bold;
+  font-size: .85rem;
+  text-align: center;
+  padding-top: 5px;
+  /*left: 87%;*/
+  left: 0%;
+  -webkit-transition: left 1s ease 0s;
+     -moz-transition: left 1s ease 0s;
+          transition: left 1s ease 0s;
+  display: none;
+  margin-left: -40px;
+}
+
+
+
+.progressbar-wrapper .popover .arrow,
+.progressbar-wrapper .popover .arrow:after {
+    border-color: transparent;
+    border-style: solid;
+    display: block;
+    height: 0;
+    position: absolute;
+    width: 0;
+    border-width: 8px;
+    border-bottom-width: 0;
+    content: " ";
+    margin-left: -8px;
+}
+.progressbar-wrapper .popover .arrow {
+    bottom: -9px;
+    border-top-color: #ba1f1f;
+    left: 50%;
+}
+
+.progressbar-wrapper .popover .arrow:after {
+    bottom: 1px;
+    border-top-color: #de5959;
+}
+
+.progressbar-wrapper .popover .number {
+  margin: 0;
+  font-size: .85rem;
+  float: none;
+  font-style: normal;
+  padding: 0;
+  line-height: 1.5;
+  min-width: 0;
+}
+
+.progressbar-wrapper .popover.green {
+  background-color: #5f7423;
+  border: 1px solid #5f7423;
+}
+.progressbar-wrapper .popover.green .arrow {
+    border-top-color: #5f7423;
+}
+.progressbar-wrapper .popover.green .arrow:after {
+    border-top-color: #5f7423;
+}
+
+
+@media only screen and (min-width: 769px) {
+  .widget-progressbar {
+    width: 55%;
+  }
+  .progressbar-wrapper {
+    width: 75%;
+  }
+}

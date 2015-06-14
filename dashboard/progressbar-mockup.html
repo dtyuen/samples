@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <!--html class="no-js"--><html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Progressbar Mockup</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <!--meta name="viewport" content="initial-scale=1"-->
+  <!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/progressbar-styles.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  Click the "Calculate" button below.
+
+  <section>
+    <div class="widget-progressbar clearfix">
+      <div class="col-left">
+        <h3>Annual Income</h3>
+        <div class="number">
+          $<span class="amount-retire">0</span><span class="subtitle">/yr</span>
+        </div>
+        <div class="progressbar-wrapper">
+            <div class="progressbar-1"><span>0%</span></div>
+            <div class="popover">
+              <div class="arrow"></div>
+              <span class="popover-text">Shortfall</span>
+              <div class="number">
+                $<span class="amount">0</span>
+              </div>            
+            </div>
+        </div><!-- progressbar-wrapper -->
+      </div>
+      <div class="col-right">
+        <h3>Target <i class="target icon-checkmark"></i></h3>
+        <div class="number">
+          $<span class="amount-target">0</span><span class="subtitle">/yr</span>
+        </div>
+      </div>
+    </div><!-- widget-progressbar -->
+  </section>
+
+  <form action="#">
+    <strong>Enter number values:</strong><br/>
+    Annual Income:&nbsp;&nbsp;&nbsp;&nbsp; $ <input type="number" id="amount-retire" name="amount-retire" value="73000"> /yr<br/>
+    Target:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ <input type="number" id="amount-target" name="amount-target" value="100000"> /yr<br/>
+
+    <button id="calculate">Calculate</button>
+  </form>
+  <br/>
+  <br/>
+
+  Slightly responsive, but starts to degrade when browser-width is small.<br/><br/>
+  TODO's:<br/>
+  &nbsp;&nbsp; -- Add media-queries for better responsive.
+  <br/>
+  <br/>
+  <br/>
+
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="js/progressbar.js" type="text/javascript"></script>
+</body>
+</html>
