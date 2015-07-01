@@ -1,0 +1,33 @@
+<section>
+  <div class="widget-progressbar clearfix">
+    <div class="col-left">
+      <h3>Annual Income</h3>
+      <div class="number">
+        {{retireInt | currency: '$': 0}}<span class="subtitle">/yr</span>
+      </div>
+      <div class="progressbar-wrapper">
+          <div class="progressbar-1" style="width:{{percent}}%"><span>{{percent}}%</span></div>
+          <div class="popover" ng-class="{'green': !shortfall}" style="left:{{popoverLeft}}%">
+            <div class="arrow"></div>
+            <span class="popover-text">{{popoverText}}</span>
+            <div class="number" ng-hide="retireInt === targetInt">
+              {{popoverInt | currency: '$': 0}}
+            </div>            
+          </div>
+      </div><!-- progressbar-wrapper -->
+    </div>
+    <div class="col-right">
+      <h3>Target <i ng-show="!shortfall" class="target icon-checkmark"></i></h3>
+      <div class="number">
+        {{targetInt | currency: '$': 0}}<span class="subtitle">/yr</span>
+      </div>
+    </div>
+  </div><!-- widget-progressbar -->
+
+  <br/>
+  <br/>
+
+  <strong>Enter number values:</strong><br/>
+  Annual Income:&nbsp;&nbsp;&nbsp;&nbsp; $ <input type="number" ng-model="retireInt" name="amount-retire"> /yr<br/>
+  Target:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $ <input type="number" ng-model="targetInt" name="amount-target"> /yr
+</section>
