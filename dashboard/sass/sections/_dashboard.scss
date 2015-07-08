@@ -972,7 +972,8 @@ $widget-green: #72bd3d;
                  -moz-transition: -moz-transform .3s;
                       transition: transform .3s;
 
-              transform-origin: 33px 5px;
+              -webkit-transform-origin: 33px 5px;
+                      transform-origin: 33px 5px;
 
               -webkit-transform: rotate(120deg);
                   -ms-transform: rotate(120deg);
@@ -999,7 +1000,8 @@ $widget-green: #72bd3d;
                    -moz-transition: -moz-transform .3s;
                         transition: transform .3s;
 
-                transform-origin: top center;
+                -webkit-transform-origin: top center;
+                        transform-origin: top center;
 
                 -webkit-transform: rotate(120deg);
                     -ms-transform: rotate(120deg);

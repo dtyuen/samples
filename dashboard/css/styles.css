@@ -2619,6 +2619,7 @@ table.tablesaw {
   -webkit-transition: -webkit-transform .3s;
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
+  -webkit-transform-origin: 33px 5px;
   transform-origin: 33px 5px;
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
@@ -2642,6 +2643,7 @@ table.tablesaw {
   -webkit-transition: -webkit-transform .3s;
   -moz-transition: -moz-transform .3s;
   transition: transform .3s;
+  -webkit-transform-origin: top center;
   transform-origin: top center;
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
