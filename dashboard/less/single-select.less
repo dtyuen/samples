@@ -1,0 +1,135 @@
+.single-select-pattern {
+  width: 636px;
+  margin: 0 auto 54px;
+
+  .single-select {
+    cursor: pointer;
+    background-color: @transparent-black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid white;
+    width: 136px;
+    height: 136px;
+    margin-right: 54px;
+    position: relative;
+    float: left;
+
+    @media (min-width: @screen-tablet) {
+      height: 176px;
+      width: 176px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+    &:before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      border: 2px solid white;
+      border-radius: 50%;
+      position: absolute;
+      right: -20px;
+      top: -20px;
+      background-color: black;
+      color: white;
+      display: none;
+
+      @media (min-width: @screen-tablet) {
+        height: 50px;
+        width: 50px;
+      }
+    }
+    &:after {
+      font-family: 'icomoon';
+      font-size: 20px;
+      content: "\ea10";
+      position: absolute;
+      right: -9px;
+      top: -10px;
+      color: white;
+      display: none;
+
+      @media (min-width: @screen-tablet) {
+        font-size: 27px;
+        right: -8px;
+        top: -8px;
+      }
+    }
+    &:hover {
+      &:before, &:after {
+        display: block;
+      }
+    }
+    &.selected {
+      &:before, &:after {
+        display: block;
+      }
+      &:before {
+        background-color: @medium-blue;
+      }
+    }
+    i.icon {
+      display: none;
+    }
+    h6 {
+      text-align: center;
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      width: 132px;
+      height: 132px;
+      color: white;
+      text-transform: uppercase;
+      padding-top: 103px;
+      overflow: hidden;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+63,000000+100&amp;0+63,1+100 */
+      background: -moz-linear-gradient(top,  rgba(255,255,255,0) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(63%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(255,255,255,0) 63%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(255,255,255,0) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
+      background: linear-gradient(to bottom,  rgba(255,255,255,0) 63%,rgba(0,0,0,1) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+      @media (min-width: @screen-tablet) {
+        height: 172px;
+        padding-top: 143px;
+        width: 172px;
+      }
+    }
+
+    &.icon {
+      i.icon {
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        width: 172px;
+        height: 105px;
+      }
+      h6 {
+        background: none;
+        height: auto;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &.disabled {
+    opacity: .6;
+    .single-select {
+      cursor: not-allowed;
+      &:hover, &.selected {
+        &:before, &:after {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+.single-select-position {
+  position: absolute;
+  top: 15%;
+  width: 90%;
+}

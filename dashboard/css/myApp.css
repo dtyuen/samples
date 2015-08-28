@@ -1,0 +1,455 @@
+/* --------------------------------------------------------------
+  compass/reset
+----------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.container:after {
+  clear: both;
+}
+
+/* --------------------------------------------------------------
+  Icon Fonts - icomoon.io
+----------------------------------------------------------------- */
+@font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot?ajxork');
+  src:url('../fonts/icomoon.eot?#iefixajxork') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ajxork') format('truetype'),
+    url('../fonts/icomoon.woff?ajxork') format('woff'),
+    url('../fonts/icomoon.svg?ajxork#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkmark2:before {
+  content: "\ea11";
+}
+.icon-checkmark {
+  color: #5f7423;
+}
+.target.icon-checkmark {
+  display: none;
+}
+
+/* --------------------------------------------------------------
+  My styles
+----------------------------------------------------------------- */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #ccc;
+  background: radial-gradient(circle at 50% 30%, #ccc, orange);
+  padding-bottom: 100px;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+.navbar {
+  border-radius: 0;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #66b2e3;
+}
+.centered {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.slider-container {
+  padding: 0 10%;
+}
+.slider-pattern {
+  position: relative;
+  height: 112px;
+  padding: 0 15px;
+  margin: 90px 0 0 0;
+}
+.slider-pattern .slider-disabled-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 112px;
+  z-index: 10;
+  display: none;
+}
+.slider-pattern .default-txt {
+  display: none;
+  position: absolute;
+  bottom: 114px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slider-pattern .default-txt span {
+  display: block;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  max-width: 215px;
+}
+.slider-pattern .slider-bg {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+.slider-pattern .angular-slider {
+  display: inline-block;
+  position: relative;
+  height: 112px;
+  margin: 0;
+  width: 100%;
+  vertical-align: middle;
+}
+.slider-pattern .angular-slider input[type="range"] {
+  cursor: pointer;
+}
+.slider-pattern .angular-slider span {
+  white-space: nowrap;
+  position: absolute;
+  display: inline-block;
+}
+.slider-pattern .angular-slider span.bar {
+  width: 100%;
+  top: 51px;
+  height: 5px;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #66b2e3 0%, #00338d 100%);
+  background-image: linear-gradient(to right, #66b2e3 0%, #00338d 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff66b2e3', endColorstr='#ff00338d', GradientType=1);
+}
+.slider-pattern .angular-slider span.pointer {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  top: 16px;
+  border: 2px solid white;
+  background-color: #0073cf;
+  border-radius: 50%;
+  background-image: none;
+}
+.slider-pattern .angular-slider span.pointer:before,
+.slider-pattern .angular-slider span.pointer:after {
+  position: absolute;
+  color: white;
+  font-family: Arial;
+  font-size: 80px;
+  line-height: 25px;
+  overflow: hidden;
+}
+.slider-pattern .angular-slider span.pointer:before {
+  content: "";
+  left: 50%;
+  top: -20px;
+  background-color: white;
+  height: 20px;
+  width: 2px;
+}
+.slider-pattern .angular-slider span.pointer:after {
+  content: "\2039 \203A";
+  left: 10px;
+  top: 18px;
+  letter-spacing: 2px;
+  height: 38px;
+  width: 53px;
+}
+.slider-pattern .angular-slider span.bubble {
+  cursor: default;
+  top: auto;
+  bottom: 114px;
+  padding: 10px 15px;
+}
+.slider-pattern .angular-slider span.bubble.low,
+.slider-pattern .angular-slider span.bubble.high {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+.slider-pattern .angular-slider span.bubble.floor,
+.slider-pattern .angular-slider span.bubble.ceiling {
+  display: none !important;
+}
+.slider-pattern.init-state .default-txt {
+  display: block;
+}
+.slider-pattern.init-state .angular-slider span.pointer {
+  left: 50% !important;
+  margin-left: -40px;
+}
+.slider-pattern.init-state .angular-slider span.bubble.low,
+.slider-pattern.init-state .angular-slider span.bubble.high {
+  opacity: 0;
+}
+.slider-pattern.disabled .slider-disabled-overlay {
+  display: block;
+  cursor: not-allowed;
+}
+.slider-pattern.disabled .default-txt span {
+  background-color: rgba(102, 102, 102, 0.45);
+}
+.slider-pattern.disabled .angular-slider span.bar {
+  background-image: -webkit-linear-gradient(left, #cccccc 0%, #666666 100%);
+  background-image: linear-gradient(to right, #cccccc 0%, #666666 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcccccc', endColorstr='#ff666666', GradientType=1);
+}
+.slider-pattern.disabled .angular-slider span.pointer {
+  background-color: #999;
+}
+.slider-pattern.disabled .angular-slider span.bubble.low,
+.slider-pattern.disabled .angular-slider span.bubble.high {
+  background-color: rgba(102, 102, 102, 0.45);
+}
+.single-select-pattern {
+  width: 636px;
+  margin: 0 auto 54px;
+}
+.single-select-pattern .single-select {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid white;
+  width: 136px;
+  height: 136px;
+  margin-right: 54px;
+  position: relative;
+  float: left;
+}
+@media (min-width: 768px) {
+  .single-select-pattern .single-select {
+    height: 176px;
+    width: 176px;
+  }
+}
+.single-select-pattern .single-select:last-child {
+  margin-right: 0;
+}
+.single-select-pattern .single-select:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  background-color: black;
+  color: white;
+  display: none;
+}
+@media (min-width: 768px) {
+  .single-select-pattern .single-select:before {
+    height: 50px;
+    width: 50px;
+  }
+}
+.single-select-pattern .single-select:after {
+  font-family: 'icomoon';
+  font-size: 20px;
+  content: "\ea10";
+  position: absolute;
+  right: -9px;
+  top: -10px;
+  color: white;
+  display: none;
+}
+@media (min-width: 768px) {
+  .single-select-pattern .single-select:after {
+    font-size: 27px;
+    right: -8px;
+    top: -8px;
+  }
+}
+.single-select-pattern .single-select:hover:before,
+.single-select-pattern .single-select:hover:after {
+  display: block;
+}
+.single-select-pattern .single-select.selected:before,
+.single-select-pattern .single-select.selected:after {
+  display: block;
+}
+.single-select-pattern .single-select.selected:before {
+  background-color: #0073cf;
+}
+.single-select-pattern .single-select i.icon {
+  display: none;
+}
+.single-select-pattern .single-select h6 {
+  text-align: center;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  width: 132px;
+  height: 132px;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 103px;
+  overflow: hidden;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+63,000000+100&amp;0+63,1+100 */
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(63%, rgba(255, 255, 255, 0)), color-stop(100%, #000000));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 63%, #000000 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 63%, #000000 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#000000', GradientType=0);
+  /* IE6-9 */
+}
+@media (min-width: 768px) {
+  .single-select-pattern .single-select h6 {
+    height: 172px;
+    padding-top: 143px;
+    width: 172px;
+  }
+}
+.single-select-pattern .single-select.icon i.icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  width: 172px;
+  height: 105px;
+}
+.single-select-pattern .single-select.icon h6 {
+  background: none;
+  height: auto;
+  padding-top: 20px;
+}
+.single-select-pattern.disabled {
+  opacity: .6;
+}
+.single-select-pattern.disabled .single-select {
+  cursor: not-allowed;
+}
+.single-select-pattern.disabled .single-select:hover:before,
+.single-select-pattern.disabled .single-select.selected:before,
+.single-select-pattern.disabled .single-select:hover:after,
+.single-select-pattern.disabled .single-select.selected:after {
+  display: none !important;
+}
+.single-select-position {
+  position: absolute;
+  top: 15%;
+  width: 90%;
+}

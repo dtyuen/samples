@@ -1,0 +1,6 @@
+<div class="slider-pattern" ng-class="{'disabled':disableSlider, 'init-state':initState}">
+  <div class="slider-disabled-overlay"></div>
+  <div class="default-txt"><span>{{sliderDefaultTxt}}</span></div>
+  <div class="slider-bg"></div>
+  <slider class="angular-slider" ng-model="sliderValue" step-width=".1" floor="0" ceiling="{{sliderLength}}" precision="1" translate-fn="translate" ng-touchstart="initSlider()"></slider>
+</div>

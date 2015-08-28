@@ -1,0 +1,21 @@
+<h1 class="text-center text-black">Single Select</h1>
+
+<div class="container-fluid text-black">
+  <div class="row">
+    <div class="col-md-12 text-center">
+
+        <form class="text-black" style="height:50px;">
+          <input type="checkbox" ng-model="disableSingleSelect1"> disable single-select-1
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="checkbox" ng-model="disableSingleSelect2"> disable single-select-2
+        </form>
+
+        <p>Select one:</p>
+        <single-select single-select-arr="singleSelectArr1" disable-single-select="disableSingleSelect1"></single-select>
+
+        <p>Select one:</p>
+        <single-select single-select-arr="singleSelectArr2" disable-single-select="disableSingleSelect2"></single-select>
+
+    </div>
+  </div>
+</div>
