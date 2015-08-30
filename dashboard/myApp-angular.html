@@ -10,7 +10,7 @@
   <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/myApp.css">
   </head>
-  <body ng-app="myApp">
+  <body ng-app="myApp" class="{{bodyClass}}">
 	<!--[if lte IE 8]>
 	  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -19,8 +19,8 @@
 	  <div class="container-fluid">
 	    <div class="navbar-header text-center">
 	      <ul class="nav navbar-nav">
-	        <li><a href="#/">Slider</a></li>
-	        <li><a href="#/single-select">Single-Select</a></li>
+	        <li><a ng-class="{'selected':bodyClass === 'slider'}" href="#/slider">Slider</a></li>
+	        <li><a ng-class="{'selected':bodyClass === 'single-select'}" href="#/single-select">Single-Select</a></li>
 	      </ul>
 	    </div>
 	  </div>

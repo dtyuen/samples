@@ -11,9 +11,11 @@
   angular.module('myApp')
     .controller('PatternsCtrl', PatternsCtrl);
 
-  PatternsCtrl.$inject = ['$log', '$scope'];
+  PatternsCtrl.$inject = ['$scope', '$rootScope', '$location', '$log'];
 
-  function PatternsCtrl($log, $scope) {
+  function PatternsCtrl($scope, $rootScope, $location, $log) {
+    $rootScope.bodyClass = $location.path().substr(1);
+
     // Single-Select
     $scope.singleSelectArr1 = [
       {type: 'image', selected: false, txt: 'House', imgpath: 'img/suburban.jpg'},

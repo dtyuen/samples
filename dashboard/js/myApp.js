@@ -18,10 +18,10 @@ angular
     'mySlider'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/slider');
     $stateProvider
-      .state('index', {
-        url: '/',
+      .state('slider', {
+        url: '/slider',
         templateUrl: 'views/slider.html',
         controller: 'PatternsCtrl'
       })
