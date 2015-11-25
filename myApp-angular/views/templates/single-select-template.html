@@ -1,6 +1,6 @@
 <div class="single-select-pattern clearfix" ng-class="{'disabled':disableSingleSelect}">
   <div class="single-select" ng-repeat="singleSelect in singleSelectArr" ng-click="toggleSingleSelect($index);" ng-class="{'selected':singleSelect.selected, 'icon':singleSelect.type === 'icon'}" ng-style="singleSelect.type === 'image' ? {'background-image': 'url({{singleSelect.imgpath}})'} : {}">
     <i ng-if="singleSelect.type === 'icon'" class="icon" style="background-image: url('{{singleSelect.imgpath}}');"></i>
-    <h6>{{singleSelect.txt}} {{$index}}</h6>
+    <h6 ng-click="singleSelect.type === 'icon' ? testClick($index) : ''">{{singleSelect.txt}} {{$index}} {{labelArr[$index]}}</h6>
   </div>
 </div>

@@ -14,7 +14,9 @@
       //require: ['ngModel'],
       scope: {
         singleSelectArr: '=',
-        disableSingleSelect: '='
+        disableSingleSelect: '=',
+        labelArr: '=?',
+        id: '@'
       },
       // controller: function($scope, $http) {
       //
@@ -34,6 +36,14 @@
             });
           }
         };
+
+      scope.testClick = function(i) {
+        alert(i);
+      }
+
+        scope.$on('$destroy', function(){
+          console.log('single-select ' + scope.id + ' destroyed');
+        });
       }
     };
   });

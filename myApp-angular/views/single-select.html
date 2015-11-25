@@ -7,14 +7,15 @@
         <form class="text-black" style="height:50px;">
           <input type="checkbox" ng-model="disableSingleSelect1"> disable single-select-1
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="checkbox" ng-model="disableSingleSelect2"> disable single-select-2
+          <input type="checkbox" ng-model="disableSingleSelect2"> disable single-select-2<br/>
+          <button ng-click="updateSingleSelect()">updateSingleSelect</button>
         </form>
 
         <p>Select one:</p>
-        <single-select single-select-arr="singleSelectArr1" disable-single-select="disableSingleSelect1"></single-select>
+        <single-select single-select-arr="singleSelectArr1" label-arr="labelArr" disable-single-select="disableSingleSelect1" id="1"></single-select>
 
         <p>Select one:</p>
-        <single-select single-select-arr="singleSelectArr2" disable-single-select="disableSingleSelect2"></single-select>
+        <single-select single-select-arr="singleSelectArr2" disable-single-select="disableSingleSelect2" id="2"></single-select>
 
     </div>
   </div>

@@ -5,13 +5,15 @@
     <div class="col-md-12">
       <div class="slider-container">
 
-        <input type="checkbox" ng-model="disableSlider1"> disable slider1 &nbsp;|&nbsp; slider1-value: {{sliderValue1}}
+        <input type="checkbox" ng-model="disableSlider1"> disable slider1 &nbsp;|&nbsp; slider1-value: {{sliderValue1}}<br/>
+        saved-slider-value = {{savedSliderValue}}<br/>
+        <button ng-click="updateSlider()">updateSlider</button>
 
-        <my-slider slider-default-txt="{{sliderDefaultTxt1}}" slider-text-arr="sliderTextArr1" slider-value="sliderValue1" disable-slider="disableSlider1"></my-slider>
+        <my-slider slider-default-txt="sliderDefaultTxt1" slider-text-arr="sliderTextArr1" init-state="initState1" slider-value="sliderValue1" disable-slider="disableSlider1" id="1"></my-slider>
 
         <input type="checkbox" ng-model="disableSlider2"> disable slider2 &nbsp;|&nbsp; slider2-value: {{sliderValue2}}
 
-        <my-slider slider-default-txt="{{sliderDefaultTxt2}}" slider-text-arr="sliderTextArr2" slider-value="sliderValue2" disable-slider="disableSlider2"></my-slider>
+        <my-slider slider-default-txt="sliderDefaultTxt2" slider-text-arr="sliderTextArr2" slider-value="sliderValue2" disable-slider="disableSlider2" id="2"></my-slider>
 
         <p>&nbsp;</p>
         <p>&nbsp;</p>

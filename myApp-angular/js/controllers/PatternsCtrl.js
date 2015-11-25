@@ -29,6 +29,13 @@
       {type: 'icon', selected: false, txt: 'Icon', imgpath: 'img/weight-loss.png'}
     ];
 
+    $scope.labelArr = ['a', 'b', 'c'];
+
+    $scope.updateSingleSelect = function() {
+      $scope.labelArr = ['d', 'e', 'f'];
+    }
+
+
     // Slider
     $scope.sliderValue1 = 0;
     $scope.sliderDefaultTxt1 = 'Use the slider to indicate your level.';
@@ -53,5 +60,21 @@
       '4. High',
       '5. High: long text here.'
     ];
+
+    $scope.savedSliderValue = 'empty';
+
+    $scope.updateSlider = function() {
+      $scope.savedSliderValue = $scope.sliderValue1;
+      $scope.initState1 = true;
+      $scope.sliderValue1 = 0;
+      $scope.sliderDefaultTxt1 = 'This text was dynamically changed.';
+      $scope.sliderTextArr1 = [
+        '0. Poor: dynamically changed.',
+        '1. Fair: long text here. dynamically changed.',
+        '2. Good: dynamically changed.',
+        '3. Normal: some text, dynamically changed.',
+        '4. Excellent: dynamically changed.',
+      ];
+    }
   }
 })();

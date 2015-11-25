@@ -14,9 +14,11 @@
       //require: ['ngModel'],
       scope: {
         sliderValue: "=",
-        sliderDefaultTxt: "@",
+        sliderDefaultTxt: "=",
         sliderTextArr: "=",
-        disableSlider: "="
+        disableSlider: "=",
+        initState: "=?",
+        id: '=?'
       },
       // controller: function($scope, $http) {
       //
@@ -43,6 +45,10 @@
         scope.initSlider = function () {
           scope.initState = false;
         };
+
+        scope.$on('$destroy', function(){
+          console.log('slider ' + scope.id + ' destroyed');
+        });
 
       }
     };
