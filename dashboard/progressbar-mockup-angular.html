@@ -40,6 +40,17 @@
   <br/>
   <br/>
 
+  <hr/>
+  <div style="font-size: 12px">
+    Note: On Chrome, the "same origin policy" will prevent Chrome from loading Angular-templates locally from file://
+    <br/>
+    <br/>
+    There are three options to workaround this:<br/><br/>
+    - Use FireFox<br/>
+    - Or, load this app through a web server<br/>
+    - Or, set a flag on Chrome. You can do this by running Chrome from the command line as chrome --allow-file-access-from-files
+  </div>
+
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
   <script src="js/vendor/angular.js" type="text/javascript"></script>
   <script type="text/javascript">
