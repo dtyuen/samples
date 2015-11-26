@@ -1,9 +1,0 @@
-I inherited, supported, and customized the CMS modules on the landing pages below:
- 
-http://www.hotwire.com/
-http://www.hotwire.com/hotel/index.jsp
-http://www.hotwire.com/car/index.jsp
-http://www.hotwire.com/air/index.jsp
-http://www.hotwire.com/deals/index.jsp
- 
-I didn't keep the code because there are several dependencies for Hotwire. For example: these modules are templatized in the CMS, and made accessible for a non-tech Product Manager to configure. The travel-deals are returned by the Java Application, and loaded asynchronously with AJAX. The javascript in every component across the site utilizes Hotwire libraries that refer back to Singleton and "Superclass" objects established by a Front-end Architect.
