@@ -1,0 +1,119 @@
+{
+    "content":{
+        "title":"What do you drink on a typical day?<br><em> Serving size is approximately 12-18 Fl Oz. or 237-355 Ml.</em>",
+        "bgImage":{
+            "altText":"asdf",
+            "landscape":"images/beverage/beverage-table-bg.jpg",
+            "portrait":"images/beverage/beverage-table-bg.jpg"
+        },
+        "tooltip":{
+            "close":"Close",
+            "header":"Header",
+            "text":"Text"
+        },
+        "saveModal": {
+            "cancelText":"Cancel",
+            "saveText":"Save and Continue"
+        },
+        "inlineFunFacts": {
+            "funfactTitle": "Did you know?",
+            "funfactItems":[
+                {"label": "Fun Fact 1 - beverages - text goes here."},
+                {"label": "Fun Fact 2 - beverages - text goes here."},
+                {"label": "Fun Fact 3 - beverages - Lorem ipsum dolor sit amet"},
+                {"label": "Fun Fact 4 - beverages - Lorem ipsum dolor sit amet"}
+            ]
+        }
+    },
+    "componentSection":{
+        "multiSelects": [
+            {
+                "id": "beverages",
+                "descriptiveLabel": "Select 1 or more",
+                "options":[
+                    {
+                        "id": "1",
+                        "image": "images/placeholders/coffee-sm.png",
+                        "text": "Coffee/Tea",
+                        "sliderImages": [
+                            "images/beverage/beverage-1.png",
+                            "images/beverage/beverage-2.png",
+                            "images/beverage/beverage-3.png"
+                        ]
+                    },
+                    {
+                        "id": "2",
+                        "image": "images/placeholders/coffee-sm.png",
+                        "text": "Energy Drinks",
+                        "sliderImages": [
+                            "images/beverage/beverage-2.png",
+                            "images/beverage/beverage-5.png",
+                            "images/beverage/beverage-4.png"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "image": "images/placeholders/coffee-sm.png",
+                        "text": "Soda",
+                        "sliderImages": [
+                            "images/beverage/beverage-3.png",
+                            "images/beverage/beverage-4.png",
+                            "images/beverage/beverage-5.png"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "image": "images/placeholders/coffee-sm.png",
+                        "text": "Juice",
+                        "sliderImages": [
+                            "images/beverage/beverage-4.png",
+                            "images/beverage/beverage-5.png",
+                            "images/beverage/beverage-3.png"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "image": "images/placeholders/coffee-sm.png",
+                        "text": "Alchohol",
+                        "sliderImages": [
+                            "images/beverage/beverage-5.png",
+                            "images/beverage/beverage-4.png",
+                            "images/beverage/beverage-1.png"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "image": "images/placeholders/coffee-sm.png",
+                        "text": "Water",
+                        "sliderImages": [
+                            "images/beverage/beverage-2.png",
+                            "images/beverage/beverage-3.png",
+                            "images/beverage/beverage-4.png"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "sliders":[
+            {
+                "id":"slider1",
+                "defaultState":"slider 1",
+                "defaultImage":"images/beverage/beverage-0.png",
+                "options":[
+                    {
+                        "id":"1",
+                        "label":"1-2 per day"
+                    },
+                    {
+                        "id":"2",
+                        "label":"3-4 per day"
+                    },
+                    {
+                        "id":"3",
+                        "label":"5+ per day"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,141 @@
+/* --------------------------------------------------------------
+  compass/reset
+----------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after,
+.container:after {
+  clear: both;
+}
+
+
+/* --------------------------------------------------------------
+  My styles
+----------------------------------------------------------------- */
+body {
+  background-color: #999;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  width: 850px;
+}
+
+.container img {
+  display: block;
+}
+
+.method1, .method2 {
+  float: left;
+  width: 420px;
+  height: 420px;
+  overflow: hidden;
+  position: relative;
+}
+
+.method1 h3, .method2 h3 {
+  position: absolute;
+  top: 5px;
+  left: 160px;
+}
+
+.method1 .star-overlay {
+  position: absolute;
+  top: 134px;
+  left: 140px;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  opacity: 0;
+}
+
+.method1 .star-overlay.blue-overlay {
+  background-color: blue;
+}
+
+.method1 .star-overlay.red-overlay {
+  background-color: red;
+}
+
+label, input[type='number'], input[type='range'] {
+  margin-left: 30px;
+}
+
+input#velocity-input {
+  width: 50px;
+}
+
+input#velocity-slider {
+  width: 200px;
+}
+
+p.instruction {
+  font-size: .8em;
+  margin-left: 200px;
+}
+
+.footnote {
+  border-top: 1px solid white;
+  padding: 2em;
+  font-size: .8em;
+}

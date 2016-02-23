@@ -146,6 +146,12 @@ a:focus {
   outline: none;
 }
 
+.footnote {
+  border-top: 1px solid white;
+  padding: 2em;
+  font-size: .8em;
+}
+
 .navbar {
   border-radius: 0;
 }
