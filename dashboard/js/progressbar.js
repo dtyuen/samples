@@ -8,8 +8,8 @@ jQuery(document).ready(function ($) {
       return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
-  $('#calculate').click(function(e) {
-    e.preventDefault();
+  function handleClick(e) {
+    if (e) e.preventDefault();
     var $progressbar = $('.progressbar-1', '.progressbar-wrapper'),
         $popover = $('.popover'),
         $popoverText = $popover.find('.popover-text'),
@@ -68,7 +68,12 @@ jQuery(document).ready(function ($) {
       $popoverNumber.show();
       $popoverAmount.text(difference);
     }
-  });
+  }
+
+  $('#calculate').click(handleClick);
+
+  // initial load
+  handleClick();
 // end .ready        
 });
 
