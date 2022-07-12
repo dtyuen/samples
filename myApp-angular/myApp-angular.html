@@ -31,13 +31,20 @@
 	</div>
 
   <div class="footnote">
-    <b>Note:</b> On Chrome, the "same origin policy" will prevent Chrome from loading Angular-templates locally from file://
+    <b>Note:</b> The "same origin policy" will prevent Chrome and FireFox from loading Angular-templates locally from file://
     <br/>
     <br/>
-    There are 3 options to workaround this:<br/><br/>
-    - <b>Use FireFox ... (the easiest option)</b><br/>
-    - Or, load this app through a web server<br/>
-    - Or, set a flag on Chrome. You can do this by running Chrome from the command line as chrome --allow-file-access-from-files
+    To workaround this:<br/>
+    <a href="https://dev.to/dengel29/loading-local-files-in-firefox-and-chrome-m9f" target="_blank">https://dev.to/dengel29/loading-local-files-in-firefox-and-chrome-m9f</a>
+    <br/><br/>
+    - On FireFox, navigate to <b>about:config</b> in the Firefox browser<br/>
+    search for <b>security.fileuri.strict_origin_policy</b><br/>
+    toggle that to <b>false</b>
+    <br/><br/>
+    - On Chrome, set a <b>--allow-file-access-from-files</b> flag when running Chrome from the command line<br/>
+    <b>On Windows:</b> Run cmd to get a command window.<br/>
+    Move to the Chrome directory, e.g., <b>cd C:\Program Files (x86)\Google\Chrome\Application</b><br/>
+    Then: <b>chrome.exe --allow-file-access-from-files</b>
   </div>
 
   <script src="js/vendor/jquery-1.10.2.min.js"></script>
