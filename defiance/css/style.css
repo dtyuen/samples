@@ -609,7 +609,7 @@ td { vertical-align: top; }
 /* ! Layout for desktop version   */
 /* ============================== */
 
-body {background:#FFF url('http://webcdn.triongames.com/defiance/images/bg.jpg') no-repeat center 180px;font-size:14px;}
+body {background:#FFF url('../images/bg.jpg') no-repeat center 180px;font-size:14px;}
 .cookie-compliance-container {background:#333;border-bottom:1px solid #FFF;top:0;position:absolute;width:100%;height:102px;}
 .cookie-compliance-message{width:978px;margin:0 auto;position:relative;}
 .cookie-compliance-message p{color:#999;width:770px;padding:14px 10px 18px;font-size:12px;line-height:1.2em;margin:0;}
@@ -687,7 +687,7 @@ p a {color:#6FE9F4;}
 .defi-red{color:#913254}
 .defi-blue{color:#6FE9F4}
 .a-name {height:0;position:relative;}
-.trion-nav {height:34px;background:#000 url('http://webcdn.triongames.com/defiance/images/global-nav-bg.png') repeat-x 0 0;margin-bottom:1px;
+.trion-nav {height:34px;background:#000 url('../images/global-nav-bg.png') repeat-x 0 0;margin-bottom:1px;
 -moz-box-shadow: 0px 1px 0px rgba(140, 140, 140, 1);
 -webkit-box-shadow: 0px 1px 0px rgba(140, 140, 140, 1);
 box-shadow: 0px 1px 0px rgba(140, 140, 140, 1);
@@ -846,7 +846,7 @@ div.hr hr,div.ark-hr hr {display:none;}
 div.hr {clear:both;height:7px;border:0;background:transparent url('http://webcdn.triongames.com/defiance/images/divider-thin.png') no-repeat scroll center center;padding:20px 0;}
 .center {text-align:center;}
 .frame-mid {
-background: url('http://webcdn.triongames.com/defiance/images/frame-mid.png') no-repeat scroll center 469px transparent;
+background: url('../images/frame-mid.png') no-repeat scroll center 469px transparent;
 margin-top: 200px;
 z-index: 10;
 /*overflow:hidden;*/
@@ -854,18 +854,18 @@ min-height:619px;
 /*height:1469px;*/
 }
 .frame-top {
-background: url('http://webcdn.triongames.com/defiance/images/frame-top.png') no-repeat scroll center 46px transparent;
+background: url('../images/frame-top.png') no-repeat scroll center 46px transparent;
 padding-top: 1px;
 margin-top: -122px;
 min-height: 818px;
 /*height: 818px;*/
 }
 .frame-bot {
-background: url('http://webcdn.triongames.com/defiance/images/frame-bot.png') no-repeat scroll center bottom transparent;
+background: url('../images/frame-bot.png') no-repeat scroll center bottom transparent;
 min-height: 273px;
 margin-top: -149px;
 }
-.header {background: url('http://webcdn.triongames.com/defiance/images/tab-bg.png') repeat-x scroll center bottom #FFF;
+.header {background: url('../images/tab-bg.png') repeat-x scroll center bottom #FFF;
 /*overflow:hidden;*/
 /*-moz-box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
 -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
@@ -885,9 +885,9 @@ box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
 .account a {display:block;color:#000;font:bold 11px/14px 'MicrogrammaExtD-Med','sans-serif';text-transform:uppercase;text-decoration:none;word-spacing:0.2em;letter-spacing:0.2em}
 .account a.sign-in:hover { color: #87D1EC; }
 .register-btn, .header .login-btn {height:25px}
-.register-btn {background: transparent url('http://webcdn.triongames.com/defiance/images/register-login-sep.png') no-repeat right center;margin-left:5px}
-.register-btn a {background:transparent url('http://webcdn.triongames.com/defiance/images/ego-dark-icon-small.png') no-repeat left 5px;margin-right:5px}
-.register-btn a:hover { color: #87D1EC; background-image: url('http://webcdn.triongames.com/defiance/images/ego-blue-icon-small.png') }
+.register-btn {background: transparent url('../images/register-login-sep.png') no-repeat right center;margin-left:5px}
+.register-btn a {background:transparent url('../images/ego-dark-icon-small.png') no-repeat left 5px;margin-right:5px}
+.register-btn a:hover { color: #87D1EC; background-image: url('../images/ego-blue-icon-small.png') }
 .register-btn a span {padding:8px 22px 8px 0px;display:block}
 .login-btn a span {padding:8px 2px 8px 9px;display:block}
 .register-btn a span {margin-left:24px}
@@ -1190,7 +1190,7 @@ height: 49px;left: 0px;top: 0px;padding-left: 65px;padding-top: 21px;color: #fff
 .videoHeader #numFound em {font-size:.8em; font-style:italic; text-transform:none;}
 .videoHeader .filterHeader {font-size:12px; padding-left:5px;}
 #trailers {display:none; width:940px; }
-div.filterSelect, div.filterSelect span.filterSelect-ed {background-image:url("http://webcdn.triongames.com/defiance/images/sprite/filtermenu-sprite.png"); background-repeat:no-repeat;}
+div.filterSelect, div.filterSelect span.filterSelect-ed {background-image:url("../images/filtermenu-sprite.png"); background-repeat:no-repeat;}
 div.filterSelect {width:228px; height:33px; background-position:0 -33px; overflow:hidden; padding:0 0 0 10px; position:relative;}
 div.filterSelect span.filterSelect-ed {cursor:pointer; display:block; height:27px; background-position:right 0; text-transform:uppercase; padding-top:6px; font-weight:bold;}
 select#filterMenu {width:224px; height:24px; cursor:pointer; font-family:Verdana, Arial,sans-serif; position:absolute; opacity:0; top:6px; left:5px; border:0;}
@@ -1228,29 +1228,29 @@ color:#6fe9f4;
 .pagination a:hover{color:#fff;background: transparent url('http://webcdn.triongames.com/defiance/images/media/pagination-active.png') no-repeat 0 0px;}
 .pagination .current{background: transparent url('http://webcdn.triongames.com/defiance/images/media/pagination-active.png') no-repeat 0 0px;color:#fff;}
 /* FAQ styles */
-#faqContent {padding-bottom:65px; background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg-bot.png') no-repeat scroll center bottom;}
-#faqContent p.faqNote {font-size:.85em; padding:10px 0 5px 0; background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg-top.png') no-repeat scroll center bottom;}
+#faqContent {padding-bottom:65px; background:transparent url('../images/faq-bg-bot.png') no-repeat scroll center bottom;}
+#faqContent p.faqNote {font-size:.85em; padding:10px 0 5px 0; background:transparent url('../images/faq-bg-top.png') no-repeat scroll center bottom;}
 #faqContent section h3 {font-size:1.5em; font-weight:bold; border-bottom: 1px solid #487184; padding:16px 0;}
-#faqContent section h3 span {padding-left:18px; display:block; background: transparent url('http://webcdn.triongames.com/defiance/images/faq-arrows2.png') no-repeat left 6px; }
+#faqContent section h3 span {padding-left:18px; display:block; background: transparent url('../images/faq-arrows2.png') no-repeat left 6px; }
 #faqContent section h3 span:hover {color:#6FE9F4; background-position: left -31px;}
 #faqContent section h3.active span {color:#6FE9F4; background-position: left -67px;}
 #faqContent section h3.active span:hover {color:#fff; background-position: left -102px;}
 #faqContent section .question h4 {text-transform:none; color:#fff;}
-#faqContent section h3 {cursor:pointer; background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg-mid.png') repeat-y scroll center center;}
+#faqContent section h3 {cursor:pointer; background:transparent url('../images/faq-bg-mid.png') repeat-y scroll center center;}
 #faqContent section .faqSection {padding-left:18px; display:none;}
 #faqContent section .question {border-bottom: 1px solid #487184; padding:17px 0 20px 0;}
-#faqContent section .question.alt {background:transparent url('http://webcdn.triongames.com/defiance/images/faq-bg2.png') repeat-y scroll center center;}
+#faqContent section .question.alt {background:transparent url('../images/faq-bg2.png') repeat-y scroll center center;}
 #faqContent section .question p {padding:0; margin:0; color:#D1F2F9;}
 #faqContent section .answer {padding-top:15px;}
 #faqContent section .answer p ~ p {padding-top:15px;}
 
-#faqSidebar {margin:31px 0 0 0; width:306px; background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-top.png') no-repeat scroll center 0; padding-top:7px;}
-#faqSidebar .faq-sidebar {padding:0 0 7px 0; margin:0; list-style:none; background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-bot.png') no-repeat scroll center bottom;}
-#faqSidebar .faq-sidebar li:hover, #faqSidebar .faq-sidebar li.active {background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-hover.png') repeat-y scroll center center;}
-#faqSidebar .faq-sidebar li a {cursor:pointer; padding: 16px 0 16px 20px; display:block;color:#fff;font:normal 1.1em 'gothammedium','Arial','sans-serif';text-decoration:none;text-transform:uppercase; background:transparent url('http://webcdn.triongames.com/defiance/images/sidebar-sep.png') no-repeat scroll center bottom;}
+#faqSidebar {margin:31px 0 0 0; width:306px; background:transparent url('../images/sidebar-top.png') no-repeat scroll center 0; padding-top:7px;}
+#faqSidebar .faq-sidebar {padding:0 0 7px 0; margin:0; list-style:none; background:transparent url('../images/sidebar-bot.png') no-repeat scroll center bottom;}
+#faqSidebar .faq-sidebar li:hover, #faqSidebar .faq-sidebar li.active {background:transparent url('../images/sidebar-hover.png') repeat-y scroll center center;}
+#faqSidebar .faq-sidebar li a {cursor:pointer; padding: 16px 0 16px 20px; display:block;color:#fff;font:normal 1.1em 'gothammedium','Arial','sans-serif';text-decoration:none;text-transform:uppercase; background:transparent url('../images/sidebar-sep.png') no-repeat scroll center bottom;}
 #faqSidebar .faq-sidebar li a span {padding-left:22px; display:block;}
 #faqSidebar .faq-sidebar li.active a, #faqSidebar .faq-sidebar li.active a:hover {color:#6fe9f4; cursor:default;}
-#faqSidebar .faq-sidebar li.active a span, #faqSidebar .faq-sidebar li.active a:hover span {background: transparent url('http://webcdn.triongames.com/defiance/images/sidebar-icon2.png') no-repeat left 2px;}
+#faqSidebar .faq-sidebar li.active a span, #faqSidebar .faq-sidebar li.active a:hover span {background: transparent url('../images/sidebar-icon2.png') no-repeat left 2px;}
 /* Pre order */
 .gametagline {position:absolute;right:-40px;top:2px;}
 #header-wrap .nobutton {height:69px;}
@@ -1493,7 +1493,7 @@ display: inline;
 cursor: pointer;
 }
 .controller.top-shadow{margin-top:0;}
-.footer {background:#000 url('http://webcdn.triongames.com/defiance/images/footer-bg.png') repeat-x 0 0;}
+.footer {background:#000 url('../images/footer-bg.png') repeat-x 0 0;}
 .footer .corporate, .footer .legal, .footer .platforms, .footer .ratings-brand, .footer .copyrights {
 margin: 0 auto;
 text-align: center;
