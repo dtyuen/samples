@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Progressbar Mockup</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <!--meta name="viewport" content="initial-scale=1"-->
+  <!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="css/progressbar-styles.css" media="screen" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    .progressbar-wrapper .popover {
+      display: block;
+    }
+    .target.icon-checkmark {
+      display: inline;
+    }
+    .hide, .target.icon-checkmark.hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  Enter number values below. (built with React.js)
+
+  <div id="myApp"></div>
+
+  <br/>
+  <br/>
+
+  Slightly responsive, but starts to degrade when browser-width is small.<br/><br/>
+  TODO's:<br/>
+  &nbsp;&nbsp; -- Add media-queries for better responsive.
+  <br/>
+  <br/>
+  <br/>
+  <script src="js/vendor/react-18.2.0/react.development.js"></script>
+  <script src="js/vendor/react-18.2.0/react-dom.development.js"></script>
+  <script src="js/vendor/classnames/index.js"></script>
+  <script src="js/vendor/react-18.2.0/babel-6.26.0.min.js"></script>
+  <script type="text/babel">
+    const { useState, useMemo } = React;
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    const Progressbar = (props) => {
+      const [retireInt, setRetireInt] = useState(props.retireInt || 0);
+      const [targetInt, setTargetInt] = useState(props.targetInt || 0);
+
+      const {
+          popoverInt,
+          popoverText,
+          shortfall,
+          percent,
+          popoverLeft,
+      } = useMemo(() => {
+        let popoverInt = 0,
+            popoverText = '',
+            shortfall = false;
+
+        const _retireInt = parseInt(retireInt);
+        const _targetInt = parseInt(targetInt);
+
+        const percent = (_targetInt === 0) ? 0 : Math.round(_retireInt / _targetInt * 100);
+        const popoverLeft = (percent < 76) ? percent + 14 : 90;
+
+        if (_targetInt > _retireInt) {
+          popoverInt = _targetInt - _retireInt;
+          shortfall = true;
+          popoverText = 'Shortfall';
+        } else if (_targetInt === _retireInt) {
+          popoverText = 'Goal reached!';
+        } else {
+          popoverInt = _retireInt - _targetInt;
+          popoverText = 'Surplus';
+        }        
+
+        return {
+          popoverInt,
+          popoverText,
+          shortfall,
+          percent,
+          popoverLeft,
+        };
+      }, [retireInt, targetInt]);
+
+      return (
+        <section>
+          <div className="widget-progressbar clearfix">
+            <div className="col-left">
+              <h3>Annual Income</h3>
+              <div className="number">
+                ${numberWithCommas(retireInt)}<span className="subtitle">/yr</span>
+              </div>
+              <div className="progressbar-wrapper">
+                  <div className="progressbar-1" style={{width: percent + '%'}}><span>{percent}%</span></div>
+                  <div className={classNames({
+                          'popover': true,
+                          'green': !shortfall
+                        })}
+                    style={{left: popoverLeft + '%'}}>
+                    <div className="arrow"></div>
+                    <span className="popover-text">{popoverText}</span>
+                    <div className={classNames({
+                          'number': true,
+                          'hide': (retireInt === targetInt)
+                        })}>
+                      ${numberWithCommas(popoverInt)}
+                    </div>            
+                  </div>
+              </div>
+            </div>
+            <div className="col-right">
+              <h3>Target <i className={classNames({
+                          'target': true,
+                          'icon-checkmark': true,
+                          'hide': shortfall
+                        })}></i></h3>
+              <div className="number">
+                ${numberWithCommas(targetInt)}<span className="subtitle">/yr</span>
+              </div>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <strong>Enter number values:</strong><br/>
+          Annual Income:&nbsp;&nbsp;&nbsp;&nbsp; 
+          $ <input type="number" name="amount-retire"
+            value={retireInt}
+            onChange={(evt) => setRetireInt(evt.target.value)} /> /yr<br/>
+          Target:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          $ <input type="number" name="amount-target"
+            value={targetInt}
+            onChange={(evt) => setTargetInt(evt.target.value)} /> /yr
+        </section>
+      );
+    };
+
+    const domContainer = document.getElementById('myApp');
+    const root = ReactDOM.createRoot(domContainer);
+    root.render(<Progressbar retireInt="700" targetInt="1400" />);
+  </script>
+</body>
+</html>
