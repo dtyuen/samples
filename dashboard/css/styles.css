@@ -1978,6 +1978,9 @@ table.tablesaw {
   font-weight: bold;
   margin-bottom: .5rem;
 }
+#dashboard .welcome-hdr em {
+  color: red;
+}
 #dashboard .footnote {
   font-size: .875rem;
   color: #758a99;
@@ -2007,8 +2010,9 @@ table.tablesaw {
 }
 #dashboard .welcome-intro ul li h4 a {
   color: #52606d;
+  text-decoration: none;
 }
-#dashboard .welcome-intro ul li h4 a:hover {
+#dashboard .welcome-intro ul li h4 a:hover .link {
   text-decoration: underline;
 }
 #dashboard .welcome-intro ul li h4 a em {
